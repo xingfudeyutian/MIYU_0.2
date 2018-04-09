@@ -7,83 +7,98 @@
 //
 
 #import "MIYUVideoViewController.h"
-#import "CCAnimationContainerView.h"
+#import "MIYUVideoShowViewController.h"
+
 #import "CardView.h"
-@interface MIYUVideoViewController ()
-@property(nonatomic, strong) CCAnimationContainerView *cardContainerView;
-@property(nonatomic, strong) NSMutableArray *items;
-@property(nonatomic)float leftWidth;
+#import "CardItem2.h"
+#import "CardViewConstants.h"
+
+@interface MIYUVideoViewController ()<CardViewDelegate, CardViewDataSource>
+{
+  BOOL __oneTypeItem;
+  CardViewItemScrollMode __cardViewMode;
+}
+@property (weak, nonatomic) IBOutlet CardView * cardView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint * cardViewHeightConstraint;
+
 @end
+
+//static NSString * ITEM_XIB    = @"CardItem";
+static NSString * ITEM_XIB_2  = @"CardItem2";
+//static NSString * ITEM_RUID   = @"Item_RUID";
+static NSString * ITEM_RUID_2 = @"Item_RUID2";
 
 @implementation MIYUVideoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createCardViewWithDataSource:self.items];
+     [self initData];
+  self.cardView.delegate   = self;
+  self.cardView.dataSource = self;
+  self.cardView.maxItems   = 2;
+  self.cardView.scaleRatio = 0.08;
+  self.cardView.isNeedControl = NO;
+  self.cardViewHeightConstraint.constant = CARD_ITEM_H;
+  // 修改约束后 cardView 的高度不会立即生效，依然是以 530 来计算，会导致 item 项布局错误，所以此处调用
+  [self.view layoutIfNeeded];
+
+//  [self.cardView registerXibFile:ITEM_XIB forItemReuseIdentifier:ITEM_RUID];
+  [self.cardView registerXibFile:ITEM_XIB_2 forItemReuseIdentifier:ITEM_RUID_2];
+  [self.cardView reloadData];
 }
-//创建容器
-- (void)createCardViewWithDataSource:(NSArray *)array {
-  self.leftWidth = 10.0;
+- (void)initData
+{
+  __oneTypeItem  = NO;
+  __cardViewMode = CardViewItemScrollModeRemove;
 
-  CCAnimationContainerView * containerView = [[CCAnimationContainerView alloc] initWithFrame:CGRectMake(10, 10,FUll_VIEW_WIDTH - 20, self.view.height-20-TabbarHeight)];
-  self.cardContainerView = containerView;
-  self.cardContainerView.totalCount = array.count;
-  self.cardContainerView.dataSourceArray = array;
-
-  self.cardContainerView.cardRefreshBlock = ^(){
-
-  };
-  self.cardContainerView.cardPushBlock = ^(){
-
-  };
-  [self.view addSubview:self.cardContainerView];
-  [self setAnimationSubviews];
 }
 
-//设置容器子视图
--(void)setAnimationSubviews{
-  self.cardContainerView.subViewArray = [NSMutableArray array];
-  NSInteger cardCount = (self.items.count >= 4)?4:self.items.count;
-  for(int i = 0;i < cardCount;i++){
-    NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:@"CardView" owner:nil options:nil];
-    CardView *cardView = [nibView lastObject];
-    cardView.frame = CGRectMake(0, 0, CGRectGetWidth(self.cardContainerView.frame), CGRectGetHeight(self.cardContainerView.frame));
-    [cardView setupDataSource:self.dataArray[i] andPage:i];
-//    UIView * cardView = [[UIView alloc] init];
-//    cardView.backgroundColor = [UIColor lightGrayColor];
+#pragma mark - CYKJCardViewDelegate/DataSource
 
-    cardView.tag = 100 + i;
-    if(i == 1){
-      cardView.frame = CGRectMake(10, 10, CGRectGetWidth(self.cardContainerView.frame), CGRectGetHeight(self.cardContainerView.frame));
-    }
-    if(i >= 2){
-      cardView.frame = CGRectMake(10, 10, CGRectGetWidth(self.cardContainerView.frame), CGRectGetHeight(self.cardContainerView.frame));
-    }
-    [self.cardContainerView.subViewArray addObject:cardView];
-    [self.cardContainerView addSubview:cardView];
-    [self.cardContainerView sendSubviewToBack:cardView];
-
+- (NSInteger)numberOfItemsInCardView:(CardView *)cardView
+{
+  if (!__oneTypeItem) {
   }
-  [self.cardContainerView addPanGesture];
+  return 10;
 }
 
-- (NSArray *)items {
-  if(!_items) {
-    _items = [NSMutableArray array];
-    for (int i = 1;i < 8;i++) {
-      NSString *title = [NSString stringWithFormat:@"这是标题%d",i];
-      NSString *content = [NSString stringWithFormat:@"这是内容%d",i];
-      NSString *image = [NSString stringWithFormat:@"%d.jpg",i];
-      NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:title,@"title",content,@"content",image,@"image", nil];
-      [_items addObject:dic];
-    }
-  }
-  return _items;
+- (CardViewItem *)cardView:(CardView *)cardView itemAtIndex:(NSInteger)index
+{
+//  if (!__oneTypeItem && index % 2) {
+
+    CardItem2 * item2 = (CardItem2 *)[cardView dequeueReusableCellWithIdentifier:ITEM_RUID_2];
+
+    item2.imageView.image = [UIImage imageNamed:@"info"];
+
+    return item2;
+//  }
+//
+//  CardItem * item = (CardItem *)[cardView dequeueReusableCellWithIdentifier:ITEM_RUID];
+//
+//  NSInteger idx = __oneTypeItem ? index : index / 2;
+//
+//  [item setItemWithData:self.model1[idx]];
+//
+//  return item;
+}
+
+- (CGRect)cardView:(CardView *)cardView rectForItemAtIndex:(NSInteger)index
+{
+  return CGRectMake(0, 0, CARD_ITEM_W, CARD_ITEM_H);
+}
+
+- (void)cardView:(CardView *)cardView didSelectItemAtIndex:(NSInteger)index
+{
+  NSLog(@"卡片%ld被选中", (long)index);
+
+  MIYUVideoShowViewController * videoShowVC = [[MIYUVideoShowViewController alloc] init];
+  videoShowVC.hidesBottomBarWhenPushed = YES;
+  [self.navigationController pushViewController:videoShowVC animated:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

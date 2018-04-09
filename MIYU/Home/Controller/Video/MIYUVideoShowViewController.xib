@@ -169,7 +169,7 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="RtE-ze-DnP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3VR-8A-0pP"/>
                 <constraint firstItem="ToZ-LJ-ksz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8Bt-MO-ZHc"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,13 +11,37 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUVideoViewController">
             <connections>
+                <outlet property="cardView" destination="mPb-50-kHb" id="J7P-vG-ZFg"/>
+                <outlet property="cardViewHeightConstraint" destination="kaW-hC-Eiv" id="lOr-gz-te6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D5u-Rk-5fk">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPb-50-kHb" customClass="CardView">
+                    <rect key="frame" x="0.0" y="103" width="414" height="530"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="530" id="kaW-hC-Eiv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="D5u-Rk-5fk" secondAttribute="trailing" id="8xr-t1-Xfg"/>
+                <constraint firstItem="mPb-50-kHb" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HiF-9t-Zuj"/>
+                <constraint firstAttribute="bottom" secondItem="D5u-Rk-5fk" secondAttribute="bottom" id="M4I-0M-eA5"/>
+                <constraint firstItem="mPb-50-kHb" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Xy6-SN-Pbn"/>
+                <constraint firstItem="mPb-50-kHb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YaC-9n-6Fw"/>
+                <constraint firstItem="D5u-Rk-5fk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dVu-b9-45C"/>
+                <constraint firstItem="D5u-Rk-5fk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hdE-0n-Ra6"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
     </objects>
 </document>

@@ -30,6 +30,10 @@
 		B50DDA66202066BE00D2EF32 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B50DDA64202066BE00D2EF32 /* UIImage+Extension.m */; };
 		B50F2341201B7988007EA94B /* MIYUBaseSquareCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50F233F201B7988007EA94B /* MIYUBaseSquareCollectionController.m */; };
 		B50F2342201B7988007EA94B /* MIYUBaseSquareCollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50F2340201B7988007EA94B /* MIYUBaseSquareCollectionController.xib */; };
+		B51B9788207AFF1900F5B29A /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B9784207AFF1900F5B29A /* CardView.m */; };
+		B51B9789207AFF1900F5B29A /* CardViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B9787207AFF1900F5B29A /* CardViewItem.m */; };
+		B51B978D207B007000F5B29A /* CardItem2.m in Sources */ = {isa = PBXBuildFile; fileRef = B51B978A207B006F00F5B29A /* CardItem2.m */; };
+		B51B978E207B007000F5B29A /* CardItem2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51B978C207B007000F5B29A /* CardItem2.xib */; };
 		B532D2312015917800DC06A1 /* NSObject+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D2302015917800DC06A1 /* NSObject+extend.m */; };
 		B532D2342015AAE300DC06A1 /* MIYUMineInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D2332015AAE300DC06A1 /* MIYUMineInfoView.m */; };
 		B532D23A2015B12000DC06A1 /* MIYUMineInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D2382015B12000DC06A1 /* MIYUMineInfoViewController.m */; };
@@ -121,10 +125,6 @@
 		B5E3D9152079ECE40007983E /* MIYUVoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D9132079ECE40007983E /* MIYUVoiceCell.xib */; };
 		B5E3D9192079F86A0007983E /* MIYUVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D9172079F86A0007983E /* MIYUVideoViewController.m */; };
 		B5E3D91A2079F86A0007983E /* MIYUVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D9182079F86A0007983E /* MIYUVideoViewController.xib */; };
-		B5E3D920207A11CE0007983E /* CCAnimationContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D91D207A11CE0007983E /* CCAnimationContainerView.m */; };
-		B5E3D921207A11CE0007983E /* CCAnimationLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D91F207A11CE0007983E /* CCAnimationLoadingView.m */; };
-		B5E3D925207A136B0007983E /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D922207A136B0007983E /* CardView.xib */; };
-		B5E3D926207A136B0007983E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D924207A136B0007983E /* CardView.m */; };
 		B5E4E3CC204D0E2000012E02 /* MIYUPhoneLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4E3CA204D0E2000012E02 /* MIYUPhoneLoginViewController.m */; };
 		B5E4E3CD204D0E2000012E02 /* MIYUPhoneLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E4E3CB204D0E2000012E02 /* MIYUPhoneLoginViewController.xib */; };
 		B5E4E3D1204D173A00012E02 /* MIYUVaidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4E3CF204D173A00012E02 /* MIYUVaidationViewController.m */; };
@@ -191,6 +191,14 @@
 		B50F233E201B7988007EA94B /* MIYUBaseSquareCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUBaseSquareCollectionController.h; sourceTree = "<group>"; };
 		B50F233F201B7988007EA94B /* MIYUBaseSquareCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUBaseSquareCollectionController.m; sourceTree = "<group>"; };
 		B50F2340201B7988007EA94B /* MIYUBaseSquareCollectionController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUBaseSquareCollectionController.xib; sourceTree = "<group>"; };
+		B51B9783207AFF1900F5B29A /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		B51B9784207AFF1900F5B29A /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		B51B9785207AFF1900F5B29A /* CardViewConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewConstants.h; sourceTree = "<group>"; };
+		B51B9786207AFF1900F5B29A /* CardViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewItem.h; sourceTree = "<group>"; };
+		B51B9787207AFF1900F5B29A /* CardViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewItem.m; sourceTree = "<group>"; };
+		B51B978A207B006F00F5B29A /* CardItem2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardItem2.m; sourceTree = "<group>"; };
+		B51B978B207B007000F5B29A /* CardItem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardItem2.h; sourceTree = "<group>"; };
+		B51B978C207B007000F5B29A /* CardItem2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardItem2.xib; sourceTree = "<group>"; };
 		B532D22F2015917800DC06A1 /* NSObject+extend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+extend.h"; sourceTree = "<group>"; };
 		B532D2302015917800DC06A1 /* NSObject+extend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+extend.m"; sourceTree = "<group>"; };
 		B532D2322015AAE300DC06A1 /* MIYUMineInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUMineInfoView.h; sourceTree = "<group>"; };
@@ -339,13 +347,6 @@
 		B5E3D9162079F86A0007983E /* MIYUVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVideoViewController.h; sourceTree = "<group>"; };
 		B5E3D9172079F86A0007983E /* MIYUVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoViewController.m; sourceTree = "<group>"; };
 		B5E3D9182079F86A0007983E /* MIYUVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVideoViewController.xib; sourceTree = "<group>"; };
-		B5E3D91C207A11CE0007983E /* CCAnimationContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAnimationContainerView.h; sourceTree = "<group>"; };
-		B5E3D91D207A11CE0007983E /* CCAnimationContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationContainerView.m; sourceTree = "<group>"; };
-		B5E3D91E207A11CE0007983E /* CCAnimationLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAnimationLoadingView.h; sourceTree = "<group>"; };
-		B5E3D91F207A11CE0007983E /* CCAnimationLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationLoadingView.m; sourceTree = "<group>"; };
-		B5E3D922207A136B0007983E /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
-		B5E3D923207A136B0007983E /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
-		B5E3D924207A136B0007983E /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		B5E4E3C9204D0E2000012E02 /* MIYUPhoneLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUPhoneLoginViewController.h; sourceTree = "<group>"; };
 		B5E4E3CA204D0E2000012E02 /* MIYUPhoneLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUPhoneLoginViewController.m; sourceTree = "<group>"; };
 		B5E4E3CB204D0E2000012E02 /* MIYUPhoneLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUPhoneLoginViewController.xib; sourceTree = "<group>"; };
@@ -452,6 +453,18 @@
 				B50DDA5F20204A9900D2EF32 /* MIYUFeedbackViewController.xib */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		B51B9782207AFF1900F5B29A /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				B51B9783207AFF1900F5B29A /* CardView.h */,
+				B51B9784207AFF1900F5B29A /* CardView.m */,
+				B51B9785207AFF1900F5B29A /* CardViewConstants.h */,
+				B51B9786207AFF1900F5B29A /* CardViewItem.h */,
+				B51B9787207AFF1900F5B29A /* CardViewItem.m */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		B532D24A2016F4CA00DC06A1 /* InfoDetail */ = {
@@ -710,7 +723,7 @@
 		B57495F51FFDF20600368343 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				B5E3D91B207A11CE0007983E /* CardView */,
+				B51B9782207AFF1900F5B29A /* Card */,
 				B50DDA26201EF8AF00D2EF32 /* YJFNavigationController */,
 				B574963C1FFF5AA500368343 /* MIYU-Prefix.pch */,
 				B574963D1FFF5B0000368343 /* MIYUDefineHeader.h */,
@@ -914,6 +927,9 @@
 		B5E3D90A2079ECB60007983E /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				B51B978B207B007000F5B29A /* CardItem2.h */,
+				B51B978A207B006F00F5B29A /* CardItem2.m */,
+				B51B978C207B007000F5B29A /* CardItem2.xib */,
 				B5E3D90B2079ECB60007983E /* MIYUVideoToolView.h */,
 				B5E3D90C2079ECB60007983E /* MIYUVideoToolView.m */,
 				B5E3D90D2079ECB60007983E /* MIYUVideoToolView.xib */,
@@ -929,20 +945,6 @@
 				B5E3D9132079ECE40007983E /* MIYUVoiceCell.xib */,
 			);
 			path = Voice;
-			sourceTree = "<group>";
-		};
-		B5E3D91B207A11CE0007983E /* CardView */ = {
-			isa = PBXGroup;
-			children = (
-				B5E3D923207A136B0007983E /* CardView.h */,
-				B5E3D924207A136B0007983E /* CardView.m */,
-				B5E3D922207A136B0007983E /* CardView.xib */,
-				B5E3D91C207A11CE0007983E /* CCAnimationContainerView.h */,
-				B5E3D91D207A11CE0007983E /* CCAnimationContainerView.m */,
-				B5E3D91E207A11CE0007983E /* CCAnimationLoadingView.h */,
-				B5E3D91F207A11CE0007983E /* CCAnimationLoadingView.m */,
-			);
-			path = CardView;
 			sourceTree = "<group>";
 		};
 		B5E4E3C5204D0DD800012E02 /* Login */ = {
@@ -1097,7 +1099,6 @@
 			files = (
 				B532D25A2016F77F00DC06A1 /* MIYUDynamicCell.xib in Resources */,
 				B598186A204E9594005299E3 /* MIYURectangleCell.xib in Resources */,
-				B5E3D925207A136B0007983E /* CardView.xib in Resources */,
 				B5E3D9152079ECE40007983E /* MIYUVoiceCell.xib in Resources */,
 				B5E3D91A2079F86A0007983E /* MIYUVideoViewController.xib in Resources */,
 				B583A4642063807A00444178 /* MIYUBaseSearchViewController.xib in Resources */,
@@ -1133,6 +1134,7 @@
 				B53A217D20159061000D7D3D /* MIYUNormalCell.xib in Resources */,
 				B5C95D5520622AB600C0E8AD /* MIYUVoiceView.xib in Resources */,
 				B5E3D9092079EBA80007983E /* MIYUVoiceViewController.xib in Resources */,
+				B51B978E207B007000F5B29A /* CardItem2.xib in Resources */,
 				B5E3D9102079ECB60007983E /* MIYUVideoToolView.xib in Resources */,
 				B50DDA6120204A9900D2EF32 /* MIYUFeedbackViewController.xib in Resources */,
 				B57496201FFF1DC600368343 /* MIYUTabBarController.xib in Resources */,
@@ -1251,17 +1253,16 @@
 				B532D23A2015B12000DC06A1 /* MIYUMineInfoViewController.m in Sources */,
 				B50DDA2B201EF8B000D2EF32 /* UIViewController+YJFNavigationExtension.m in Sources */,
 				B563B69D2079E75000B38AFF /* MIYURecommendViewController+UI.m in Sources */,
-				B5E3D921207A11CE0007983E /* CCAnimationLoadingView.m in Sources */,
 				B53A217120158FF1000D7D3D /* MIYUMineViewController+UI.m in Sources */,
 				B50DDA2C201EF8B000D2EF32 /* YJFRootNavigationController.m in Sources */,
 				B532D23E2015B14900DC06A1 /* MIYUMineInfoViewController+UI.m in Sources */,
 				B5950F3C2058B49F00A25995 /* MIYUSquareViewController.m in Sources */,
 				B50DDA66202066BE00D2EF32 /* UIImage+Extension.m in Sources */,
+				B51B978D207B007000F5B29A /* CardItem2.m in Sources */,
 				B563B69C2079E75000B38AFF /* MIYURecommendViewController.m in Sources */,
 				B50DDA4C2020493A00D2EF32 /* MIYUAccountSettingViewController.m in Sources */,
 				B57496241FFF1E4700368343 /* MIYURectangleCell.m in Sources */,
 				B5E4E3CC204D0E2000012E02 /* MIYUPhoneLoginViewController.m in Sources */,
-				B5E3D926207A136B0007983E /* CardView.m in Sources */,
 				B50F2341201B7988007EA94B /* MIYUBaseSquareCollectionController.m in Sources */,
 				B50DDA472020490D00D2EF32 /* MIYUSettingViewController.m in Sources */,
 				B57495C31FFCB54A00368343 /* main.m in Sources */,
@@ -1276,6 +1277,7 @@
 				B53A217720159035000D7D3D /* MIYUMineInfoCell.m in Sources */,
 				B50DDA302020104800D2EF32 /* MIYUEditMineInfoViewController.m in Sources */,
 				B5E3D90F2079ECB60007983E /* MIYUVideoToolView.m in Sources */,
+				B51B9789207AFF1900F5B29A /* CardViewItem.m in Sources */,
 				B563B6932079E74400B38AFF /* MIYUContentDetailViewController.m in Sources */,
 				B5A4AB2B205FA648004202E1 /* MIYUVoiceView.m in Sources */,
 				B583A4632063807A00444178 /* MIYUBaseSearchViewController.m in Sources */,
@@ -1286,12 +1288,12 @@
 				B5E4E3D6204D1DA100012E02 /* MIYUBasicInfoViewController.m in Sources */,
 				B57496311FFF475300368343 /* MIYUHomeViewController.m in Sources */,
 				B532D2342015AAE300DC06A1 /* MIYUMineInfoView.m in Sources */,
-				B5E3D920207A11CE0007983E /* CCAnimationContainerView.m in Sources */,
 				B563B6882079E6D600B38AFF /* MIYUBarrageViewController.m in Sources */,
 				B5E3D9082079EBA80007983E /* MIYUVoiceViewController.m in Sources */,
 				B50DDA5B20204A5500D2EF32 /* MIYUConnectUsViewController.m in Sources */,
 				B53A217C20159061000D7D3D /* MIYUNormalCell.m in Sources */,
 				B574961B1FFF1DC600368343 /* MIYUBaseViewController.m in Sources */,
+				B51B9788207AFF1900F5B29A /* CardView.m in Sources */,
 				B5950F71205A528400A25995 /* MIYUMessageViewController.m in Sources */,
 				B532D2592016F77F00DC06A1 /* MIYUDynamicCell.m in Sources */,
 				B57495B51FFCB54A00368343 /* MIYUAppDelegate.m in Sources */,
