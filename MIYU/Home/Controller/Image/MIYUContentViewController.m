@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  self.tableView.tableHeaderView = [UIView new];
+  self.tableView.tableHeaderView.backgroundColor = [UIColor blackColor];
+  self.tableView.tableHeaderView.height = 150;
 }
-
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
@@ -38,7 +40,7 @@
 {
   MIYUContentDetailViewController * contentDetail = [[MIYUContentDetailViewController alloc] init];
   contentDetail.hidesBottomBarWhenPushed = YES;
-  [self.parentVC.navigationController pushViewController:contentDetail animated:YES];
+  [self.navigationController pushViewController:contentDetail animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

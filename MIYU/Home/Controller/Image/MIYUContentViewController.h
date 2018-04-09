@@ -10,6 +10,4 @@
 
 @interface MIYUContentViewController : MIYUBaseViewController
 
-@property (nonatomic, strong) UIViewController * parentVC;
-
 @end

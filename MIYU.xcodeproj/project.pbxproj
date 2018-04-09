@@ -46,7 +46,6 @@
 		B532D25E2016FB7400DC06A1 /* MIYUTInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D25C2016FB7400DC06A1 /* MIYUTInfoCell.m */; };
 		B532D25F2016FB7400DC06A1 /* MIYUTInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B532D25D2016FB7400DC06A1 /* MIYUTInfoCell.xib */; };
 		B532D26820172F1E00DC06A1 /* UIView+CLTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D26720172F1E00DC06A1 /* UIView+CLTabbar.m */; };
-		B532D26B201730BD00DC06A1 /* MIYURecommendViewController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D26A201730BD00DC06A1 /* MIYURecommendViewController+UI.m */; };
 		B532D2B5201AD0E100DC06A1 /* MIYUShowSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D2B3201AD0E100DC06A1 /* MIYUShowSquareCell.m */; };
 		B532D2B6201AD0E100DC06A1 /* MIYUShowSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B532D2B4201AD0E100DC06A1 /* MIYUShowSquareCell.xib */; };
 		B532D2BA201AE06F00DC06A1 /* MIYUNormalReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B532D2B8201AE06F00DC06A1 /* MIYUNormalReusableView.m */; };
@@ -62,6 +61,21 @@
 		B545B4C2205659DF0039B422 /* MIYUMoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B545B4C0205659DF0039B422 /* MIYUMoneyCell.xib */; };
 		B545B4C6205774250039B422 /* MIYUVideoSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B545B4C4205774250039B422 /* MIYUVideoSettingViewController.m */; };
 		B545B4C7205774250039B422 /* MIYUVideoSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B545B4C5205774250039B422 /* MIYUVideoSettingViewController.xib */; };
+		B563B6882079E6D600B38AFF /* MIYUBarrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6802079E6D600B38AFF /* MIYUBarrageViewController.m */; };
+		B563B6892079E6D600B38AFF /* MIYUBarrageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B6812079E6D600B38AFF /* MIYUBarrageViewController.xib */; };
+		B563B68A2079E6D600B38AFF /* MIYUVideoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6832079E6D600B38AFF /* MIYUVideoShowViewController.m */; };
+		B563B68B2079E6D600B38AFF /* MIYUVideoShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B6842079E6D600B38AFF /* MIYUVideoShowViewController.xib */; };
+		B563B6932079E74400B38AFF /* MIYUContentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B68E2079E74400B38AFF /* MIYUContentDetailViewController.m */; };
+		B563B6942079E74400B38AFF /* MIYUContentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B68F2079E74400B38AFF /* MIYUContentDetailViewController.xib */; };
+		B563B6952079E74400B38AFF /* MIYUContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6912079E74400B38AFF /* MIYUContentViewController.m */; };
+		B563B6962079E74400B38AFF /* MIYUContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B6922079E74400B38AFF /* MIYUContentViewController.xib */; };
+		B563B69C2079E75000B38AFF /* MIYURecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6982079E75000B38AFF /* MIYURecommendViewController.m */; };
+		B563B69D2079E75000B38AFF /* MIYURecommendViewController+UI.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B69A2079E75000B38AFF /* MIYURecommendViewController+UI.m */; };
+		B563B69E2079E75000B38AFF /* MIYURecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B69B2079E75000B38AFF /* MIYURecommendViewController.xib */; };
+		B563B6AA2079E82B00B38AFF /* MIYUContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6A12079E82A00B38AFF /* MIYUContentCell.m */; };
+		B563B6AB2079E82B00B38AFF /* MIYUContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B6A22079E82A00B38AFF /* MIYUContentCell.xib */; };
+		B563B6AC2079E82B00B38AFF /* MIYUContentDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6A42079E82A00B38AFF /* MIYUContentDetailCell.m */; };
+		B563B6AD2079E82B00B38AFF /* MIYUContentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B6A52079E82A00B38AFF /* MIYUContentDetailCell.xib */; };
 		B57495B51FFCB54A00368343 /* MIYUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B57495B41FFCB54A00368343 /* MIYUAppDelegate.m */; };
 		B57495BB1FFCB54A00368343 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57495B91FFCB54A00368343 /* Main.storyboard */; };
 		B57495BD1FFCB54A00368343 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B57495BC1FFCB54A00368343 /* Assets.xcassets */; };
@@ -77,24 +91,10 @@
 		B57496241FFF1E4700368343 /* MIYURectangleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B57496221FFF1E4700368343 /* MIYURectangleCell.m */; };
 		B57496311FFF475300368343 /* MIYUHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B574962E1FFF475300368343 /* MIYUHomeViewController.m */; };
 		B57496321FFF475300368343 /* MIYUHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B574962F1FFF475300368343 /* MIYUHomeViewController.xib */; };
-		B57496361FFF4C3100368343 /* MIYURecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57496341FFF4C3100368343 /* MIYURecommendViewController.m */; };
-		B57496371FFF4C3100368343 /* MIYURecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57496351FFF4C3100368343 /* MIYURecommendViewController.xib */; };
 		B574963B1FFF50E200368343 /* MIYUBaseSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B574963A1FFF50E200368343 /* MIYUBaseSwitchView.m */; };
 		B583A4632063807A00444178 /* MIYUBaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B583A4612063807A00444178 /* MIYUBaseSearchViewController.m */; };
 		B583A4642063807A00444178 /* MIYUBaseSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B583A4622063807A00444178 /* MIYUBaseSearchViewController.xib */; };
-		B583A46B20638CA500444178 /* MIYUContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B583A46920638CA500444178 /* MIYUContentViewController.m */; };
-		B583A46C20638CA500444178 /* MIYUContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B583A46A20638CA500444178 /* MIYUContentViewController.xib */; };
-		B583A47120638CC900444178 /* MIYUContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B583A46F20638CC900444178 /* MIYUContentCell.m */; };
-		B583A47220638CC900444178 /* MIYUContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B583A47020638CC900444178 /* MIYUContentCell.xib */; };
-		B583A47620638D7900444178 /* MIYUContentDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B583A47420638D7900444178 /* MIYUContentDetailCell.m */; };
-		B583A47720638D7900444178 /* MIYUContentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B583A47520638D7900444178 /* MIYUContentDetailCell.xib */; };
-		B583A47B2063977800444178 /* MIYUContentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B583A4792063977800444178 /* MIYUContentDetailViewController.m */; };
-		B583A47C2063977800444178 /* MIYUContentDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B583A47A2063977800444178 /* MIYUContentDetailViewController.xib */; };
-		B583A4992064FA7D00444178 /* MIYUVideoShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B583A4972064FA7D00444178 /* MIYUVideoShowViewController.m */; };
-		B583A49A2064FA7D00444178 /* MIYUVideoShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B583A4982064FA7D00444178 /* MIYUVideoShowViewController.xib */; };
 		B58F8CD72068D498003117E4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B58F8CD62068D498003117E4 /* MediaPlayer.framework */; };
-		B58F8CDB2068D9E4003117E4 /* MIYUVideoToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F8CDA2068D9E4003117E4 /* MIYUVideoToolView.m */; };
-		B58F8CE22068DA57003117E4 /* MIYUVideoToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58F8CE12068DA57003117E4 /* MIYUVideoToolView.xib */; };
 		B5950F3C2058B49F00A25995 /* MIYUSquareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5950F3A2058B49F00A25995 /* MIYUSquareViewController.m */; };
 		B5950F3D2058B49F00A25995 /* MIYUSquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5950F3B2058B49F00A25995 /* MIYUSquareViewController.xib */; };
 		B5950F412058B98B00A25995 /* MIYUVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5950F3F2058B98B00A25995 /* MIYUVideoCell.m */; };
@@ -113,8 +113,18 @@
 		B5A4AB2E205FA654004202E1 /* MIYUFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4AB2D205FA654004202E1 /* MIYUFaceView.m */; };
 		B5A4AB31205FA660004202E1 /* MIYUGiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4AB30205FA660004202E1 /* MIYUGiftView.m */; };
 		B5C95D5520622AB600C0E8AD /* MIYUVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5C95D5420622AB600C0E8AD /* MIYUVoiceView.xib */; };
-		B5D557CC2069DE6B0020E375 /* MIYUBarrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D557CA2069DE6B0020E375 /* MIYUBarrageViewController.m */; };
-		B5D557CD2069DE6B0020E375 /* MIYUBarrageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D557CB2069DE6B0020E375 /* MIYUBarrageViewController.xib */; };
+		B5E3D9082079EBA80007983E /* MIYUVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D9062079EBA80007983E /* MIYUVoiceViewController.m */; };
+		B5E3D9092079EBA80007983E /* MIYUVoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D9072079EBA80007983E /* MIYUVoiceViewController.xib */; };
+		B5E3D90F2079ECB60007983E /* MIYUVideoToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D90C2079ECB60007983E /* MIYUVideoToolView.m */; };
+		B5E3D9102079ECB60007983E /* MIYUVideoToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D90D2079ECB60007983E /* MIYUVideoToolView.xib */; };
+		B5E3D9142079ECE40007983E /* MIYUVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D9122079ECE40007983E /* MIYUVoiceCell.m */; };
+		B5E3D9152079ECE40007983E /* MIYUVoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D9132079ECE40007983E /* MIYUVoiceCell.xib */; };
+		B5E3D9192079F86A0007983E /* MIYUVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D9172079F86A0007983E /* MIYUVideoViewController.m */; };
+		B5E3D91A2079F86A0007983E /* MIYUVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D9182079F86A0007983E /* MIYUVideoViewController.xib */; };
+		B5E3D920207A11CE0007983E /* CCAnimationContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D91D207A11CE0007983E /* CCAnimationContainerView.m */; };
+		B5E3D921207A11CE0007983E /* CCAnimationLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D91F207A11CE0007983E /* CCAnimationLoadingView.m */; };
+		B5E3D925207A136B0007983E /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E3D922207A136B0007983E /* CardView.xib */; };
+		B5E3D926207A136B0007983E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E3D924207A136B0007983E /* CardView.m */; };
 		B5E4E3CC204D0E2000012E02 /* MIYUPhoneLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4E3CA204D0E2000012E02 /* MIYUPhoneLoginViewController.m */; };
 		B5E4E3CD204D0E2000012E02 /* MIYUPhoneLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5E4E3CB204D0E2000012E02 /* MIYUPhoneLoginViewController.xib */; };
 		B5E4E3D1204D173A00012E02 /* MIYUVaidationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E4E3CF204D173A00012E02 /* MIYUVaidationViewController.m */; };
@@ -207,8 +217,6 @@
 		B532D25D2016FB7400DC06A1 /* MIYUTInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUTInfoCell.xib; sourceTree = "<group>"; };
 		B532D26620172F1E00DC06A1 /* UIView+CLTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CLTabbar.h"; sourceTree = "<group>"; };
 		B532D26720172F1E00DC06A1 /* UIView+CLTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CLTabbar.m"; sourceTree = "<group>"; };
-		B532D269201730BD00DC06A1 /* MIYURecommendViewController+UI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIYURecommendViewController+UI.h"; sourceTree = "<group>"; };
-		B532D26A201730BD00DC06A1 /* MIYURecommendViewController+UI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MIYURecommendViewController+UI.m"; sourceTree = "<group>"; };
 		B532D2B2201AD0E100DC06A1 /* MIYUShowSquareCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUShowSquareCell.h; sourceTree = "<group>"; };
 		B532D2B3201AD0E100DC06A1 /* MIYUShowSquareCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUShowSquareCell.m; sourceTree = "<group>"; };
 		B532D2B4201AD0E100DC06A1 /* MIYUShowSquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUShowSquareCell.xib; sourceTree = "<group>"; };
@@ -232,7 +240,30 @@
 		B545B4C3205774250039B422 /* MIYUVideoSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVideoSettingViewController.h; sourceTree = "<group>"; };
 		B545B4C4205774250039B422 /* MIYUVideoSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoSettingViewController.m; sourceTree = "<group>"; };
 		B545B4C5205774250039B422 /* MIYUVideoSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVideoSettingViewController.xib; sourceTree = "<group>"; };
-		B57495B01FFCB54A00368343 /* MIYU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MIYU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B563B67F2079E6D600B38AFF /* MIYUBarrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUBarrageViewController.h; sourceTree = "<group>"; };
+		B563B6802079E6D600B38AFF /* MIYUBarrageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUBarrageViewController.m; sourceTree = "<group>"; };
+		B563B6812079E6D600B38AFF /* MIYUBarrageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUBarrageViewController.xib; sourceTree = "<group>"; };
+		B563B6822079E6D600B38AFF /* MIYUVideoShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUVideoShowViewController.h; sourceTree = "<group>"; };
+		B563B6832079E6D600B38AFF /* MIYUVideoShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoShowViewController.m; sourceTree = "<group>"; };
+		B563B6842079E6D600B38AFF /* MIYUVideoShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUVideoShowViewController.xib; sourceTree = "<group>"; };
+		B563B68D2079E74400B38AFF /* MIYUContentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUContentDetailViewController.h; sourceTree = "<group>"; };
+		B563B68E2079E74400B38AFF /* MIYUContentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUContentDetailViewController.m; sourceTree = "<group>"; };
+		B563B68F2079E74400B38AFF /* MIYUContentDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUContentDetailViewController.xib; sourceTree = "<group>"; };
+		B563B6902079E74400B38AFF /* MIYUContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUContentViewController.h; sourceTree = "<group>"; };
+		B563B6912079E74400B38AFF /* MIYUContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUContentViewController.m; sourceTree = "<group>"; };
+		B563B6922079E74400B38AFF /* MIYUContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUContentViewController.xib; sourceTree = "<group>"; };
+		B563B6972079E75000B38AFF /* MIYURecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYURecommendViewController.h; sourceTree = "<group>"; };
+		B563B6982079E75000B38AFF /* MIYURecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYURecommendViewController.m; sourceTree = "<group>"; };
+		B563B6992079E75000B38AFF /* MIYURecommendViewController+UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MIYURecommendViewController+UI.h"; sourceTree = "<group>"; };
+		B563B69A2079E75000B38AFF /* MIYURecommendViewController+UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MIYURecommendViewController+UI.m"; sourceTree = "<group>"; };
+		B563B69B2079E75000B38AFF /* MIYURecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYURecommendViewController.xib; sourceTree = "<group>"; };
+		B563B6A02079E82A00B38AFF /* MIYUContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUContentCell.h; sourceTree = "<group>"; };
+		B563B6A12079E82A00B38AFF /* MIYUContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUContentCell.m; sourceTree = "<group>"; };
+		B563B6A22079E82A00B38AFF /* MIYUContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUContentCell.xib; sourceTree = "<group>"; };
+		B563B6A32079E82A00B38AFF /* MIYUContentDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUContentDetailCell.h; sourceTree = "<group>"; };
+		B563B6A42079E82A00B38AFF /* MIYUContentDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUContentDetailCell.m; sourceTree = "<group>"; };
+		B563B6A52079E82A00B38AFF /* MIYUContentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUContentDetailCell.xib; sourceTree = "<group>"; };
+		B57495B01FFCB54A00368343 /* Mi鱼.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mi鱼.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57495B31FFCB54A00368343 /* MIYUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUAppDelegate.h; sourceTree = "<group>"; };
 		B57495B41FFCB54A00368343 /* MIYUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUAppDelegate.m; sourceTree = "<group>"; };
 		B57495BA1FFCB54A00368343 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -259,9 +290,6 @@
 		B574962D1FFF475300368343 /* MIYUHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUHomeViewController.h; sourceTree = "<group>"; };
 		B574962E1FFF475300368343 /* MIYUHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUHomeViewController.m; sourceTree = "<group>"; };
 		B574962F1FFF475300368343 /* MIYUHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUHomeViewController.xib; sourceTree = "<group>"; };
-		B57496331FFF4C3100368343 /* MIYURecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYURecommendViewController.h; sourceTree = "<group>"; };
-		B57496341FFF4C3100368343 /* MIYURecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYURecommendViewController.m; sourceTree = "<group>"; };
-		B57496351FFF4C3100368343 /* MIYURecommendViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYURecommendViewController.xib; sourceTree = "<group>"; };
 		B57496391FFF50E200368343 /* MIYUBaseSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUBaseSwitchView.h; sourceTree = "<group>"; };
 		B574963A1FFF50E200368343 /* MIYUBaseSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUBaseSwitchView.m; sourceTree = "<group>"; };
 		B574963C1FFF5AA500368343 /* MIYU-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MIYU-Prefix.pch"; sourceTree = "<group>"; };
@@ -269,25 +297,7 @@
 		B583A4602063807A00444178 /* MIYUBaseSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUBaseSearchViewController.h; sourceTree = "<group>"; };
 		B583A4612063807A00444178 /* MIYUBaseSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUBaseSearchViewController.m; sourceTree = "<group>"; };
 		B583A4622063807A00444178 /* MIYUBaseSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUBaseSearchViewController.xib; sourceTree = "<group>"; };
-		B583A46820638CA500444178 /* MIYUContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUContentViewController.h; sourceTree = "<group>"; };
-		B583A46920638CA500444178 /* MIYUContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUContentViewController.m; sourceTree = "<group>"; };
-		B583A46A20638CA500444178 /* MIYUContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUContentViewController.xib; sourceTree = "<group>"; };
-		B583A46E20638CC900444178 /* MIYUContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUContentCell.h; sourceTree = "<group>"; };
-		B583A46F20638CC900444178 /* MIYUContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUContentCell.m; sourceTree = "<group>"; };
-		B583A47020638CC900444178 /* MIYUContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUContentCell.xib; sourceTree = "<group>"; };
-		B583A47320638D7900444178 /* MIYUContentDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUContentDetailCell.h; sourceTree = "<group>"; };
-		B583A47420638D7900444178 /* MIYUContentDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUContentDetailCell.m; sourceTree = "<group>"; };
-		B583A47520638D7900444178 /* MIYUContentDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUContentDetailCell.xib; sourceTree = "<group>"; };
-		B583A4782063977800444178 /* MIYUContentDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUContentDetailViewController.h; sourceTree = "<group>"; };
-		B583A4792063977800444178 /* MIYUContentDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUContentDetailViewController.m; sourceTree = "<group>"; };
-		B583A47A2063977800444178 /* MIYUContentDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUContentDetailViewController.xib; sourceTree = "<group>"; };
-		B583A4962064FA7D00444178 /* MIYUVideoShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVideoShowViewController.h; sourceTree = "<group>"; };
-		B583A4972064FA7D00444178 /* MIYUVideoShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoShowViewController.m; sourceTree = "<group>"; };
-		B583A4982064FA7D00444178 /* MIYUVideoShowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVideoShowViewController.xib; sourceTree = "<group>"; };
 		B58F8CD62068D498003117E4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		B58F8CD92068D9E4003117E4 /* MIYUVideoToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVideoToolView.h; sourceTree = "<group>"; };
-		B58F8CDA2068D9E4003117E4 /* MIYUVideoToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoToolView.m; sourceTree = "<group>"; };
-		B58F8CE12068DA57003117E4 /* MIYUVideoToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVideoToolView.xib; sourceTree = "<group>"; };
 		B5950F392058B49F00A25995 /* MIYUSquareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUSquareViewController.h; sourceTree = "<group>"; };
 		B5950F3A2058B49F00A25995 /* MIYUSquareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUSquareViewController.m; sourceTree = "<group>"; };
 		B5950F3B2058B49F00A25995 /* MIYUSquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUSquareViewController.xib; sourceTree = "<group>"; };
@@ -317,9 +327,25 @@
 		B5A4AB2F205FA660004202E1 /* MIYUGiftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUGiftView.h; sourceTree = "<group>"; };
 		B5A4AB30205FA660004202E1 /* MIYUGiftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUGiftView.m; sourceTree = "<group>"; };
 		B5C95D5420622AB600C0E8AD /* MIYUVoiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVoiceView.xib; sourceTree = "<group>"; };
-		B5D557C92069DE6B0020E375 /* MIYUBarrageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUBarrageViewController.h; sourceTree = "<group>"; };
-		B5D557CA2069DE6B0020E375 /* MIYUBarrageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUBarrageViewController.m; sourceTree = "<group>"; };
-		B5D557CB2069DE6B0020E375 /* MIYUBarrageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUBarrageViewController.xib; sourceTree = "<group>"; };
+		B5E3D9052079EBA80007983E /* MIYUVoiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVoiceViewController.h; sourceTree = "<group>"; };
+		B5E3D9062079EBA80007983E /* MIYUVoiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVoiceViewController.m; sourceTree = "<group>"; };
+		B5E3D9072079EBA80007983E /* MIYUVoiceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVoiceViewController.xib; sourceTree = "<group>"; };
+		B5E3D90B2079ECB60007983E /* MIYUVideoToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUVideoToolView.h; sourceTree = "<group>"; };
+		B5E3D90C2079ECB60007983E /* MIYUVideoToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoToolView.m; sourceTree = "<group>"; };
+		B5E3D90D2079ECB60007983E /* MIYUVideoToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MIYUVideoToolView.xib; sourceTree = "<group>"; };
+		B5E3D9112079ECE40007983E /* MIYUVoiceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVoiceCell.h; sourceTree = "<group>"; };
+		B5E3D9122079ECE40007983E /* MIYUVoiceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVoiceCell.m; sourceTree = "<group>"; };
+		B5E3D9132079ECE40007983E /* MIYUVoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVoiceCell.xib; sourceTree = "<group>"; };
+		B5E3D9162079F86A0007983E /* MIYUVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUVideoViewController.h; sourceTree = "<group>"; };
+		B5E3D9172079F86A0007983E /* MIYUVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVideoViewController.m; sourceTree = "<group>"; };
+		B5E3D9182079F86A0007983E /* MIYUVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUVideoViewController.xib; sourceTree = "<group>"; };
+		B5E3D91C207A11CE0007983E /* CCAnimationContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAnimationContainerView.h; sourceTree = "<group>"; };
+		B5E3D91D207A11CE0007983E /* CCAnimationContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationContainerView.m; sourceTree = "<group>"; };
+		B5E3D91E207A11CE0007983E /* CCAnimationLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAnimationLoadingView.h; sourceTree = "<group>"; };
+		B5E3D91F207A11CE0007983E /* CCAnimationLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationLoadingView.m; sourceTree = "<group>"; };
+		B5E3D922207A136B0007983E /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		B5E3D923207A136B0007983E /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		B5E3D924207A136B0007983E /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		B5E4E3C9204D0E2000012E02 /* MIYUPhoneLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUPhoneLoginViewController.h; sourceTree = "<group>"; };
 		B5E4E3CA204D0E2000012E02 /* MIYUPhoneLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUPhoneLoginViewController.m; sourceTree = "<group>"; };
 		B5E4E3CB204D0E2000012E02 /* MIYUPhoneLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUPhoneLoginViewController.xib; sourceTree = "<group>"; };
@@ -519,6 +545,58 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		B563B6772079E6D600B38AFF /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3D9052079EBA80007983E /* MIYUVoiceViewController.h */,
+				B5E3D9062079EBA80007983E /* MIYUVoiceViewController.m */,
+				B5E3D9072079EBA80007983E /* MIYUVoiceViewController.xib */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		B563B67E2079E6D600B38AFF /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3D9162079F86A0007983E /* MIYUVideoViewController.h */,
+				B5E3D9172079F86A0007983E /* MIYUVideoViewController.m */,
+				B5E3D9182079F86A0007983E /* MIYUVideoViewController.xib */,
+				B563B67F2079E6D600B38AFF /* MIYUBarrageViewController.h */,
+				B563B6802079E6D600B38AFF /* MIYUBarrageViewController.m */,
+				B563B6812079E6D600B38AFF /* MIYUBarrageViewController.xib */,
+				B563B6822079E6D600B38AFF /* MIYUVideoShowViewController.h */,
+				B563B6832079E6D600B38AFF /* MIYUVideoShowViewController.m */,
+				B563B6842079E6D600B38AFF /* MIYUVideoShowViewController.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		B563B68C2079E74400B38AFF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				B563B6902079E74400B38AFF /* MIYUContentViewController.h */,
+				B563B6912079E74400B38AFF /* MIYUContentViewController.m */,
+				B563B6922079E74400B38AFF /* MIYUContentViewController.xib */,
+				B563B68D2079E74400B38AFF /* MIYUContentDetailViewController.h */,
+				B563B68E2079E74400B38AFF /* MIYUContentDetailViewController.m */,
+				B563B68F2079E74400B38AFF /* MIYUContentDetailViewController.xib */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		B563B69F2079E82A00B38AFF /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				B563B6A02079E82A00B38AFF /* MIYUContentCell.h */,
+				B563B6A12079E82A00B38AFF /* MIYUContentCell.m */,
+				B563B6A22079E82A00B38AFF /* MIYUContentCell.xib */,
+				B563B6A32079E82A00B38AFF /* MIYUContentDetailCell.h */,
+				B563B6A42079E82A00B38AFF /* MIYUContentDetailCell.m */,
+				B563B6A52079E82A00B38AFF /* MIYUContentDetailCell.xib */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		B57495A71FFCB54A00368343 = {
 			isa = PBXGroup;
 			children = (
@@ -534,7 +612,7 @@
 		B57495B11FFCB54A00368343 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B57495B01FFCB54A00368343 /* MIYU.app */,
+				B57495B01FFCB54A00368343 /* Mi鱼.app */,
 				B57495C81FFCB54A00368343 /* MIYUTests.xctest */,
 				B57495D31FFCB54A00368343 /* MIYUUITests.xctest */,
 			);
@@ -632,6 +710,7 @@
 		B57495F51FFDF20600368343 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B5E3D91B207A11CE0007983E /* CardView */,
 				B50DDA26201EF8AF00D2EF32 /* YJFNavigationController */,
 				B574963C1FFF5AA500368343 /* MIYU-Prefix.pch */,
 				B574963D1FFF5B0000368343 /* MIYUDefineHeader.h */,
@@ -702,6 +781,9 @@
 		B574962B1FFF475300368343 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5E3D90A2079ECB60007983E /* Video */,
+				B5E3D90E2079ECB60007983E /* Voice */,
+				B563B69F2079E82A00B38AFF /* Content */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -709,72 +791,24 @@
 		B574962C1FFF475300368343 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B563B6972079E75000B38AFF /* MIYURecommendViewController.h */,
+				B563B6982079E75000B38AFF /* MIYURecommendViewController.m */,
+				B563B69B2079E75000B38AFF /* MIYURecommendViewController.xib */,
+				B563B6992079E75000B38AFF /* MIYURecommendViewController+UI.h */,
+				B563B69A2079E75000B38AFF /* MIYURecommendViewController+UI.m */,
 				B574962D1FFF475300368343 /* MIYUHomeViewController.h */,
 				B574962E1FFF475300368343 /* MIYUHomeViewController.m */,
 				B574962F1FFF475300368343 /* MIYUHomeViewController.xib */,
-				B532D269201730BD00DC06A1 /* MIYURecommendViewController+UI.h */,
-				B532D26A201730BD00DC06A1 /* MIYURecommendViewController+UI.m */,
-				B57496331FFF4C3100368343 /* MIYURecommendViewController.h */,
-				B57496341FFF4C3100368343 /* MIYURecommendViewController.m */,
-				B57496351FFF4C3100368343 /* MIYURecommendViewController.xib */,
+				B563B68C2079E74400B38AFF /* Image */,
+				B563B6772079E6D600B38AFF /* Voice */,
+				B563B67E2079E6D600B38AFF /* Video */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		B583A46720638CA500444178 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				B583A46820638CA500444178 /* MIYUContentViewController.h */,
-				B583A46920638CA500444178 /* MIYUContentViewController.m */,
-				B583A46A20638CA500444178 /* MIYUContentViewController.xib */,
-				B583A4782063977800444178 /* MIYUContentDetailViewController.h */,
-				B583A4792063977800444178 /* MIYUContentDetailViewController.m */,
-				B583A47A2063977800444178 /* MIYUContentDetailViewController.xib */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
-		B583A46D20638CC900444178 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				B583A46E20638CC900444178 /* MIYUContentCell.h */,
-				B583A46F20638CC900444178 /* MIYUContentCell.m */,
-				B583A47020638CC900444178 /* MIYUContentCell.xib */,
-				B583A47320638D7900444178 /* MIYUContentDetailCell.h */,
-				B583A47420638D7900444178 /* MIYUContentDetailCell.m */,
-				B583A47520638D7900444178 /* MIYUContentDetailCell.xib */,
-			);
-			path = Content;
-			sourceTree = "<group>";
-		};
-		B583A4952064FA5400444178 /* video */ = {
-			isa = PBXGroup;
-			children = (
-				B583A4962064FA7D00444178 /* MIYUVideoShowViewController.h */,
-				B583A4972064FA7D00444178 /* MIYUVideoShowViewController.m */,
-				B583A4982064FA7D00444178 /* MIYUVideoShowViewController.xib */,
-				B5D557C92069DE6B0020E375 /* MIYUBarrageViewController.h */,
-				B5D557CA2069DE6B0020E375 /* MIYUBarrageViewController.m */,
-				B5D557CB2069DE6B0020E375 /* MIYUBarrageViewController.xib */,
-			);
-			path = video;
-			sourceTree = "<group>";
-		};
-		B58F8CD82068D99F003117E4 /* video */ = {
-			isa = PBXGroup;
-			children = (
-				B58F8CD92068D9E4003117E4 /* MIYUVideoToolView.h */,
-				B58F8CDA2068D9E4003117E4 /* MIYUVideoToolView.m */,
-				B58F8CE12068DA57003117E4 /* MIYUVideoToolView.xib */,
-			);
-			path = video;
 			sourceTree = "<group>";
 		};
 		B5950F362058B49F00A25995 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B58F8CD82068D99F003117E4 /* video */,
-				B583A46D20638CC900444178 /* Content */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,8 +819,6 @@
 				B5950F392058B49F00A25995 /* MIYUSquareViewController.h */,
 				B5950F3A2058B49F00A25995 /* MIYUSquareViewController.m */,
 				B5950F3B2058B49F00A25995 /* MIYUSquareViewController.xib */,
-				B583A4952064FA5400444178 /* video */,
-				B583A46720638CA500444178 /* Content */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -879,6 +911,40 @@
 			path = ChatBox;
 			sourceTree = "<group>";
 		};
+		B5E3D90A2079ECB60007983E /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3D90B2079ECB60007983E /* MIYUVideoToolView.h */,
+				B5E3D90C2079ECB60007983E /* MIYUVideoToolView.m */,
+				B5E3D90D2079ECB60007983E /* MIYUVideoToolView.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		B5E3D90E2079ECB60007983E /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3D9112079ECE40007983E /* MIYUVoiceCell.h */,
+				B5E3D9122079ECE40007983E /* MIYUVoiceCell.m */,
+				B5E3D9132079ECE40007983E /* MIYUVoiceCell.xib */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		B5E3D91B207A11CE0007983E /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3D923207A136B0007983E /* CardView.h */,
+				B5E3D924207A136B0007983E /* CardView.m */,
+				B5E3D922207A136B0007983E /* CardView.xib */,
+				B5E3D91C207A11CE0007983E /* CCAnimationContainerView.h */,
+				B5E3D91D207A11CE0007983E /* CCAnimationContainerView.m */,
+				B5E3D91E207A11CE0007983E /* CCAnimationLoadingView.h */,
+				B5E3D91F207A11CE0007983E /* CCAnimationLoadingView.m */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 		B5E4E3C5204D0DD800012E02 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,7 +1005,7 @@
 			);
 			name = MIYU;
 			productName = MIYU;
-			productReference = B57495B01FFCB54A00368343 /* MIYU.app */;
+			productReference = B57495B01FFCB54A00368343 /* Mi鱼.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B57495C71FFCB54A00368343 /* MIYUTests */ = {
@@ -1029,36 +1095,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B583A47720638D7900444178 /* MIYUContentDetailCell.xib in Resources */,
 				B532D25A2016F77F00DC06A1 /* MIYUDynamicCell.xib in Resources */,
 				B598186A204E9594005299E3 /* MIYURectangleCell.xib in Resources */,
+				B5E3D925207A136B0007983E /* CardView.xib in Resources */,
+				B5E3D9152079ECE40007983E /* MIYUVoiceCell.xib in Resources */,
+				B5E3D91A2079F86A0007983E /* MIYUVideoViewController.xib in Resources */,
 				B583A4642063807A00444178 /* MIYUBaseSearchViewController.xib in Resources */,
 				B545B4C7205774250039B422 /* MIYUVideoSettingViewController.xib in Resources */,
 				B57496321FFF475300368343 /* MIYUHomeViewController.xib in Resources */,
 				B50DDA5C20204A5500D2EF32 /* MIYUConnectUsViewController.xib in Resources */,
-				B583A46C20638CA500444178 /* MIYUContentViewController.xib in Resources */,
-				B583A47C2063977800444178 /* MIYUContentDetailViewController.xib in Resources */,
 				B5950F72205A528400A25995 /* MIYUMessageViewController.xib in Resources */,
 				B5E4E3CD204D0E2000012E02 /* MIYUPhoneLoginViewController.xib in Resources */,
-				B57496371FFF4C3100368343 /* MIYURecommendViewController.xib in Resources */,
 				B50DDA5720204A1300D2EF32 /* MIYUPrivacySettingViewController.xib in Resources */,
 				B5950F77205A52C100A25995 /* MIYUChatListHeader.xib in Resources */,
-				B5D557CD2069DE6B0020E375 /* MIYUBarrageViewController.xib in Resources */,
+				B563B6892079E6D600B38AFF /* MIYUBarrageViewController.xib in Resources */,
 				B5950F422058B98B00A25995 /* MIYUVideoCell.xib in Resources */,
 				B532D25F2016FB7400DC06A1 /* MIYUTInfoCell.xib in Resources */,
 				B532D23B2015B12000DC06A1 /* MIYUMineInfoViewController.xib in Resources */,
 				B50DDA482020490D00D2EF32 /* MIYUSettingViewController.xib in Resources */,
 				B574961C1FFF1DC600368343 /* MIYUBaseViewController.xib in Resources */,
 				B57495C01FFCB54A00368343 /* LaunchScreen.storyboard in Resources */,
-				B583A47220638CC900444178 /* MIYUContentCell.xib in Resources */,
 				B5950F70205A528400A25995 /* MIYUConversationViewController.xib in Resources */,
 				B532D2B6201AD0E100DC06A1 /* MIYUShowSquareCell.xib in Resources */,
 				B5E4E3D2204D173A00012E02 /* MIYUVaidationViewController.xib in Resources */,
 				B50DDA3D20201BB500D2EF32 /* MIYUVirtualmoneyViewController.xib in Resources */,
 				B50DDA4D2020493A00D2EF32 /* MIYUAccountSettingViewController.xib in Resources */,
-				B58F8CE22068DA57003117E4 /* MIYUVideoToolView.xib in Resources */,
+				B563B69E2079E75000B38AFF /* MIYURecommendViewController.xib in Resources */,
 				B5E4E3D7204D1DA100012E02 /* MIYUBasicInfoViewController.xib in Resources */,
 				B50F2342201B7988007EA94B /* MIYUBaseSquareCollectionController.xib in Resources */,
+				B563B6942079E74400B38AFF /* MIYUContentDetailViewController.xib in Resources */,
 				B50DDA312020104800D2EF32 /* MIYUEditMineInfoViewController.xib in Resources */,
 				B5950F3D2058B49F00A25995 /* MIYUSquareViewController.xib in Resources */,
 				B53A217320158FF1000D7D3D /* MIYUMineViewController.xib in Resources */,
@@ -1067,14 +1132,19 @@
 				B50DDA4220201BE000D2EF32 /* MIYUVipViewController.xib in Resources */,
 				B53A217D20159061000D7D3D /* MIYUNormalCell.xib in Resources */,
 				B5C95D5520622AB600C0E8AD /* MIYUVoiceView.xib in Resources */,
+				B5E3D9092079EBA80007983E /* MIYUVoiceViewController.xib in Resources */,
+				B5E3D9102079ECB60007983E /* MIYUVideoToolView.xib in Resources */,
 				B50DDA6120204A9900D2EF32 /* MIYUFeedbackViewController.xib in Resources */,
 				B57496201FFF1DC600368343 /* MIYUTabBarController.xib in Resources */,
 				B532D2542016F50000DC06A1 /* MIYUInfoVideoViewController.xib in Resources */,
+				B563B6AB2079E82B00B38AFF /* MIYUContentCell.xib in Resources */,
+				B563B68B2079E6D600B38AFF /* MIYUVideoShowViewController.xib in Resources */,
 				B57495BD1FFCB54A00368343 /* Assets.xcassets in Resources */,
+				B563B6962079E74400B38AFF /* MIYUContentViewController.xib in Resources */,
 				B50DDA3820201B4400D2EF32 /* MIYUIncomeViewController.xib in Resources */,
 				B53A217820159035000D7D3D /* MIYUMineInfoCell.xib in Resources */,
 				B532D24F2016F4ED00DC06A1 /* MIYUInfoViewController.xib in Resources */,
-				B583A49A2064FA7D00444178 /* MIYUVideoShowViewController.xib in Resources */,
+				B563B6AD2079E82B00B38AFF /* MIYUContentDetailCell.xib in Resources */,
 				B532D2BB201AE06F00DC06A1 /* MIYUNormalReusableView.xib in Resources */,
 				B57495BB1FFCB54A00368343 /* Main.storyboard in Resources */,
 			);
@@ -1171,36 +1241,42 @@
 				B50DDA6020204A9900D2EF32 /* MIYUFeedbackViewController.m in Sources */,
 				B532D25E2016FB7400DC06A1 /* MIYUTInfoCell.m in Sources */,
 				B532D24E2016F4ED00DC06A1 /* MIYUInfoViewController.m in Sources */,
+				B563B68A2079E6D600B38AFF /* MIYUVideoShowViewController.m in Sources */,
 				B574963B1FFF50E200368343 /* MIYUBaseSwitchView.m in Sources */,
+				B563B6AC2079E82B00B38AFF /* MIYUContentDetailCell.m in Sources */,
 				B532D2412015B47200DC06A1 /* MIYUMineInfoSectionHeaderView.m in Sources */,
 				B532D2BA201AE06F00DC06A1 /* MIYUNormalReusableView.m in Sources */,
 				B5A4AB2E205FA654004202E1 /* MIYUFaceView.m in Sources */,
 				B50DDA4120201BE000D2EF32 /* MIYUVipViewController.m in Sources */,
 				B532D23A2015B12000DC06A1 /* MIYUMineInfoViewController.m in Sources */,
 				B50DDA2B201EF8B000D2EF32 /* UIViewController+YJFNavigationExtension.m in Sources */,
-				B583A47B2063977800444178 /* MIYUContentDetailViewController.m in Sources */,
-				B58F8CDB2068D9E4003117E4 /* MIYUVideoToolView.m in Sources */,
+				B563B69D2079E75000B38AFF /* MIYURecommendViewController+UI.m in Sources */,
+				B5E3D921207A11CE0007983E /* CCAnimationLoadingView.m in Sources */,
 				B53A217120158FF1000D7D3D /* MIYUMineViewController+UI.m in Sources */,
 				B50DDA2C201EF8B000D2EF32 /* YJFRootNavigationController.m in Sources */,
-				B583A47120638CC900444178 /* MIYUContentCell.m in Sources */,
 				B532D23E2015B14900DC06A1 /* MIYUMineInfoViewController+UI.m in Sources */,
 				B5950F3C2058B49F00A25995 /* MIYUSquareViewController.m in Sources */,
 				B50DDA66202066BE00D2EF32 /* UIImage+Extension.m in Sources */,
-				B583A47620638D7900444178 /* MIYUContentDetailCell.m in Sources */,
+				B563B69C2079E75000B38AFF /* MIYURecommendViewController.m in Sources */,
 				B50DDA4C2020493A00D2EF32 /* MIYUAccountSettingViewController.m in Sources */,
 				B57496241FFF1E4700368343 /* MIYURectangleCell.m in Sources */,
 				B5E4E3CC204D0E2000012E02 /* MIYUPhoneLoginViewController.m in Sources */,
+				B5E3D926207A136B0007983E /* CardView.m in Sources */,
 				B50F2341201B7988007EA94B /* MIYUBaseSquareCollectionController.m in Sources */,
 				B50DDA472020490D00D2EF32 /* MIYUSettingViewController.m in Sources */,
 				B57495C31FFCB54A00368343 /* main.m in Sources */,
 				B5E4E3D1204D173A00012E02 /* MIYUVaidationViewController.m in Sources */,
 				B5A4AB31205FA660004202E1 /* MIYUGiftView.m in Sources */,
+				B5E3D9142079ECE40007983E /* MIYUVoiceCell.m in Sources */,
 				B574961D1FFF1DC600368343 /* MIYUNavigationViewController.m in Sources */,
+				B5E3D9192079F86A0007983E /* MIYUVideoViewController.m in Sources */,
+				B563B6AA2079E82B00B38AFF /* MIYUContentCell.m in Sources */,
 				B532D2532016F50000DC06A1 /* MIYUInfoVideoViewController.m in Sources */,
 				B50DDA3720201B4400D2EF32 /* MIYUIncomeViewController.m in Sources */,
 				B53A217720159035000D7D3D /* MIYUMineInfoCell.m in Sources */,
-				B583A46B20638CA500444178 /* MIYUContentViewController.m in Sources */,
 				B50DDA302020104800D2EF32 /* MIYUEditMineInfoViewController.m in Sources */,
+				B5E3D90F2079ECB60007983E /* MIYUVideoToolView.m in Sources */,
+				B563B6932079E74400B38AFF /* MIYUContentDetailViewController.m in Sources */,
 				B5A4AB2B205FA648004202E1 /* MIYUVoiceView.m in Sources */,
 				B583A4632063807A00444178 /* MIYUBaseSearchViewController.m in Sources */,
 				B5A4AB24205F8094004202E1 /* MIYUChatBoxViewController.m in Sources */,
@@ -1208,13 +1284,13 @@
 				B545B4C6205774250039B422 /* MIYUVideoSettingViewController.m in Sources */,
 				B5950F452058C84400A25995 /* MIYUBaseCollectionViewCell.m in Sources */,
 				B5E4E3D6204D1DA100012E02 /* MIYUBasicInfoViewController.m in Sources */,
-				B532D26B201730BD00DC06A1 /* MIYURecommendViewController+UI.m in Sources */,
 				B57496311FFF475300368343 /* MIYUHomeViewController.m in Sources */,
 				B532D2342015AAE300DC06A1 /* MIYUMineInfoView.m in Sources */,
-				B5D557CC2069DE6B0020E375 /* MIYUBarrageViewController.m in Sources */,
+				B5E3D920207A11CE0007983E /* CCAnimationContainerView.m in Sources */,
+				B563B6882079E6D600B38AFF /* MIYUBarrageViewController.m in Sources */,
+				B5E3D9082079EBA80007983E /* MIYUVoiceViewController.m in Sources */,
 				B50DDA5B20204A5500D2EF32 /* MIYUConnectUsViewController.m in Sources */,
 				B53A217C20159061000D7D3D /* MIYUNormalCell.m in Sources */,
-				B57496361FFF4C3100368343 /* MIYURecommendViewController.m in Sources */,
 				B574961B1FFF1DC600368343 /* MIYUBaseViewController.m in Sources */,
 				B5950F71205A528400A25995 /* MIYUMessageViewController.m in Sources */,
 				B532D2592016F77F00DC06A1 /* MIYUDynamicCell.m in Sources */,
@@ -1228,7 +1304,7 @@
 				B5950F75205A52AC00A25995 /* MIYUChatListHeader.m in Sources */,
 				B5A4AB28205F80D9004202E1 /* MIYUChatBoxView.m in Sources */,
 				B50DDA5620204A1300D2EF32 /* MIYUPrivacySettingViewController.m in Sources */,
-				B583A4992064FA7D00444178 /* MIYUVideoShowViewController.m in Sources */,
+				B563B6952079E74400B38AFF /* MIYUContentViewController.m in Sources */,
 				B5950F6F205A528400A25995 /* MIYUConversationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1393,14 +1469,15 @@
 			baseConfigurationReference = 4B86EA529377FFACB9B10EBA /* Pods-MIYU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "MIYU/Tool/MIYU-Prefix.pch";
 				INFOPLIST_FILE = MIYU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mi鱼";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1410,14 +1487,15 @@
 			baseConfigurationReference = 9962C8F50B2629EDD65C3B43 /* Pods-MIYU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "MIYU/Tool/MIYU-Prefix.pch";
 				INFOPLIST_FILE = MIYU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mi鱼";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

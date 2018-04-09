@@ -8,6 +8,12 @@
 
 #import "MIYUContentCell.h"
 
+@interface MIYUContentCell()
+
+
+@end
+
+
 @implementation MIYUContentCell
 
 - (void)awakeFromNib {

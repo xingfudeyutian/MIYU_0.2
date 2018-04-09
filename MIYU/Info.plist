@@ -30,8 +30,6 @@
 	<string>如果不允许，你将无法发送语音消息给朋友</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>如果不允许，你将无法发送系统相册里的照片给朋友</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -7,22 +7,22 @@
 //
 
 #import "MIYUHomeViewController.h"
-#import "MIYURecommendViewController.h"
-#import "MIYUBaseSquareCollectionController.h"
 #import "MIYUBaseSwitchView.h"
 
+#import "MIYUContentViewController.h"
+#import "MIYUVoiceViewController.h"
+#import "MIYUVideoViewController.h"
 
-@interface MIYUHomeViewController ()<UIScrollViewDelegate>
+@interface MIYUHomeViewController ()
 
 @property (nonatomic, strong) MIYUBaseSwitchView * switchView;
+@property (nonatomic, strong) UIViewController * currentVC;
 @property (nonatomic, strong) NSArray * titles;
-@property (nonatomic, strong) NSArray * contentViewControllers;
-@property (nonatomic, strong) UIView * currentView;
+@property (nonatomic, strong) NSArray * vcs;
 
-@property (nonatomic, strong) UIScrollView * scrollTabView;
-@property (nonatomic, strong) UIPageControl * pageControl;
-
-
+@property (nonatomic, strong) MIYUContentViewController * imageVC;//图文动态
+@property (nonatomic, strong) MIYUVoiceViewController * voiceVC;//语音鱼塘
+@property (nonatomic, strong) MIYUVideoViewController * videoVC;//视频鱼塘
 
 @end
 
@@ -30,51 +30,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+     self.edgesForExtendedLayout = UIRectEdgeNone;
     @Weak(self)
     self.switchView.switchBlock = ^(NSInteger tag) {
         @Strong(self)
-        self.pageControl.currentPage = tag;
-        [self pageControlValueChange:self.pageControl];
+      [self changePageTo:tag];
     };
-    self.navigationItem.titleView = self.switchView;
-    [self.view addSubview:self.scrollTabView];
-    [self.view addSubview:self.pageControl];
+
+  [self.view addSubview:self.switchView];
+  [self.view addSubview:self.imageVC.view];
+  [self.view addSubview:self.voiceVC.view];
+  [self.view addSubview:self.videoVC.view];
+
+  [self addChildViewController:self.imageVC];
+  [self addChildViewController:self.voiceVC];
+  [self addChildViewController:self.videoVC];
+  [self changePageTo:0];
 
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterShow)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(searchShow)];
 
 }
-#pragma mark -- UIScrollViewDelegate
-//实现协议UIScrollViewDelegate的方法，必须实现的
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+
+- (void)changePageTo:(NSInteger)tag
 {
-    //获取当前视图的宽度
-    CGFloat pageWith = scrollView.frame.size.width;
-    //根据scrolView的左右滑动,对pageCotrol的当前指示器进行切换(设置currentPage)
-    int page = floor((scrollView.contentOffset.x - pageWith/2)/pageWith)+1;
-    //切换改变页码，小圆点
-    self.pageControl.currentPage = page;
-    self.switchView.currentPage = page;
-}
+  self.currentVC.view.hidden = YES;
+  self.currentVC = self.vcs[tag];
+  self.currentVC.view.hidden = NO;
 
-#pragma mark - UIPageControl
-- (void)pageControlValueChange:(UIPageControl *)pageControl {
-
-    NSLog(@"%ld", pageControl.currentPage);  // 根据当前页的不同的值, 可以实现不同的功能
-
-    [UIView animateWithDuration:0.3 animations:^{
-        //根据当前的页数。是的scrollView也滑动到对应的子视图。通过设置scrollView的contentOffSet来实现（改变contentOffSet实际上就是改变scrollView的bounds）
-        //得到当前的页数
-        int page = (int)pageControl.currentPage;
-        //根据当前页数来计算偏移量
-        //step1:得到scrollView
-//        UIScrollView *scrollView = (UIScrollView *)[self.view viewWithTag:1000];
-        //step2:设置scrollView的偏移量---当前的页数乘以屏幕宽度
-        [self.scrollTabView setContentOffset:CGPointMake(page*CGRectGetWidth(self.view.frame), 0) animated:YES];
-    } completion:nil];
+  self.navigationItem.leftBarButtonItem = tag == 2?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(filterShow)];
+  self.navigationItem.rightBarButtonItem = tag == 1?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"Camera_RB"] style:UIBarButtonItemStylePlain target:self action:@selector(Camera_RBShow)];
 }
 
 - (void)filterShow
@@ -84,99 +68,74 @@
 
 }
 
-- (void)searchShow
+- (void)Camera_RBShow
 {
 
 
 }
 
-
 #pragma mark - Lazy loading
-
 
 -(NSArray *)titles
 {
     if (_titles==nil)
     {
-        _titles = @[@"推荐",@"新人",@"附近"];
+        _titles = @[@"图文动态",@"语音鱼塘",@"视频鱼塘"];
     }
     return _titles;
 }
 
--(UIScrollView *)scrollTabView
+-(NSArray *)vcs
 {
-    if (_scrollTabView == nil)
-    {
-        _scrollTabView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0,FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT)];
-        _scrollTabView.pagingEnabled = YES;
-        _scrollTabView.contentSize = CGSizeMake(FUll_VIEW_WIDTH*self.contentViewControllers.count, FUll_VIEW_HEIGHT);
-        _scrollTabView.bouncesZoom = NO;
-        _scrollTabView.delegate = self;
-        _scrollTabView.bounces = NO;
-        _scrollTabView.showsHorizontalScrollIndicator = NO;//控制是否显示水平方向的滚动条
-        _scrollTabView.showsVerticalScrollIndicator  = NO;     //控制是否显示垂直方向的滚动条
-        _scrollTabView.alwaysBounceVertical   = NO;        //控制垂直方向遇到边框是否反弹
-        _scrollTabView.alwaysBounceHorizontal = NO;      //控制水平方向遇到边框是否反弹
-    }
-    return _scrollTabView;
+  if (_vcs == nil) {
+    _vcs = @[self.imageVC,self.voiceVC,self.videoVC];
+  }
+  return _vcs;
 }
-
 
 -(MIYUBaseSwitchView *)switchView
 {
     if (_switchView == nil)
     {
         _switchView = [[MIYUBaseSwitchView alloc] init];
-        _switchView.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH-130, TabbarHeight);
+        _switchView.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, TabbarHeight);
         _switchView.titles = self.titles;
-//        _switchView.backgroundColor = [UIColor whiteColor];
-        for (int i = 0; i < self.contentViewControllers.count; i++)
-        {
-            UIViewController * vc = self.contentViewControllers[i];
-            vc.view.frame = CGRectMake(i*FUll_VIEW_WIDTH, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
-            [self.scrollTabView addSubview:vc.view];
-        }
+        _switchView.backgroundColor = [UIColor whiteColor];
+
     }
     return _switchView;
 }
-
--(UIPageControl *)pageControl
+-(MIYUContentViewController *)imageVC
 {
-    if (_pageControl == nil)
-    {
-        _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
-        _pageControl.currentPage = 0;
-        _pageControl.numberOfPages = self.contentViewControllers.count;
-        [_pageControl addTarget:self action:@selector(pageControlValueChange:) forControlEvents:UIControlEventValueChanged];
-//        _pageControl.backgroundColor = [UIColor redColor];
-        _pageControl.hidden = YES;
-    }
-    return _pageControl;
+  if (_imageVC == nil)
+  {
+    _imageVC = [[MIYUContentViewController alloc] init];
+    _imageVC.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
+    _imageVC.view.hidden = YES;
+  }
+  return _imageVC;
+}
+-(MIYUVoiceViewController *)voiceVC
+{
+  if (_voiceVC == nil) {
+    _voiceVC = [[MIYUVoiceViewController alloc] init];
+    _voiceVC.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
+    _videoVC.view.backgroundColor = [UIColor grayColor];
+    _voiceVC.view.hidden = YES;
+  }
+  return _voiceVC;
 }
 
--(NSArray *)contentViewControllers
+-(MIYUVideoViewController *)videoVC
 {
-    if (_contentViewControllers == nil)
-    {
-
-        MIYURecommendViewController * recommendVC =  [[MIYURecommendViewController  alloc] init];
-        recommendVC.superViewController = self;
-        MIYUBaseSquareCollectionController * newVC = [[MIYUBaseSquareCollectionController alloc] init];
-        newVC.parentVC = self;
-        MIYUBaseSquareCollectionController * squareVC = [[MIYUBaseSquareCollectionController alloc] init];
-        squareVC.parentVC = self;
-        _contentViewControllers = @[
-                            recommendVC,
-                             newVC,
-                             squareVC,
-                             ];
-    }
-    return _contentViewControllers;
+  if (_videoVC == nil) {
+    _videoVC = [[MIYUVideoViewController alloc] init];
+    _videoVC.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
+    _videoVC.view.hidden = YES;
+    _videoVC.view.backgroundColor = [UIColor yellowColor];
+  }
+  return _videoVC;
 }
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 

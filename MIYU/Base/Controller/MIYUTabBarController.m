@@ -31,7 +31,7 @@
 {
     /** 首页 */
     MIYUHomeViewController *homeVC = [[MIYUHomeViewController alloc] init];
-    [self setupOneChildViewController:homeVC Title:@"首页" normalImg:IMAGE_Original(@"Icons_Home5") selImg:IMAGE_Original(@"Icons_Home1")];
+    [self setupOneChildViewController:homeVC Title:@"鱼塘" normalImg:IMAGE_Original(@"Icons_Home5") selImg:IMAGE_Original(@"Icons_Home1")];
 
     /** 广场 */
     MIYUSquareViewController *squareVC = [[MIYUSquareViewController alloc] init];
@@ -39,7 +39,7 @@
 //    MIYUBaseSquareCollectionController *squareVC = [[MIYUBaseSquareCollectionController alloc] init];
 
 
-    [self setupOneChildViewController:squareVC Title:@"广场" normalImg:IMAGE_Original(@"Icons_Home2") selImg:IMAGE_Original(@"Icons_Home7")];
+    [self setupOneChildViewController:squareVC Title:@"蜜友" normalImg:IMAGE_Original(@"Icons_Home2") selImg:IMAGE_Original(@"Icons_Home7")];
 
 
 

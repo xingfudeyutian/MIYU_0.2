@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B57495AF1FFCB54A00368343"
-               BuildableName = "MIYU.app"
+               BuildableName = "Mi&#x9c7c;.app"
                BlueprintName = "MIYU"
                ReferencedContainer = "container:MIYU.xcodeproj">
             </BuildableReference>
@@ -49,7 +49,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B57495AF1FFCB54A00368343"
-            BuildableName = "MIYU.app"
+            BuildableName = "Mi&#x9c7c;.app"
             BlueprintName = "MIYU"
             ReferencedContainer = "container:MIYU.xcodeproj">
          </BuildableReference>
@@ -73,7 +73,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B57495AF1FFCB54A00368343"
-            BuildableName = "MIYU.app"
+            BuildableName = "Mi&#x9c7c;.app"
             BlueprintName = "MIYU"
             ReferencedContainer = "container:MIYU.xcodeproj">
          </BuildableReference>
@@ -92,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B57495AF1FFCB54A00368343"
-            BuildableName = "MIYU.app"
+            BuildableName = "Mi&#x9c7c;.app"
             BlueprintName = "MIYU"
             ReferencedContainer = "container:MIYU.xcodeproj">
          </BuildableReference>
