@@ -23,7 +23,7 @@
 }
 -(void)setupSubViews
 {
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -47,7 +47,6 @@
    *  添加两个键盘回收通知
    */
   // 即将隐藏
-
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
   // 键盘的Frame值即将发生变化的时候创建的额监听
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
@@ -112,8 +111,6 @@
     _playerModel.videoURL         = self.videoURL;
     _playerModel.placeholderImage = [UIImage imageNamed:@"loading_bgView1"];
     _playerModel.fatherView       = self.playerFatherView;
-//            _playerModel.resolutionDic = @{@"高清" : self.videoURL.absoluteString,
-    //                                       @"标清" : self.videoURL.absoluteString};
   }
   return _playerModel;
 }
@@ -121,22 +118,15 @@
 - (ZFPlayerView *)playerView {
   if (!_playerView) {
     _playerView = [[ZFPlayerView alloc] init];
-
-    /*****************************************************************************************
-     *   // 指定控制层(可自定义)
-     *   // ZFPlayerControlView *controlView = [[ZFPlayerControlView alloc] init];
-     *   // 设置控制层和播放模型
-     *   // 控制层传nil，默认使用ZFPlayerControlView(如自定义可传自定义的控制层)
-     *   // 等效于 [_playerView playerModel:self.playerModel];
-     ******************************************************************************************/
     [self.playerControlView addSubview:self.videoTool];
-    
     [self.playerControlView addSubview:self.barrageController.view];
     [self addChildViewController:self.barrageController];
+
+
     [_playerView playerControlView:self.playerControlView playerModel:self.playerModel];
 
     // 设置代理
-    _playerView.delegate = self;
+//    _playerView.delegate = self;
 
     //（可选设置）可以设置视频的填充模式，内部设置默认（ZFPlayerLayerGravityResizeAspect：等比例填充，直到一个维度到达区域边界）
      _playerView.playerLayerGravity = ZFPlayerLayerGravityResizeAspectFill;

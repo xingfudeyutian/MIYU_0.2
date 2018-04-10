@@ -60,7 +60,7 @@
     }else
     {
       width = (FUll_VIEW_WIDTH - 3*margin)/2;
-      height = 225*width/172;
+      height = 8*width/5;
     }
     return CGSizeMake(width, height);
 }
