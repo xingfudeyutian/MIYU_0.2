@@ -9,10 +9,11 @@
 #import "MIYUContentViewController.h"
 #import "MIYUContentDetailViewController.h"
 #import "MIYUContentCell.h"
-
+#import "MIYUADScrollView.h"
 
 @interface MIYUContentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic ,strong) MIYUADScrollView * adScrollView;
 
 @end
 
@@ -20,9 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  self.tableView.tableHeaderView = [UIView new];
-  self.tableView.tableHeaderView.backgroundColor = [UIColor blackColor];
+
+  self.tableView.tableHeaderView = self.adScrollView;
   self.tableView.tableHeaderView.height = 150;
+  self.adScrollView.ads = [NSArray arrayWithObjects:@"",@"",@"",@"", nil];
+
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
@@ -41,6 +44,16 @@
   MIYUContentDetailViewController * contentDetail = [[MIYUContentDetailViewController alloc] init];
   contentDetail.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:contentDetail animated:YES];
+}
+
+- (MIYUADScrollView *)adScrollView
+{
+  if (_adScrollView == nil)
+  {
+    _adScrollView = [[MIYUADScrollView alloc] initWithFrame:CGRectMake(0, 0, FUll_VIEW_WIDTH, 150)];
+
+  }
+  return _adScrollView;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
