@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的收益";
+  self.navigationController.navigationBar.tintColor = [UIColor blackColor] ;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"明细" style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+}
+
+- (void)rightAction
+{
+
 }
 
 - (void)didReceiveMemoryWarning {

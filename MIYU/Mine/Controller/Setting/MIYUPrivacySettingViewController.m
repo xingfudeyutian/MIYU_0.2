@@ -7,6 +7,8 @@
 //
 
 #import "MIYUPrivacySettingViewController.h"
+#import "MIYUBlacklistViewController.h"
+
 
 @interface MIYUPrivacySettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -17,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  self.title = @"隐私通知设置";
 }
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate
@@ -48,7 +51,7 @@
   UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, FUll_VIEW_WIDTH-40, 50)];
   label.numberOfLines = 0;
   label.backgroundColor = [UIColor clearColor];
-  label.text = section?nil:@"请在iPhone的“设置”-“通用”功能中，找到应用程序“同伴”中更改";
+  label.text = section?nil:@"如果你要关闭或者开启消息通知，晴子啊系统中操作";
   label.textColor = [UIColor lightGrayColor];
   label.font = [UIFont systemFontOfSize:10];
   [view addSubview:label];
@@ -66,33 +69,34 @@
 
 
 
-  UISwitch * switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
-  switchBtn.onTintColor = COLOR_YELLOW;
-  cell.accessoryView = indexPath.section==1?switchBtn:nil;
-
+//  UISwitch * switchBtn = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+//  switchBtn.onTintColor = COLOR_YELLOW;
+//  cell.accessoryView = indexPath.section==1?switchBtn:nil;
+//
   cell.detailTextLabel.font = [UIFont systemFontOfSize:13];
 
 
-  if (indexPath.section != 1 )
-  {
-    if ((indexPath.section ==4) && (indexPath.row == 1)) {
+//  if (indexPath.section != 1 )
+//  {
+    if ((indexPath.section ==2) && (indexPath.row == 1)) {
       cell.accessoryType = UITableViewCellAccessoryNone;
     }
     else
     {
       cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-  }
+//  }
 
   NSString * detail;
   if (indexPath.section == 0)
   {
     detail = @"已开启";
   }
-  else if (indexPath.section == 2)
-  {
-    detail = @"全部";
-  }else if(indexPath.section == 4&&indexPath.row == 1)
+//  else if (indexPath.section == 2)
+//  {
+//    detail = @"全部";
+//  }
+  else if(indexPath.section == 2&&indexPath.row == 1)
   {
     detail = @"0KB";
   }
@@ -101,17 +105,21 @@
   return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  if (indexPath.section == 1) {
+    MIYUBlacklistViewController * blackList = [[MIYUBlacklistViewController alloc] init];
+    [self.navigationController pushViewController:blackList animated:YES];
+  }
+}
+
 -(NSArray *)items
 {
   if (_items == nil)
   {
     _items = @[
                @[@"接受消息通知"],
-               @[@"来电提醒",
-                 @"鱼塘直播提醒",
-                 @"允许别人保存我发的照片"],
-               @[@"谁可以给我发消息"],
-               @[@"黑名单"],
+               @[@"我屏蔽的人"],
                @[@"清空聊天记录",@"清空图片视频缓存"],
                ];
   }

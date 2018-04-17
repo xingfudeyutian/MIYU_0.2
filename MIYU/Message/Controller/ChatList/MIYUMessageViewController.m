@@ -29,9 +29,7 @@
   [self setCollectionConversationType:@[@(ConversationType_DISCUSSION),
                                         @(ConversationType_GROUP)]];
 
-
-
-
+  self.emptyConversationView = [UIView new];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:IMAGE_Original(@"microphone") style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
 
   UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, FUll_VIEW_WIDTH, 200)];

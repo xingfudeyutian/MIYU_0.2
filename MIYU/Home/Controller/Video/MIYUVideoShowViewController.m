@@ -13,7 +13,7 @@
 #import "MIYUBarrageViewController.h"
 
 
-#define VideoToolHeight 70
+#define VideoToolHeight 60
 
 @interface MIYUVideoShowViewController ()<ZFPlayerDelegate,UIGestureRecognizerDelegate>
 
@@ -150,7 +150,7 @@
   if (_barrageController == nil)
   {
     _barrageController = [[MIYUBarrageViewController alloc] init];
-    [_barrageController.view setFrame:CGRectMake(0, FUll_VIEW_HEIGHT/3, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT/3)];
+    [_barrageController.view setFrame:CGRectMake(0, FUll_VIEW_HEIGHT/4, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT/2)];
   }
   return _barrageController;
 }
@@ -159,14 +159,13 @@
   if (_videoTool == nil) {
     _videoTool = [MIYUVideoToolView viewFromXIB];
     _videoTool.frame = CGRectMake(0, FUll_VIEW_HEIGHT-VideoToolHeight, FUll_VIEW_WIDTH, VideoToolHeight);
- 
   }
   return _videoTool;
 }
 
 - (IBAction)backClick:(UIButton *)sender {
-
-  [self.navigationController popViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:nil];
+//  [self.navigationController popViewControllerAnimated:YES];
 }
 // 返回值要必须为NO
 - (BOOL)shouldAutorotate {

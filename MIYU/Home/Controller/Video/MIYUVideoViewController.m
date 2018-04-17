@@ -93,7 +93,9 @@ static NSString * ITEM_RUID_2 = @"Item_RUID2";
 
   MIYUVideoShowViewController * videoShowVC = [[MIYUVideoShowViewController alloc] init];
   videoShowVC.hidesBottomBarWhenPushed = YES;
-  [self.navigationController pushViewController:videoShowVC animated:YES];
+  videoShowVC.modalTransitionStyle = UIModalPresentationFormSheet;
+  [self presentViewController:videoShowVC animated:YES completion:nil];
+//  [self.navigationController pushViewController:videoShowVC animated:YES];
 
 }
 

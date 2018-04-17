@@ -35,23 +35,8 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bu-mb-UqL">
-                    <rect key="frame" x="40" y="375.5" width="295" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.8649975061416626" blue="0.0090984450653195381" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="9F8-sX-x6S"/>
-                    </constraints>
-                    <state key="normal" title="兑换鱼饵">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="25"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXJ-bR-0cZ">
-                    <rect key="frame" x="40" y="445.5" width="295" height="50"/>
+                    <rect key="frame" x="20" y="445.5" width="335" height="50"/>
                     <color key="backgroundColor" red="0.99880343675613403" green="0.28214246034622192" blue="0.28454369306564331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="OT9-gA-bQW"/>
@@ -65,10 +50,22 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-FD-qUs">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-FD-qUs">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="175.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                    <nil key="textColor"/>
+                    <attributedString key="attributedText">
+                        <fragment content="1000.00">
+                            <attributes>
+                                <font key="NSFont" size="48" name="SimHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                        <fragment content=" 我的收益">
+                            <attributes>
+                                <font key="NSFont" size="20" name="SimHei"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgB-CC-5RH">
@@ -83,10 +80,15 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agT-iB-hSD">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="agT-iB-hSD">
                             <rect key="frame" x="20" y="40" width="355" height="64"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <attributedString key="attributedText">
+                                <fragment content="0">
+                                    <attributes>
+                                        <font key="NSFont" size="20" name="SimHei"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeJ-9r-9Id">
@@ -96,13 +98,31 @@
                                 <constraint firstAttribute="height" constant="1" id="HRM-Op-oiF"/>
                             </constraints>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可提取金额：0.00元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdI-YK-mdF">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdI-YK-mdF">
                             <rect key="frame" x="20" y="115" width="345" height="15"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="15" id="7Ja-mM-PUJ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <attributedString key="attributedText">
+                                <fragment content="可提取金额：">
+                                    <attributes>
+                                        <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="0.00">
+                                    <attributes>
+                                        <color key="NSColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="元">
+                                    <attributes>
+                                        <color key="NSColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -127,25 +147,23 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="eXJ-bR-0cZ" firstAttribute="trailing" secondItem="3bu-mb-UqL" secondAttribute="trailing" id="2X1-TQ-bYT"/>
-                <constraint firstItem="eXJ-bR-0cZ" firstAttribute="leading" secondItem="3bu-mb-UqL" secondAttribute="leading" id="42k-Q1-zIw"/>
                 <constraint firstItem="kgB-CC-5RH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="8QR-3B-pts"/>
                 <constraint firstItem="pUb-GQ-d0i" firstAttribute="top" secondItem="kgB-CC-5RH" secondAttribute="bottom" id="9Zi-Ct-JdT"/>
                 <constraint firstItem="L1b-pg-j4G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="D1a-eO-pNb"/>
                 <constraint firstAttribute="trailing" secondItem="pUb-GQ-d0i" secondAttribute="trailing" id="GVn-4s-UGA"/>
-                <constraint firstItem="eXJ-bR-0cZ" firstAttribute="top" secondItem="3bu-mb-UqL" secondAttribute="bottom" constant="20" id="LQy-uW-ZEa"/>
+                <constraint firstItem="eXJ-bR-0cZ" firstAttribute="top" secondItem="pUb-GQ-d0i" secondAttribute="bottom" constant="80" id="K4h-qS-bf5"/>
+                <constraint firstAttribute="trailing" secondItem="eXJ-bR-0cZ" secondAttribute="trailing" constant="20" id="M2w-9L-qS9"/>
                 <constraint firstItem="kgB-CC-5RH" firstAttribute="top" secondItem="L1b-pg-j4G" secondAttribute="bottom" id="QVm-03-yKU"/>
                 <constraint firstAttribute="trailing" secondItem="L1b-pg-j4G" secondAttribute="trailing" id="SXW-Jc-zhI"/>
                 <constraint firstItem="kgB-CC-5RH" firstAttribute="top" secondItem="kOx-FD-qUs" secondAttribute="bottom" id="bA3-Kf-QG6"/>
+                <constraint firstItem="eXJ-bR-0cZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="bxr-yr-f9J"/>
                 <constraint firstAttribute="trailing" secondItem="kgB-CC-5RH" secondAttribute="trailing" id="c0o-e6-9be"/>
-                <constraint firstItem="3bu-mb-UqL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="cQi-ht-fkK"/>
                 <constraint firstItem="kOx-FD-qUs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dxU-Ex-qrC"/>
-                <constraint firstItem="3bu-mb-UqL" firstAttribute="top" secondItem="pUb-GQ-d0i" secondAttribute="bottom" constant="10" id="eZf-G6-kjp"/>
                 <constraint firstItem="kOx-FD-qUs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eeY-eB-vET"/>
                 <constraint firstItem="pUb-GQ-d0i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="nir-nY-gK9"/>
                 <constraint firstAttribute="trailing" secondItem="kOx-FD-qUs" secondAttribute="trailing" id="rDT-Pw-f3E"/>
-                <constraint firstAttribute="trailing" secondItem="3bu-mb-UqL" secondAttribute="trailing" constant="40" id="rLK-jm-3PR"/>
                 <constraint firstItem="L1b-pg-j4G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="x3P-hg-1uQ"/>
+                <constraint firstItem="eXJ-bR-0cZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xVj-1P-FL7"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>

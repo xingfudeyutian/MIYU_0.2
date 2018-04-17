@@ -29,7 +29,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return 1;
+  return [self.items[section] count];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -37,7 +37,7 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-  return 50;
+  return 30;
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -48,7 +48,7 @@
   UIView * view = [UIView new];
   UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, FUll_VIEW_WIDTH-40, 50)];
   label.numberOfLines = 0;
-  label.text = section?@"女生录制打招呼视频开启收费功能，收费上限随等级增加，男生等级达到Lv20可开启":@"若不喜欢陌生人打扰请关闭视频功能";
+  label.text = section?@"":@"若不喜欢陌生人打扰请关闭请求功能";
   label.textColor = [UIColor lightGrayColor];
   label.font = [UIFont systemFontOfSize:10];
   [view addSubview:label];
@@ -61,7 +61,7 @@
   {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
   }
-  cell.textLabel.text = self.items[indexPath.section];
+  cell.textLabel.text = self.items[indexPath.section][indexPath.row];
   cell.textLabel.font = [UIFont systemFontOfSize:13];
   cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
@@ -81,8 +81,8 @@
   if (_items == nil)
   {
     _items = @[
-               @"允许陌生人发送视频请求",
-               @"视频收费",
+               @[@"允许陌生人发送视频请求",@"允许陌生人发送语音请求"],
+               @[@"视频收费"]
                ];
   }
   return _items;
