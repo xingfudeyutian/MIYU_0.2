@@ -47,6 +47,9 @@
 - (YYLabel *)miaxedImageAndTextLabel {
     if (!_miaxedImageAndTextLabel) {
         _miaxedImageAndTextLabel = [[YYLabel alloc] init];
+        _miaxedImageAndTextLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        _miaxedImageAndTextLabel.layer.cornerRadius = 12.5;
+        _miaxedImageAndTextLabel.textAlignment = NSTextAlignmentCenter;
     }
     
     return _miaxedImageAndTextLabel;

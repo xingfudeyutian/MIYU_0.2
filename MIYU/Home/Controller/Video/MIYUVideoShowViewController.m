@@ -20,7 +20,8 @@
 @property (nonatomic, assign) CGRect keyboardFrame;
 /** 视频URL */
 @property (nonatomic, strong) NSURL *videoURL;
-
+@property (weak, nonatomic) IBOutlet UIButton *barrageBtn;
+@property (nonatomic) BOOL   currentBarrageState;
 @property (weak, nonatomic) IBOutlet UIView *playerFatherView;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIView *playerControlView;
@@ -118,11 +119,9 @@
 - (ZFPlayerView *)playerView {
   if (!_playerView) {
     _playerView = [[ZFPlayerView alloc] init];
-    [self.playerControlView addSubview:self.videoTool];
     [self.playerControlView addSubview:self.barrageController.view];
     [self addChildViewController:self.barrageController];
-
-
+    [self.playerControlView addSubview:self.videoTool];
     [_playerView playerControlView:self.playerControlView playerModel:self.playerModel];
 
     // 设置代理
@@ -151,6 +150,8 @@
   {
     _barrageController = [[MIYUBarrageViewController alloc] init];
     [_barrageController.view setFrame:CGRectMake(0, FUll_VIEW_HEIGHT/4, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT/2)];
+    [_barrageController startBarrage];
+    self.currentBarrageState = YES;
   }
   return _barrageController;
 }
@@ -163,9 +164,37 @@
   return _videoTool;
 }
 
-- (IBAction)backClick:(UIButton *)sender {
-  [self dismissViewControllerAnimated:YES completion:nil];
-//  [self.navigationController popViewControllerAnimated:YES];
+- (IBAction)navigationClick:(UIButton *)sender {
+  UIButton * btn = (UIButton *)sender;
+  switch (btn.tag)
+  {
+    case 0:
+    {
+      //返回
+      [self dismissViewControllerAnimated:YES completion:nil];
+    }
+      break;
+    case 1:
+    {
+      //弹幕开关
+      self.currentBarrageState  = !self.currentBarrageState;
+      NSString * imageName = self.currentBarrageState ? @"barrage_on":@"barrage_off";
+      [self.barrageBtn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+      self.currentBarrageState ? [self.barrageController startBarrage] : [self.barrageController stopBarrage];
+    }
+
+      break;
+    case 2:
+    {
+      //更多
+
+    }
+
+      break;
+    default:
+      break;
+  }
+
 }
 // 返回值要必须为NO
 - (BOOL)shouldAutorotate {

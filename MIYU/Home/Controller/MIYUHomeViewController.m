@@ -37,7 +37,7 @@
       [self changePageTo:tag];
     };
 
-  [self.view addSubview:self.switchView];
+   [self.view addSubview:self.switchView];
   [self.view addSubview:self.imageVC.view];
   [self.view addSubview:self.voiceVC.view];
   [self.view addSubview:self.videoVC.view];
@@ -57,13 +57,12 @@
   self.currentVC = self.vcs[tag];
   self.currentVC.view.hidden = NO;
 
-  self.navigationItem.leftBarButtonItem = tag == 2?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(filterShow)];
+  self.navigationItem.leftBarButtonItem = tag == 2?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(searchShow)];
   self.navigationItem.rightBarButtonItem = tag == 1?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"Camera_RB"] style:UIBarButtonItemStylePlain target:self action:@selector(Camera_RBShow)];
 }
 
-- (void)filterShow
+- (void)searchShow
 {
-
 
 
 }

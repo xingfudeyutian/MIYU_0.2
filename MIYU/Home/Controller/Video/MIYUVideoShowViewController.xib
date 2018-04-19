@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUVideoShowViewController">
             <connections>
                 <outlet property="backBtn" destination="4Tk-ST-kOq" id="kto-a5-tmi"/>
+                <outlet property="barrageBtn" destination="NTb-YC-wdU" id="ohF-Up-GqP"/>
                 <outlet property="playerControlView" destination="ToZ-LJ-ksz" id="fYH-Ga-lb4"/>
                 <outlet property="playerFatherView" destination="RtE-ze-DnP" id="6bq-Ku-3dC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -44,22 +45,22 @@
                                     </constraints>
                                     <state key="normal" image="video_close"/>
                                     <connections>
-                                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="B8P-Ue-ilg"/>
+                                        <action selector="navigationClick:" destination="-1" eventType="touchUpInside" id="J8n-JC-pbv"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTb-YC-wdU">
+                                <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTb-YC-wdU">
                                     <rect key="frame" x="317" y="41" width="26" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="26" id="2Nd-Qs-sgk"/>
                                         <constraint firstAttribute="width" secondItem="NTb-YC-wdU" secondAttribute="height" multiplier="1:1" id="kt7-P9-yRm"/>
                                         <constraint firstAttribute="height" constant="26" id="qTG-AL-j8D"/>
                                     </constraints>
-                                    <state key="normal" image="barrage_off"/>
+                                    <state key="normal" image="barrage_on"/>
                                     <connections>
-                                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="P9a-NX-Yap"/>
+                                        <action selector="navigationClick:" destination="-1" eventType="touchUpInside" id="8PZ-Tn-YYC"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zz-32-7ug">
+                                <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zz-32-7ug">
                                     <rect key="frame" x="373" y="41" width="26" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="26" id="5YD-CB-SCj"/>
@@ -68,7 +69,7 @@
                                     </constraints>
                                     <state key="normal" image="video_more"/>
                                     <connections>
-                                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="GxU-QF-YWa"/>
+                                        <action selector="navigationClick:" destination="-1" eventType="touchUpInside" id="8A9-ww-UNP"/>
                                     </connections>
                                 </button>
                             </subviews>
@@ -118,7 +119,7 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="barrage_off" width="26" height="26"/>
+        <image name="barrage_on" width="26" height="26"/>
         <image name="video_close" width="29" height="29"/>
         <image name="video_more" width="26" height="26"/>
     </resources>

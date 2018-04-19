@@ -9,6 +9,7 @@
 #import "MIYUSquareViewController.h"
 #import "MIYUBaseSwitchView.h"
 #import "MIYUBaseSquareCollectionController.h"
+#import "MIYUFilterViewController.h"
 
 @interface MIYUSquareViewController ()
 
@@ -18,6 +19,8 @@
 @property (nonatomic, strong) NSArray * titles;
 
 @property (nonatomic, strong) MIYUBaseSquareCollectionController * squareVC;
+@property (nonatomic, strong) MIYUFilterViewController * filterVC;
+@property (nonatomic) BOOL currentFilterState;
 
 @end
 
@@ -44,7 +47,7 @@
 //
 //  self.navigationItem.titleView = titleView;
    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterShow)];
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(CameraShow)];
+   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(CameraShow)];
 
 
   @Weak(self)
@@ -57,16 +60,30 @@
   [self.view addSubview:self.squareVC.view];
   [self addChildViewController:self.squareVC];
 
-}
+//  [self.view addSubview:self.filterVC.view];
+//  [self addChildViewController:self.filterVC];
 
+}
 
 -(void)filterShow
 {
-
+  self.currentFilterState = !self.currentFilterState;
+  self.currentFilterState ? [self addFilter]:[self removeFilter];
 }
 -(void)CameraShow
 {
 
+}
+
+- (void)addFilter
+{
+  [[UIApplication sharedApplication].keyWindow addSubview:self.filterVC.view];
+
+
+}
+- (void)removeFilter
+{
+  [self.filterVC.view removeFromSuperview];
 }
 
 #pragma mark - Lazy loading
@@ -99,6 +116,15 @@
     _switchView.titles = self.titles;
   }
   return _switchView;
+}
+
+-(MIYUFilterViewController *)filterVC
+{
+  if (_filterVC ==nil) {
+    _filterVC = [[MIYUFilterViewController alloc] init];
+    _filterVC.view.frame = CGRectMake(0, NavigationBarHeight, self.view.width, FUll_VIEW_HEIGHT - NavigationBarHeight);
+  }
+ return _filterVC;
 }
 
 - (void)didReceiveMemoryWarning {

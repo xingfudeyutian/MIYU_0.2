@@ -9,5 +9,6 @@
 #import "MIYUBaseViewController.h"
 
 @interface MIYUBarrageViewController : MIYUBaseViewController
-
+- (void)startBarrage;
+- (void)stopBarrage;
 @end
