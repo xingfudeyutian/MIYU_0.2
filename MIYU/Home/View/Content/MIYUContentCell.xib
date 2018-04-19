@@ -51,16 +51,16 @@
                         </constraints>
                         <state key="normal" image="more"/>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="4fh-Om-QTN">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="4fh-Om-QTN">
                         <rect key="frame" x="0.0" y="106.33333333333333" width="196.33333333333334" height="196.33333333333337"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="4fh-Om-QTN" secondAttribute="height" multiplier="1:1" id="WCh-Lm-1bD"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Ugj-VX-Lgq">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Ugj-VX-Lgq">
                         <rect key="frame" x="198.33333333333337" y="106.33333333333333" width="196.66666666666663" height="196.33333333333337"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="whg-Wz-rW7">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="whg-Wz-rW7">
                         <rect key="frame" x="397" y="106.33333333333333" width="196" height="196.33333333333337"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GfZ-ff-hri">
@@ -102,7 +102,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="info" width="610" height="610"/>
+        <image name="info" width="520" height="312"/>
         <image name="more" width="17" height="3"/>
     </resources>
 </document>

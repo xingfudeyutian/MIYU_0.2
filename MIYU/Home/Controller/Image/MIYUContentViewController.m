@@ -24,10 +24,7 @@
 
   self.tableView.tableHeaderView = self.adScrollView;
   self.tableView.tableHeaderView.height = 150;
-  self.adScrollView.ads = [NSArray arrayWithObjects:@"",@"",@"",@"", nil];
-
-  
-
+  self.adScrollView.ads = [NSArray arrayWithObjects:@"placeholder",@"info",@"placeholder",@"info", nil];
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource

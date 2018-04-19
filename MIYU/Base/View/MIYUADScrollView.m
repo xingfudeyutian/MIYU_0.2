@@ -48,7 +48,7 @@
 {
   if (_pageControl == nil)
   {
-    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 100, FUll_VIEW_WIDTH, 50)];
+    _pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, self.height-50, FUll_VIEW_WIDTH, 50)];
     _pageControl.centerX = self.centerX;
     _pageControl.currentPage = 0;
     _pageControl.pageIndicatorTintColor = [UIColor whiteColor];
@@ -64,8 +64,9 @@
   {
     UIImageView * adImage = [[UIImageView alloc] init];
     adImage.tag = i;
-    [adImage setImageWithURL:[NSURL URLWithString:@""] placeholder:[UIImage imageNamed:@"placeholder"]];
-    adImage.frame = CGRectMake(i*FUll_VIEW_WIDTH, 0, FUll_VIEW_WIDTH, 150);
+    adImage.contentMode = UIViewContentModeScaleAspectFill;
+    [adImage setImageWithURL:[NSURL URLWithString:@""] placeholder:[UIImage imageNamed:self.ads[i]]];
+    adImage.frame = CGRectMake(i*FUll_VIEW_WIDTH, 0, FUll_VIEW_WIDTH, self.height);
     adImage.userInteractionEnabled = YES;
     UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc] initWithActionBlock:^(id  _Nonnull sender) {
        self.adTapActionBlock ? self.adTapActionBlock(i) : nil ;

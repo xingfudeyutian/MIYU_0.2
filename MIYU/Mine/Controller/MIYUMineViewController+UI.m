@@ -9,7 +9,7 @@
 #import "MIYUMineViewController+UI.h"
 #import "MIYUNormalCell.h"
 #import "MIYUMineInfoCell.h"
-
+#import "MIYUMineMomentCell.h"
 
 
 
@@ -17,32 +17,22 @@
 
 - (void)setupSubViews
 {
-
+  self.tableView.tableHeaderView = self.adScrollView;
 }
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return indexPath.section?55:UITableViewAutomaticDimension;
-}
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 4;
+    return 2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section) {
         case 0:
-            return 1;
+            return 6;
             break;
         case 1:
-            return 4;
-            break;
-        case 2:
-            return 1;
-            break;
-        case 3:
             return 2;
             break;
         default:
@@ -51,32 +41,37 @@
     }
 }
 
-
-
--(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    return [UIView new];
-}
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [UIView new];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 10;
-}
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return CGFLOAT_MIN;
-}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
     BaseTableViewCell * cell;
     if (indexPath.section == 0)
     {
+      if(indexPath.row == 0)
+      {
+        //个人信息
         cell = [MIYUMineInfoCell xibCellWithTableView:tableView];
+      }
+      else if(indexPath.row == 1)
+      {
+        //视频收费
+        cell = [MIYUNormalCell xibCellWithTableView:tableView];
+        cell.textLabel.text = self.items[indexPath.section][indexPath.row][@"title"];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.detailTextLabel.text = self.items[indexPath.section][indexPath.row][@"detail"];
+      }
+      else if (indexPath.row == 2)
+      {
+        //我的动态
+        cell = [MIYUMineMomentCell xibCellWithTableView:tableView];
+      }
+      else
+      {
+        cell = [MIYUNormalCell xibCellWithTableView:tableView];
+        cell.textLabel.text = self.items[indexPath.section][indexPath.row][@"title"];
+        cell.imageView.image = IMAGE(self.items[indexPath.section][indexPath.row][@"image"]);
+        cell.detailTextLabel.text = self.items[indexPath.section][indexPath.row][@"detail"];
+      }
 
     }
     else

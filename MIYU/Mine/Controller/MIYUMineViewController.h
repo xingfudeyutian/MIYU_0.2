@@ -7,12 +7,13 @@
 //
 
 #import "MIYUBaseViewController.h"
+#import "MIYUADScrollView.h"
 
 @interface MIYUMineViewController : MIYUBaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray * items;
-
+@property (nonatomic, strong) MIYUADScrollView * adScrollView;
 
 - (void)cellSelectedWithIndexPath:(NSIndexPath *)indexPath;
 
