@@ -9,6 +9,7 @@
 #import "MIYUMineViewController.h"
 #import "MIYUMineViewController+UI.h"
 
+#import "MIYUEditMineInfoViewController.h"
 #import "MIYUIncomeViewController.h"
 #import "MIYUVirtualmoneyViewController.h"
 #import "MIYUVipViewController.h"
@@ -20,40 +21,41 @@
 #import "MIYUAppDelegate.h"
 
 @interface MIYUMineViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *rightBtn;
 
 @end
 
 @implementation MIYUMineViewController
 
-
 -(void)viewWillAppear:(BOOL)animated
 {
   [super viewWillAppear:animated];
-  [self.navigationController setNavigationBarHidden:YES animated:YES];
+  [self.navigationController setNavigationBarHidden:YES animated:NO];
   [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
- }
-- (void)viewDidLoad {
-  [super viewDidLoad];
-
   self.navigationController.interactivePopGestureRecognizer.enabled = NO;
   if (@available(iOS 11.0, *)) {
     self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
   }else {
     self.automaticallyAdjustsScrollViewInsets = NO;
   }
+ }
+- (void)viewDidLoad {
+  [super viewDidLoad];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
   [super viewWillDisappear:animated];
   [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-  [self.navigationController setNavigationBarHidden:NO animated:YES];
-
-}
--(void)viewDidDisappear:(BOOL)animated
-{
-  [super viewDidDisappear:animated];
+  [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
+- (IBAction)rightAction:(id)sender {
+
+  MIYUEditMineInfoViewController * editVC = [[MIYUEditMineInfoViewController alloc] init];
+  editVC.hidesBottomBarWhenPushed = YES;
+  [self.navigationController pushViewController:editVC animated:YES];
+
+}
 - (void)cellSelectedWithIndexPath:(NSIndexPath *)indexPath
 {
     MIYUBaseViewController * vc;

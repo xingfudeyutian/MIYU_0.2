@@ -101,6 +101,6 @@ Cg
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="info" width="610" height="610"/>
+        <image name="info" width="520" height="312"/>
     </resources>
 </document>

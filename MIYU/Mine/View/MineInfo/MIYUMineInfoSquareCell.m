@@ -1,14 +1,14 @@
 //
-//  MIYURectangleCell.m
+//  MIYUMineInfoSquareCell.m
 //  MIYU
 //
-//  Created by hanyutong on 2018/1/5.
+//  Created by hanyutong on 2018/4/21.
 //  Copyright © 2018年 hanyutong. All rights reserved.
 //
 
-#import "MIYURectangleCell.h"
+#import "MIYUMineInfoSquareCell.h"
 
-@implementation MIYURectangleCell
+@implementation MIYUMineInfoSquareCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

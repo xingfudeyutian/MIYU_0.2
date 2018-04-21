@@ -35,13 +35,7 @@
 
     /** 广场 */
     MIYUSquareViewController *squareVC = [[MIYUSquareViewController alloc] init];
-
-//    MIYUBaseSquareCollectionController *squareVC = [[MIYUBaseSquareCollectionController alloc] init];
-
-
     [self setupOneChildViewController:squareVC Title:@"蜜友" normalImg:IMAGE_Original(@"Icons_Home2") selImg:IMAGE_Original(@"Icons_Home7")];
-
-
 
     /** 私信 */
     MIYUMessageViewController *messageVC = [[MIYUMessageViewController alloc] init];

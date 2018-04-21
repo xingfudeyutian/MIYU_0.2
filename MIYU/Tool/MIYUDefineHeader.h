@@ -32,14 +32,4 @@
 #define Strong(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 
 
-typedef NS_ENUM(NSInteger,MIYUCellType){
-  MIYUCELLTYPE_SQUARE = 0, //方型
-  MIYUCELLTYPE_RECTAGLE,//长条形
-  MIYUCELLTYPE_VIDEO,//视频框
-};
-
-
-
-
-
 #endif /* MIYUDefineHeader_h */

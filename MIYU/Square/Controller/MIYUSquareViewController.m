@@ -102,7 +102,6 @@
   if (_squareVC == nil) {
     _squareVC = [[MIYUBaseSquareCollectionController alloc] init];
     _squareVC.view.frame = CGRectMake(0, 0, self.view.width, self.view.height);
-    _squareVC.cellType = MIYUCELLTYPE_SQUARE;
   }
   return _squareVC;
 }

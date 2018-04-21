@@ -6,8 +6,8 @@
 //  Copyright © 2018年 hanyutong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MIYUBaseViewController.h"
 
-@interface MIYUEditMineInfoViewController : UIViewController
+@interface MIYUEditMineInfoViewController : MIYUBaseViewController
 
 @end

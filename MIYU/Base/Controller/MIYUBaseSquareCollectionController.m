@@ -8,14 +8,8 @@
 
 #import "MIYUBaseSquareCollectionController.h"
 #import "MIYUShowSquareCell.h"
-#import "MIYURectangleCell.h"
-#import "MIYUVideoCell.h"
 
-#import "MIYUVideoShowViewController.h"
-
-#define VideoCellID @"MIYUVideoCell"
 #define SquareID @"MIYUShowSquareCell"
-#define RectangleID @"MIYURectangleCell"
 #define margin 10.0f
 
 
@@ -29,39 +23,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-
 }
 
 -(void)setupSubViews
 {
     [super setupSubViews];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    // Register cell classes
+
     //注册cell
     UINib * squareNib = [UINib nibWithNibName:NSStringFromClass([MIYUShowSquareCell class]) bundle: [NSBundle mainBundle]];
     [self.collectionView registerNib:squareNib forCellWithReuseIdentifier:SquareID];
-
-    UINib * rectangleNib = [UINib nibWithNibName:NSStringFromClass([MIYURectangleCell class]) bundle: [NSBundle mainBundle]];
-    [self.collectionView registerNib:rectangleNib forCellWithReuseIdentifier:RectangleID];
-
-    UINib * videoNib = [UINib nibWithNibName:NSStringFromClass([MIYUVideoCell class]) bundle: [NSBundle mainBundle]];
-    [self.collectionView registerNib:videoNib forCellWithReuseIdentifier:VideoCellID];
 }
 //item大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
   CGFloat width;
   CGFloat height;
-    if (self.cellType == MIYUCELLTYPE_RECTAGLE) {
-      return CGSizeMake(FUll_VIEW_WIDTH - 2* margin, 70);
-    }else
-    {
+
       width = (FUll_VIEW_WIDTH - 3*margin)/2;
       height = 8*width/5;
-    }
+
     return CGSizeMake(width, height);
 }
 //纵向间距
@@ -107,31 +88,14 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
   MIYUBaseCollectionViewCell * cell;
-    if (self.cellType == MIYUCELLTYPE_RECTAGLE) {
-
-      cell = [collectionView dequeueReusableCellWithReuseIdentifier:RectangleID forIndexPath:indexPath];
-      return cell;
-    }else if (self.cellType == MIYUCELLTYPE_SQUARE)
-    {
       cell = [collectionView dequeueReusableCellWithReuseIdentifier:SquareID forIndexPath:indexPath];
-    }else
-    {
-      cell = [collectionView dequeueReusableCellWithReuseIdentifier:VideoCellID forIndexPath:indexPath];
-    }
+
     return cell;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-  MIYUBaseViewController * vc;
 
-  if (self.cellType == MIYUCELLTYPE_VIDEO)
-  {
-    vc = [[MIYUVideoShowViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-  }
-
-  [self.parentVC.navigationController pushViewController:vc animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

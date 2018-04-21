@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUMineViewController">
             <connections>
+                <outlet property="rightBtn" destination="0p2-1z-y8S" id="3aS-sJ-ERF"/>
                 <outlet property="tableView" destination="XWG-zc-RBX" id="FNr-jV-8Yo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,6 +34,9 @@
                     <state key="normal" title="编辑">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="rightAction:" destination="-1" eventType="touchUpInside" id="6Fl-Rw-HWw"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

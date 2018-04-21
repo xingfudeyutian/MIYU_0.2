@@ -36,12 +36,56 @@
                                 </constraints>
                                 <state key="normal" image="moment_add"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="kmr-SQ-wIz">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kmr-SQ-wIz" secondAttribute="height" multiplier="1:1" id="cHw-TK-Vm3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="aFc-my-qqV">
+                                <rect key="frame" x="65" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aFc-my-qqV" secondAttribute="height" multiplier="1:1" id="Imz-pG-Rb0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="Tco-eJ-AFx">
+                                <rect key="frame" x="130" y="0.0" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tco-eJ-AFx" secondAttribute="height" multiplier="1:1" id="Yii-av-1xl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Tco-eJ-AFx" firstAttribute="leading" secondItem="aFc-my-qqV" secondAttribute="trailing" constant="5" id="5sh-YG-mbD"/>
                             <constraint firstItem="e75-th-gTL" firstAttribute="leading" secondItem="9gG-hS-fYR" secondAttribute="leading" id="7nL-bm-ttY"/>
                             <constraint firstItem="e75-th-gTL" firstAttribute="top" secondItem="9gG-hS-fYR" secondAttribute="top" id="R8g-gZ-wgk"/>
+                            <constraint firstItem="Tco-eJ-AFx" firstAttribute="top" secondItem="kmr-SQ-wIz" secondAttribute="top" id="RD5-10-vmK"/>
+                            <constraint firstAttribute="bottom" secondItem="kmr-SQ-wIz" secondAttribute="bottom" id="SWr-Nn-vmA"/>
+                            <constraint firstItem="kmr-SQ-wIz" firstAttribute="leading" secondItem="9gG-hS-fYR" secondAttribute="leading" id="Uk3-xj-pWN"/>
+                            <constraint firstItem="aFc-my-qqV" firstAttribute="top" secondItem="kmr-SQ-wIz" secondAttribute="top" id="Yap-Jj-ynp"/>
+                            <constraint firstItem="aFc-my-qqV" firstAttribute="centerY" secondItem="kmr-SQ-wIz" secondAttribute="centerY" id="d5e-da-JwD"/>
+                            <constraint firstItem="Tco-eJ-AFx" firstAttribute="bottom" secondItem="kmr-SQ-wIz" secondAttribute="bottom" id="hhJ-NX-qgp"/>
                             <constraint firstAttribute="bottom" secondItem="e75-th-gTL" secondAttribute="bottom" constant="20" id="l1d-dd-gTm"/>
+                            <constraint firstItem="kmr-SQ-wIz" firstAttribute="top" secondItem="9gG-hS-fYR" secondAttribute="top" id="lip-f3-WeP"/>
+                            <constraint firstItem="aFc-my-qqV" firstAttribute="leading" secondItem="kmr-SQ-wIz" secondAttribute="trailing" constant="5" id="ll2-z0-uQH"/>
+                            <constraint firstItem="Tco-eJ-AFx" firstAttribute="centerY" secondItem="kmr-SQ-wIz" secondAttribute="centerY" id="pLC-98-ghh"/>
+                            <constraint firstItem="aFc-my-qqV" firstAttribute="bottom" secondItem="kmr-SQ-wIz" secondAttribute="bottom" id="tm6-jb-Vqg"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yll-E0-OwO">
@@ -71,7 +115,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="moment_add" width="21" height="21"/>
+        <image name="info" width="520" height="312"/>
+        <image name="moment_add" width="40" height="40"/>
         <image name="moment_more" width="13" height="13"/>
     </resources>
 </document>

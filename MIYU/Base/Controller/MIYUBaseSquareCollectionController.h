@@ -10,6 +10,5 @@
 
 @interface MIYUBaseSquareCollectionController : MIYUBaseViewController
 @property (nonatomic, strong) UIViewController * parentVC;
-@property (nonatomic, assign) MIYUCellType  cellType;
 
 @end
