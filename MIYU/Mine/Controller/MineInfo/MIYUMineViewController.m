@@ -10,6 +10,7 @@
 #import "MIYUMineViewController+UI.h"
 
 #import "MIYUEditMineInfoViewController.h"
+#import "MIYUMyMomentViewController.h"
 #import "MIYUIncomeViewController.h"
 #import "MIYUVirtualmoneyViewController.h"
 #import "MIYUVipViewController.h"
@@ -64,7 +65,8 @@
         {
           switch (indexPath.row) {
             case 2:
-              //
+              //我的动态
+              vc = [MIYUMyMomentViewController new];
               break;
             case 3:
               //我的收益
