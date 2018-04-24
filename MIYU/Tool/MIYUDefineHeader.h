@@ -32,4 +32,9 @@
 #define Strong(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 
 
+typedef NS_ENUM(NSInteger, MIYUViewControllerType) {
+  MIYUPERSONERALINFO = 0, // 个人信息
+  MIYUOTHERINFO,      //其他人员信息
+};
+
 #endif /* MIYUDefineHeader_h */

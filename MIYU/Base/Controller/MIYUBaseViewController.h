@@ -11,6 +11,7 @@
 @interface MIYUBaseViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableArray * dataArray;
+@property (nonatomic, assign) MIYUViewControllerType controllerType;
 
 - (void)setupSubViews;
 

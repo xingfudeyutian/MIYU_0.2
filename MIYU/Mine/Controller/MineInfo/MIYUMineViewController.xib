@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUMineViewController">
             <connections>
+                <outlet property="leftBtn" destination="tk0-lN-S1B" id="AfD-Mc-jn8"/>
                 <outlet property="rightBtn" destination="0p2-1z-y8S" id="3aS-sJ-ERF"/>
                 <outlet property="tableView" destination="XWG-zc-RBX" id="FNr-jV-8Yo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,14 +23,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="10" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="XWG-zc-RBX">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="419-Il-xXE"/>
                         <outlet property="delegate" destination="-1" id="Lko-X5-Isz"/>
                     </connections>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-1z-y8S">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0p2-1z-y8S">
                     <rect key="frame" x="329" y="30" width="31" height="30"/>
                     <state key="normal" title="编辑">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,16 +39,31 @@
                         <action selector="rightAction:" destination="-1" eventType="touchUpInside" id="6Fl-Rw-HWw"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tk0-lN-S1B">
+                    <rect key="frame" x="15" y="30" width="9" height="30"/>
+                    <state key="normal" image="back_light">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="rightAction:" destination="-1" eventType="touchUpInside" id="4u7-sP-Kf8"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="0p2-1z-y8S" firstAttribute="bottom" secondItem="tk0-lN-S1B" secondAttribute="bottom" id="HwA-DF-2b7"/>
                 <constraint firstAttribute="trailing" secondItem="0p2-1z-y8S" secondAttribute="trailing" constant="15" id="d0h-r5-Fgk"/>
                 <constraint firstItem="0p2-1z-y8S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="f4c-8M-tL6"/>
-                <constraint firstAttribute="bottom" secondItem="XWG-zc-RBX" secondAttribute="bottom" constant="49" id="iOv-La-l4H"/>
+                <constraint firstItem="tk0-lN-S1B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="i57-Rr-DFp"/>
+                <constraint firstAttribute="bottom" secondItem="XWG-zc-RBX" secondAttribute="bottom" id="iOv-La-l4H"/>
                 <constraint firstItem="XWG-zc-RBX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mvF-0n-O1j"/>
+                <constraint firstItem="0p2-1z-y8S" firstAttribute="top" secondItem="tk0-lN-S1B" secondAttribute="top" id="rBp-0H-3Jp"/>
                 <constraint firstItem="XWG-zc-RBX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="wBg-g7-YZI"/>
                 <constraint firstAttribute="trailing" secondItem="XWG-zc-RBX" secondAttribute="trailing" id="xeU-Jl-WZP"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="back_light" width="9" height="17"/>
+    </resources>
 </document>

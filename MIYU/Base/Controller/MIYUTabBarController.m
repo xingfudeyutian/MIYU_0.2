@@ -44,7 +44,7 @@
     /** 我的 */
     MIYUMineViewController *mineVC = [[MIYUMineViewController alloc] init];
     [self setupOneChildViewController:mineVC Title:@"我的" normalImg:IMAGE_Original(@"Icons_Home") selImg:IMAGE_Original(@"Icons_Home6")];
-
+    mineVC.controllerType = MIYUPERSONERALINFO;
     self.selectedIndex = 0;
 }
 

@@ -31,7 +31,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"moment_add"] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    if (self.controllerType == MIYUPERSONERALINFO)
+    {
+      self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"nav_add"] style:UIBarButtonItemStylePlain target:self action:@selector(rightAction)];
+    }
+
     [self.view addSubview:self.switchView];
     @Weak(self)
     self.switchView.switchBlock = ^(NSInteger tag) {

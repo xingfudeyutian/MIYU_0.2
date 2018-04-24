@@ -8,6 +8,7 @@
 
 #import "MIYUBaseSquareCollectionController.h"
 #import "MIYUShowSquareCell.h"
+#import "MIYUMineViewController.h"
 
 #define SquareID @"MIYUShowSquareCell"
 #define margin 10.0f
@@ -87,7 +88,7 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-  MIYUBaseCollectionViewCell * cell;
+    MIYUBaseCollectionViewCell * cell;
       cell = [collectionView dequeueReusableCellWithReuseIdentifier:SquareID forIndexPath:indexPath];
 
     return cell;
@@ -95,7 +96,10 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+  MIYUMineViewController * mineVC = [[MIYUMineViewController alloc] init];
+  mineVC.controllerType = MIYUOTHERINFO;
+  mineVC.hidesBottomBarWhenPushed = YES;
+  [self.navigationController pushViewController:mineVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

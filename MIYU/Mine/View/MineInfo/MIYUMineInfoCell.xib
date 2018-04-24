@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="MIYUMineInfoCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="186" id="KGk-i7-Jjw" customClass="MIYUMineInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="132.66666666666666"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="185.66666666666666"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈利波特" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZo-2J-OFV">
@@ -44,19 +44,25 @@
                         </userDefinedRuntimeAttributes>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="觅鱼号：111111111111111111111111" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXO-wT-pFV">
-                        <rect key="frame" x="20" y="46" width="290" height="54"/>
+                        <rect key="frame" x="20" y="46" width="290" height="13.333333333333336"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13.33" id="9ju-nS-hhs"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="女／24/双鱼座" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39A-D8-Bi0">
-                        <rect key="frame" x="20" y="110" width="73.666666666666671" height="12.666666666666671"/>
+                        <rect key="frame" x="20" y="69.333333333333329" width="73.666666666666671" height="12.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12.67" id="e9q-EN-vnL"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计视频时长：10分钟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkW-aB-IhD">
-                        <rect key="frame" x="196.33333333333334" y="110.33333333333333" width="113.66666666666666" height="12.666666666666671"/>
+                        <rect key="frame" x="196.33333333333334" y="69.666666666666671" width="113.66666666666666" height="12.666666666666671"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -68,15 +74,24 @@
                             <constraint firstAttribute="height" constant="12" id="twx-x2-E5D"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个性签名：哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gla-cf-Fsx">
+                        <rect key="frame" x="20" y="87" width="290" height="93.666666666666686"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="nZo-2J-OFV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="1U5-5f-JR6"/>
                     <constraint firstItem="ZXO-wT-pFV" firstAttribute="leading" secondItem="nZo-2J-OFV" secondAttribute="leading" id="1hg-DT-w6Q"/>
+                    <constraint firstItem="Gla-cf-Fsx" firstAttribute="leading" secondItem="39A-D8-Bi0" secondAttribute="leading" id="2GT-yP-drJ"/>
                     <constraint firstItem="ZXO-wT-pFV" firstAttribute="top" secondItem="nZo-2J-OFV" secondAttribute="bottom" constant="10" id="2wk-0L-TLd"/>
                     <constraint firstItem="39A-D8-Bi0" firstAttribute="top" secondItem="ZXO-wT-pFV" secondAttribute="bottom" constant="10" id="4vh-eK-PK0"/>
+                    <constraint firstItem="Gla-cf-Fsx" firstAttribute="top" secondItem="IkW-aB-IhD" secondAttribute="bottom" constant="5" id="7KG-os-nFA"/>
                     <constraint firstItem="aJq-Ib-8QW" firstAttribute="leading" secondItem="nZo-2J-OFV" secondAttribute="trailing" constant="10" id="7RX-I4-E5O"/>
-                    <constraint firstAttribute="bottom" secondItem="39A-D8-Bi0" secondAttribute="bottom" constant="10" id="BcW-uo-Bv0"/>
+                    <constraint firstItem="IkW-aB-IhD" firstAttribute="trailing" secondItem="Gla-cf-Fsx" secondAttribute="trailing" id="B6E-tO-9lb"/>
                     <constraint firstItem="aJq-Ib-8QW" firstAttribute="centerY" secondItem="nZo-2J-OFV" secondAttribute="centerY" id="GQq-hn-ZGv"/>
+                    <constraint firstAttribute="bottom" secondItem="Gla-cf-Fsx" secondAttribute="bottom" constant="5" id="JNj-iS-Z8u"/>
                     <constraint firstItem="39A-D8-Bi0" firstAttribute="leading" secondItem="ZXO-wT-pFV" secondAttribute="leading" id="ULq-oK-pl3"/>
                     <constraint firstAttribute="trailing" secondItem="R67-KD-J62" secondAttribute="trailing" constant="10" id="bLb-pD-Rzf"/>
                     <constraint firstItem="IkW-aB-IhD" firstAttribute="centerY" secondItem="39A-D8-Bi0" secondAttribute="centerY" id="jJU-Uy-EGK"/>
@@ -88,7 +103,7 @@
                     <constraint firstItem="IkW-aB-IhD" firstAttribute="bottom" secondItem="39A-D8-Bi0" secondAttribute="bottom" id="zFf-Fc-9sg"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="45" y="58.5"/>
+            <point key="canvasLocation" x="45" y="85"/>
         </tableViewCell>
     </objects>
     <resources>

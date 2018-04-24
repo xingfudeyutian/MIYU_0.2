@@ -21,7 +21,11 @@
 
 #import "MIYUAppDelegate.h"
 
+
+
+
 @interface MIYUMineViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *leftBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rightBtn;
 
 @end
@@ -42,6 +46,20 @@
  }
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  if(self.controllerType == MIYUPERSONERALINFO)
+  {
+    self.leftBtn.hidden = YES;
+    [self.rightBtn setTitle: @"编辑" forState:UIControlStateNormal];
+    self.tableView.tableFooterView = [UIView new];
+    self.tableView.tableFooterView.height = TabbarHeight;
+  }
+  else if (self.controllerType == MIYUOTHERINFO)
+  {
+    self.leftBtn.hidden = NO;
+    [self.rightBtn setTitle:nil forState:UIControlStateNormal];
+    [self.rightBtn setImage:[UIImage imageOriginalWithName:@"more"] forState:UIControlStateNormal];
+  }
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -52,10 +70,24 @@
 
 - (IBAction)rightAction:(id)sender {
 
-  MIYUEditMineInfoViewController * editVC = [[MIYUEditMineInfoViewController alloc] init];
-  editVC.hidesBottomBarWhenPushed = YES;
-  [self.navigationController pushViewController:editVC animated:YES];
+  UIButton * button = (UIButton *)sender;
+  if (button.tag == 0)
+  {
+    [self.navigationController popViewControllerAnimated:YES];
+  }else
+  {
+    if(self.controllerType == MIYUPERSONERALINFO)
+    {
+      MIYUEditMineInfoViewController * editVC = [[MIYUEditMineInfoViewController alloc] init];
+      editVC.hidesBottomBarWhenPushed = YES;
+      [self.navigationController pushViewController:editVC animated:YES];
+    }
+    else
+    {
 
+    }
+
+  }
 }
 - (void)cellSelectedWithIndexPath:(NSIndexPath *)indexPath
 {
@@ -67,6 +99,7 @@
             case 2:
               //我的动态
               vc = [MIYUMyMomentViewController new];
+              vc.controllerType = self.controllerType;
               break;
             case 3:
               //我的收益
@@ -111,7 +144,7 @@
 {
     if (!_items)
     {
-       NSArray * item = @[
+       NSArray * item = self.controllerType == MIYUPERSONERALINFO?@[
                    @[
                       @{@"image":@"",
                         @"title":@"",
@@ -138,7 +171,17 @@
                      @{@"image":@"setting",
                        @"title":@"设置",
                        @"detail":@""},]
-                   ];
+                   ] : @[@[
+                           @{@"image":@"",
+                             @"title":@"",
+                             @"detail":@""},
+                           @{@"image":@"",
+                             @"title":@"视频收费",
+                             @"detail":@"15鱼饵"},
+                           @{@"image":@"",
+                             @"title":@"我的动态",
+                             @"detail":@""}]]
+      ;
         _items = [NSMutableArray arrayWithArray:item];
     }
     return _items;
