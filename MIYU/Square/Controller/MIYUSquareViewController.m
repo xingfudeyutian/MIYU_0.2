@@ -52,9 +52,10 @@
    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(CameraShow)];
 
 
-  @Weak(self)
+//  @Weak(self)
   self.switchView.switchBlock = ^(NSInteger tag) {
-    @Strong(self)
+//    @Strong(self)
+
 
   };
   self.navigationItem.titleView = self.switchView;

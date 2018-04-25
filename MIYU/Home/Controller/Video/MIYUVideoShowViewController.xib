@@ -15,8 +15,10 @@
             <connections>
                 <outlet property="backBtn" destination="4Tk-ST-kOq" id="kto-a5-tmi"/>
                 <outlet property="barrageBtn" destination="NTb-YC-wdU" id="ohF-Up-GqP"/>
+                <outlet property="messageTF" destination="y05-CV-8UR" id="PRn-2O-ddk"/>
                 <outlet property="playerControlView" destination="ToZ-LJ-ksz" id="fYH-Ga-lb4"/>
                 <outlet property="playerFatherView" destination="RtE-ze-DnP" id="6bq-Ku-3dC"/>
+                <outlet property="toolView" destination="Wbw-0Y-9oP" id="kD4-pC-WUu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -86,11 +88,64 @@
                                 <constraint firstItem="5zz-32-7ug" firstAttribute="width" secondItem="5zz-32-7ug" secondAttribute="height" multiplier="1:1" id="wws-Xk-FJi"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-0Y-9oP">
+                            <rect key="frame" x="0.0" y="676" width="414" height="60"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="E8H-KV-72p">
+                                    <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="FEx-Se-vbu"/>
+                                        <constraint firstAttribute="width" secondItem="E8H-KV-72p" secondAttribute="height" multiplier="1:1" id="KV1-i2-9gx"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="哈哈哈哈哈哈哈哈哈哈哈哈" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y05-CV-8UR">
+                                    <rect key="frame" x="55" y="5" width="311" height="40"/>
+                                    <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.7518996147" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIp-gS-nVe">
+                                    <rect key="frame" x="376" y="10" width="28" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="28" id="Aj0-ko-kSv"/>
+                                        <constraint firstAttribute="height" constant="30" id="gdg-ZS-bUl"/>
+                                    </constraints>
+                                    <state key="normal" image="gift_light"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="y05-CV-8UR" firstAttribute="leading" secondItem="E8H-KV-72p" secondAttribute="trailing" constant="5" id="0Ml-b3-g1d"/>
+                                <constraint firstItem="y05-CV-8UR" firstAttribute="top" secondItem="E8H-KV-72p" secondAttribute="top" id="5ii-Bc-LKS"/>
+                                <constraint firstAttribute="height" constant="60" id="DPS-xv-N6h"/>
+                                <constraint firstItem="DIp-gS-nVe" firstAttribute="centerY" secondItem="E8H-KV-72p" secondAttribute="centerY" id="Twy-fw-6Pm"/>
+                                <constraint firstItem="y05-CV-8UR" firstAttribute="centerY" secondItem="E8H-KV-72p" secondAttribute="centerY" id="Z9i-8X-GBf"/>
+                                <constraint firstAttribute="trailing" secondItem="DIp-gS-nVe" secondAttribute="trailing" constant="10" id="ZRj-Y4-3Sx"/>
+                                <constraint firstItem="DIp-gS-nVe" firstAttribute="leading" secondItem="y05-CV-8UR" secondAttribute="trailing" constant="10" id="por-WS-u5q"/>
+                                <constraint firstItem="E8H-KV-72p" firstAttribute="top" secondItem="Wbw-0Y-9oP" secondAttribute="top" constant="5" id="qFL-eQ-WPI"/>
+                                <constraint firstItem="y05-CV-8UR" firstAttribute="bottom" secondItem="E8H-KV-72p" secondAttribute="bottom" id="sSK-K8-w6t"/>
+                                <constraint firstItem="E8H-KV-72p" firstAttribute="leading" secondItem="Wbw-0Y-9oP" secondAttribute="leading" constant="10" id="zuQ-ZR-ocI"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Wbw-0Y-9oP" secondAttribute="trailing" id="OER-Ej-lKS"/>
                         <constraint firstItem="nHO-BX-74Q" firstAttribute="leading" secondItem="ToZ-LJ-ksz" secondAttribute="leading" id="QIV-XO-Ibp"/>
                         <constraint firstItem="nHO-BX-74Q" firstAttribute="top" secondItem="ToZ-LJ-ksz" secondAttribute="top" id="ZDk-c9-tyI"/>
+                        <constraint firstAttribute="bottom" secondItem="Wbw-0Y-9oP" secondAttribute="bottom" id="afd-9A-DFu"/>
+                        <constraint firstItem="Wbw-0Y-9oP" firstAttribute="leading" secondItem="ToZ-LJ-ksz" secondAttribute="leading" id="tb8-cc-Z9E"/>
                         <constraint firstAttribute="trailing" secondItem="nHO-BX-74Q" secondAttribute="trailing" id="zw1-7C-Euf"/>
                     </constraints>
                     <connections>
@@ -109,7 +164,7 @@
                 <constraint firstAttribute="bottom" secondItem="RtE-ze-DnP" secondAttribute="bottom" id="b5K-df-yHr"/>
                 <constraint firstAttribute="trailing" secondItem="ToZ-LJ-ksz" secondAttribute="trailing" id="vdC-1x-hG5"/>
             </constraints>
-            <point key="canvasLocation" x="220.5" y="29.5"/>
+            <point key="canvasLocation" x="220" y="29"/>
         </view>
         <tapGestureRecognizer id="dE5-Bb-YCK">
             <connections>
@@ -120,6 +175,8 @@
     </objects>
     <resources>
         <image name="barrage_on" width="26" height="26"/>
+        <image name="gift_light" width="28" height="30"/>
+        <image name="info" width="520" height="312"/>
         <image name="video_close" width="29" height="29"/>
         <image name="video_more" width="26" height="26"/>
     </resources>

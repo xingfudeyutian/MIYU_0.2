@@ -64,6 +64,7 @@
   {
     UIImageView * adImage = [[UIImageView alloc] init];
     adImage.tag = i;
+    adImage.clipsToBounds = YES;
     adImage.contentMode = UIViewContentModeScaleAspectFill;
     [adImage setImageWithURL:[NSURL URLWithString:@""] placeholder:[UIImage imageNamed:self.ads[i]]];
     adImage.frame = CGRectMake(i*FUll_VIEW_WIDTH, 0, FUll_VIEW_WIDTH, self.height);

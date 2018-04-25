@@ -7,10 +7,11 @@
 //
 
 #import "MIYUVideoShowViewController.h"
-#import "MIYUVideoToolView.h"
-
-
+#import "MIYUViewToolViewController.h"
 #import "MIYUBarrageViewController.h"
+
+#import "MIYUShareActionSheet.h"
+
 
 
 #define VideoToolHeight 60
@@ -25,13 +26,15 @@
 @property (weak, nonatomic) IBOutlet UIView *playerFatherView;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (weak, nonatomic) IBOutlet UIView *playerControlView;
+@property (weak, nonatomic) IBOutlet UIView *toolView;
+@property (weak, nonatomic) IBOutlet UITextField *messageTF;
+
 @property (strong, nonatomic) ZFPlayerView *playerView;
 /** 离开页面时候是否在播放 */
 @property (nonatomic, assign) BOOL isPlaying;
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
 @property (nonatomic, strong) UIView *bottomView;
 
-@property (nonatomic, strong) MIYUVideoToolView * videoTool;
 
 @property (nonatomic, strong) MIYUBarrageViewController * barrageController;
 
@@ -119,13 +122,13 @@
 - (ZFPlayerView *)playerView {
   if (!_playerView) {
     _playerView = [[ZFPlayerView alloc] init];
+
     [self.playerControlView addSubview:self.barrageController.view];
-    [self addChildViewController:self.barrageController];
-    [self.playerControlView addSubview:self.videoTool];
+//    [self addChildViewController:self.barrageController];
     [_playerView playerControlView:self.playerControlView playerModel:self.playerModel];
 
     // 设置代理
-//    _playerView.delegate = self;
+    _playerView.delegate = self;
 
     //（可选设置）可以设置视频的填充模式，内部设置默认（ZFPlayerLayerGravityResizeAspect：等比例填充，直到一个维度到达区域边界）
      _playerView.playerLayerGravity = ZFPlayerLayerGravityResizeAspectFill;
@@ -155,14 +158,7 @@
   }
   return _barrageController;
 }
--(MIYUVideoToolView *)videoTool
-{
-  if (_videoTool == nil) {
-    _videoTool = [MIYUVideoToolView viewFromXIB];
-    _videoTool.frame = CGRectMake(0, FUll_VIEW_HEIGHT-VideoToolHeight, FUll_VIEW_WIDTH, VideoToolHeight);
-  }
-  return _videoTool;
-}
+
 
 - (IBAction)navigationClick:(UIButton *)sender {
   UIButton * btn = (UIButton *)sender;
@@ -170,6 +166,7 @@
   {
     case 0:
     {
+//      [self.navigationController popViewControllerAnimated:YES];
       //返回
       [self dismissViewControllerAnimated:YES completion:nil];
     }
@@ -182,19 +179,23 @@
       [self.barrageBtn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
       self.currentBarrageState ? [self.barrageController startBarrage] : [self.barrageController stopBarrage];
     }
-
       break;
     case 2:
     {
       //更多
+      UIAlertController * alert = [MIYUShareActionSheet showShareActionSheetWithType:self.controllerType model:nil actionBlock:^(id paramer) {
+        [paramer dismissViewControllerAnimated:YES completion:nil];
+        UIAlertController * reportAlert = [MIYUShareActionSheet showReportActionSheetModel:nil actionBlock:^(id paramer) {
 
+        }];
+        [self presentViewController:reportAlert animated:YES completion:nil];
+      }];
+      [self presentViewController:alert animated:YES completion:nil];
     }
-
       break;
     default:
       break;
   }
-
 }
 // 返回值要必须为NO
 - (BOOL)shouldAutorotate {
@@ -202,7 +203,7 @@
 }
 
 - (IBAction)controlViewTapGesture:(UITapGestureRecognizer *)sender {
-    [self.videoTool resignFirstResponder];
+    [self.messageTF resignFirstResponder];
 }
 #pragma mark - Private Methods
 
@@ -210,12 +211,11 @@
 
   self.keyboardFrame = CGRectZero;
   [UIView animateWithDuration:0.3 animations:^{
-    self.videoTool.bottom = self.playerControlView.bottom;
+    self.toolView.bottom = self.playerControlView.bottom;
   }];
 
 
 }
-
 
 /**
  *  点击了 textView 的时候，这个方法的调用是比  - (void) textViewDidBeginEditing:(UITextView *)textView 要早的。
@@ -227,7 +227,7 @@
   if (self.keyboardFrame.size.height>VideoToolHeight) {
     [UIView animateWithDuration:0.3 animations:^{
 
-       self.videoTool.bottom = self.playerControlView.bottom - self.keyboardFrame.size.height ;
+       self.toolView.bottom = self.playerControlView.bottom - self.keyboardFrame.size.height ;
     }];
 
   }

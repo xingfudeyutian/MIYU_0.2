@@ -10,6 +10,7 @@
 #import "MIYUContentDetailViewController.h"
 #import "MIYUContentCell.h"
 #import "MIYUADScrollView.h"
+#import "MIYUShareActionSheet.h"
 
 @interface MIYUContentViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,11 +37,20 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MIYUContentCell * cell = [MIYUContentCell xibCellWithTableView:tableView];
+  @Weak(self)
+    cell.moreActionBlock = ^(id model) {
+      @Strong(self)
+      UIAlertController * alert = [MIYUShareActionSheet showMoreActionSheetModel:nil actionBlock:^(id paramer) {
+
+    }];
+      [self presentViewController:alert animated:YES completion:nil];
+  };
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
   MIYUContentDetailViewController * contentDetail = [[MIYUContentDetailViewController alloc] init];
+  contentDetail.controllerType = self.controllerType;
   contentDetail.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:contentDetail animated:YES];
 }

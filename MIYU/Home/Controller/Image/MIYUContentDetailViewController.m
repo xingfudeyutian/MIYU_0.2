@@ -8,6 +8,7 @@
 
 #import "MIYUContentDetailViewController.h"
 #import "MIYUContentDetailCell.h"
+#import "MIYUShareActionSheet.h"
 
 @interface MIYUContentDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -58,6 +59,18 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   MIYUContentDetailCell * cell = [MIYUContentDetailCell xibCellWithTableView:tableView];
+  @Weak(self)
+  cell.shareActionBlock = ^(id model) {
+    @Strong(self)
+    UIAlertController * alert = [MIYUShareActionSheet showShareActionSheetWithType:self.controllerType model:nil actionBlock:^(id paramer) {
+      [paramer dismissViewControllerAnimated:YES completion:nil];
+      UIAlertController * reportAlert = [MIYUShareActionSheet showReportActionSheetModel:nil actionBlock:^(id paramer) {
+
+      }];
+      [self presentViewController:reportAlert animated:YES completion:nil];
+    }];
+    [self presentViewController:alert animated:YES completion:nil];
+  };
   return cell;
 }
 

@@ -68,7 +68,7 @@ static NSString * ITEM_RUID_2 = @"Item_RUID2";
 
     CardItem2 * item2 = (CardItem2 *)[cardView dequeueReusableCellWithIdentifier:ITEM_RUID_2];
 
-    item2.imageView.image = [UIImage imageNamed:@"info"];
+  item2.imageView.image = [UIImage imageProcess:[UIImage imageNamed:@"info"]];//[UIImage mosaicImageWith:[UIImage imageNamed:@"info"]];
 
     return item2;
 //  }
@@ -93,9 +93,10 @@ static NSString * ITEM_RUID_2 = @"Item_RUID2";
 
   MIYUVideoShowViewController * videoShowVC = [[MIYUVideoShowViewController alloc] init];
   videoShowVC.hidesBottomBarWhenPushed = YES;
+  videoShowVC.controllerType = MIYUOTHERINFO;
   videoShowVC.modalTransitionStyle = UIModalPresentationFormSheet;
-  [self presentViewController:videoShowVC animated:YES completion:nil];
-//  [self.navigationController pushViewController:videoShowVC animated:YES];
+//  [self presentViewController:videoShowVC animated:YES completion:nil];
+  [self.navigationController pushViewController:videoShowVC animated:YES];
 
 }
 

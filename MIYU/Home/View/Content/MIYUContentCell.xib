@@ -50,6 +50,9 @@
                             <constraint firstAttribute="width" secondItem="qVq-lh-471" secondAttribute="height" multiplier="1:1" id="V4I-9W-qpW"/>
                         </constraints>
                         <state key="normal" image="more"/>
+                        <connections>
+                            <action selector="moreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xDU-BO-P3O"/>
+                        </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="4fh-Om-QTN">
                         <rect key="frame" x="0.0" y="106.33333333333333" width="196.33333333333334" height="196.33333333333337"/>

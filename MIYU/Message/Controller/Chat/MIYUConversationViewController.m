@@ -52,17 +52,17 @@
   if (_chatBoxVC == nil) {
     _chatBoxVC = [[MIYUChatBoxViewController alloc] init];
     [_chatBoxVC.view setFrame:CGRectMake(0, FUll_VIEW_HEIGHT - HEIGHT_CHATBOXVIEW_TOOL, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT)];
-    @Weak(self)
+//    @Weak(self)
     _chatBoxVC.sendMessageBlock = ^(MIYUChatBoxViewController *chatBoxViewController, RCMessageModel *messageModel) {
-        @Strong(self)
+//        @Strong(self)
     };
     _chatBoxVC.photoOrVideoShowBlock = ^(MIYUChatBoxStatus status) {
-        @Strong(self)
+//        @Strong(self)
 
     };
     
     _chatBoxVC.changeChatBoxHeightBlock = ^(MIYUChatBoxViewController *chatBoxViewController, CGFloat height) {
-        @Strong(self)
+//        @Strong(self)
       /**
        *   改变BoxController .view 的高度 ，这采取的是重新设置 Frame 值！！
        */

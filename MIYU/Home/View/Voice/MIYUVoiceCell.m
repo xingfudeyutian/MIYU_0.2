@@ -14,6 +14,13 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)moreAction:(id)sender {
+
+  if (self.moreActionBlock)
+  {
+    self.moreActionBlock(nil);
+  }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

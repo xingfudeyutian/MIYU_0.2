@@ -109,6 +109,7 @@
   if (_imageVC == nil)
   {
     _imageVC = [[MIYUContentViewController alloc] init];
+    _imageVC.controllerType = MIYUOTHERINFO;
     _imageVC.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
     _imageVC.view.hidden = YES;
   }
@@ -118,6 +119,7 @@
 {
   if (_voiceVC == nil) {
     _voiceVC = [[MIYUVoiceViewController alloc] init];
+    _voiceVC.controllerType = MIYUOTHERINFO;
     _voiceVC.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
     _voiceVC.view.hidden = YES;
   }
@@ -128,6 +130,7 @@
 {
   if (_videoVC == nil) {
     _videoVC = [[MIYUVideoViewController alloc] init];
+    _videoVC.controllerType = MIYUOTHERINFO;
     _videoVC.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
     _videoVC.view.hidden = YES;
   }

@@ -106,6 +106,7 @@
 }
 
 @end
+
 @implementation UIView (extend)
 
 
@@ -357,15 +358,14 @@
 
     [self.layer addSublayer:border];
 }
-//- (void)addBottomLine{
-//
-//    UIView * line =[[UIView alloc]init];
-//    line.backgroundColor =ColorHex(f4f4f4);
-//    [self addSubview:line];
-//    [line mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.right.bottom.equalTo(@(0));
-//        make.height.equalTo(@(0.5));
-//    }];
-//
-//}
+- (void)addBottomLine{
+
+    UIView * line =[[UIView alloc]init];
+    line.backgroundColor =[UIColor lightGrayColor];
+    [self addSubview:line];
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(@(0));
+        make.height.equalTo(@(0.5));
+    }];
+}
 @end

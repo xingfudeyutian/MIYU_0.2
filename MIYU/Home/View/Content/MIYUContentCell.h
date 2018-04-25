@@ -10,4 +10,6 @@
 
 @interface MIYUContentCell : BaseTableViewCell
 
+@property (nonatomic, copy) void(^moreActionBlock)(id model);
+
 @end

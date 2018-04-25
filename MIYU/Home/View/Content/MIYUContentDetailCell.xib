@@ -53,6 +53,9 @@
                                     <constraint firstAttribute="width" constant="22" id="ukI-2L-lYm"/>
                                 </constraints>
                                 <state key="normal" image="more"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xok-M1-o7q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>

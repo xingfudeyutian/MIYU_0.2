@@ -71,7 +71,6 @@
     childVc.tabBarItem.image = normalImg;
     childVc.tabBarItem.selectedImage = selImg;
     childVc.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)didReceiveMemoryWarning {

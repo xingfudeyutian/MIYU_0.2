@@ -14,5 +14,7 @@
 //+ (UIImage *)circleImageWithSize:(CGSize )size phoneNo:(NSString *)phoneNo text:(NSString *)text;
 - (UIImage *) imageWithWaterMask:(UIImage*)mask inRect:(CGRect)rect;
 - (UIImage *) watermarkWithName:(NSString *)name;
++ (UIImage *)mosaicImageWith:(UIImage *)image;
++ (UIImage*)imageProcess:(UIImage*)image;
 
 @end

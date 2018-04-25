@@ -27,6 +27,7 @@
 @interface MIYUMineViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *leftBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rightBtn;
+@property (weak, nonatomic) IBOutlet UIView *bottomTool;
 
 @end
 
@@ -51,14 +52,14 @@
   {
     self.leftBtn.hidden = YES;
     [self.rightBtn setTitle: @"编辑" forState:UIControlStateNormal];
-    self.tableView.tableFooterView = [UIView new];
-    self.tableView.tableFooterView.height = TabbarHeight;
+    self.bottomTool.hidden = YES;
   }
   else if (self.controllerType == MIYUOTHERINFO)
   {
     self.leftBtn.hidden = NO;
     [self.rightBtn setTitle:nil forState:UIControlStateNormal];
     [self.rightBtn setImage:[UIImage imageOriginalWithName:@"more"] forState:UIControlStateNormal];
+    self.bottomTool.hidden = NO;
   }
 }
 -(void)viewWillDisappear:(BOOL)animated
@@ -89,6 +90,22 @@
 
   }
 }
+
+- (IBAction)bottomToolAction:(id)sender {
+
+  UIButton * btn = (UIButton *)sender;
+  if (btn.tag == 0)
+  {
+    //视频
+  }else
+  {
+    //信息
+  }
+
+}
+
+
+
 - (void)cellSelectedWithIndexPath:(NSIndexPath *)indexPath
 {
     MIYUBaseViewController * vc;

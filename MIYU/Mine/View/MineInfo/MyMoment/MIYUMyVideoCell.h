@@ -9,5 +9,6 @@
 #import "NSObject+extend.h"
 
 @interface MIYUMyVideoCell : BaseTableViewCell
+@property (nonatomic, copy) void(^moreActionBlock)(id model);
 
 @end

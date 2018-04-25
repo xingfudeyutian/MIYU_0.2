@@ -46,10 +46,6 @@
   //        self.collectionViewFlowLayout.sectionHeadersPinToVisibleBounds = YES;
   //      }
 
-
-  // 注册头部
-//  UINib * headerNib = [UINib nibWithNibName:NSStringFromClass([MIYUNormalReusableView class]) bundle: [NSBundle mainBundle]];
-//  [self.collectionView registerNib:headerNib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeaderID];
   //注册cell
   UINib * moneyNib = [UINib nibWithNibName:NSStringFromClass([MIYUMoneyCell class]) bundle: [NSBundle mainBundle]];
   [self.collectionView registerNib:moneyNib forCellWithReuseIdentifier:MoneyCell];

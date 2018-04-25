@@ -14,6 +14,13 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)shareButton:(id)sender {
+  if (self.shareActionBlock)
+  {
+    self.shareActionBlock(nil);
+  }
+  
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

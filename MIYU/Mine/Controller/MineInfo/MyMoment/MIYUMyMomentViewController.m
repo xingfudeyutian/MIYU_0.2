@@ -82,6 +82,7 @@
 {
   if (_myImage == nil) {
     _myImage = [[MIYUContentDetailViewController alloc] init];
+    _myImage.controllerType = self.controllerType;
     _myImage.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
     _myImage.view.hidden = YES;
   }
@@ -91,6 +92,7 @@
 {
   if (_myVoice==nil) {
     _myVoice = [[MIYUContentDetailViewController alloc] init];
+    _myVoice.controllerType = self.controllerType;
     _myVoice.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
     _myVoice.view.hidden = YES;
   }
@@ -101,6 +103,7 @@
   if (_myVideo == nil)
   {
     _myVideo = [[MIYUMyVideoViewController alloc] init];
+    _myVideo.controllerType = self.controllerType;
     _myVideo.view.frame = CGRectMake(0, TabbarHeight, self.view.width, self.view.height - TabbarHeight);
     _myVideo.view.hidden = YES;
   }
