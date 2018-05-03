@@ -7,12 +7,17 @@
 //
 
 #import "MIYUContentDetailViewController.h"
+#import "MIYUReportViewController.h"
+#import "MIYUContentcommentViewController.h"
 #import "MIYUContentDetailCell.h"
 #import "MIYUShareActionSheet.h"
 
+
+#import "MIYUFilterViewController.h"
+
 @interface MIYUContentDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, strong) MIYUReportViewController * reportVC;
 @end
 
 @implementation MIYUContentDetailViewController
@@ -65,7 +70,16 @@
     UIAlertController * alert = [MIYUShareActionSheet showShareActionSheetWithType:self.controllerType model:nil actionBlock:^(id paramer) {
       [paramer dismissViewControllerAnimated:YES completion:nil];
       UIAlertController * reportAlert = [MIYUShareActionSheet showReportActionSheetModel:nil actionBlock:^(id paramer) {
+        [paramer dismissViewControllerAnimated:YES completion:nil];
 
+        dispatch_async(dispatch_get_main_queue(), ^{
+//          MIYUReportViewController * reportVC = [[MIYUReportViewController alloc] init];
+//          reportVC.view.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
+          [[UIApplication sharedApplication].keyWindow addSubview:self.reportVC.view];
+
+        });
+
+        
       }];
       [self presentViewController:reportAlert animated:YES completion:nil];
     }];
@@ -75,7 +89,22 @@
 }
 
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  MIYUContentcommentViewController * commentVC = [[MIYUContentcommentViewController alloc] init];
+  commentVC.controllerType = self.controllerType;
+  [self.navigationController pushViewController:commentVC animated:YES];
+}
 
+-(MIYUReportViewController *)reportVC
+{
+  if (_reportVC == nil)
+  {
+    _reportVC = [[MIYUReportViewController alloc] init];
+    _reportVC.view.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
+  }
+  return _reportVC;
+}
 
 
 

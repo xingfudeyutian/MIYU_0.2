@@ -60,19 +60,12 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWb-wC-l4b">
-                                <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FWb-wC-l4b" firstAttribute="leading" secondItem="tJv-7P-lEF" secondAttribute="leading" id="039-Fh-7KS"/>
-                            <constraint firstAttribute="bottom" secondItem="FWb-wC-l4b" secondAttribute="bottom" id="34E-Of-DhQ"/>
                             <constraint firstAttribute="bottom" secondItem="Tcn-Re-GX6" secondAttribute="bottom" id="55h-8O-SJL"/>
-                            <constraint firstItem="FWb-wC-l4b" firstAttribute="top" secondItem="tJv-7P-lEF" secondAttribute="top" id="A1f-0r-mJX"/>
                             <constraint firstAttribute="trailing" secondItem="Tcn-Re-GX6" secondAttribute="trailing" id="KM7-E2-18M"/>
                             <constraint firstItem="Tcn-Re-GX6" firstAttribute="top" secondItem="tJv-7P-lEF" secondAttribute="top" id="fdy-xc-rTL"/>
-                            <constraint firstAttribute="trailing" secondItem="FWb-wC-l4b" secondAttribute="trailing" id="l0C-XH-b2W"/>
                             <constraint firstItem="Tcn-Re-GX6" firstAttribute="leading" secondItem="tJv-7P-lEF" secondAttribute="leading" id="lKe-bc-Khr"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

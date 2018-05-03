@@ -1,24 +1,32 @@
 //
-//  MIYUBaseSearchViewController.m
+//  MIYURechargeViewController.m
 //  MIYU
 //
-//  Created by hanyutong on 2018/3/22.
+//  Created by hanyutong on 2018/5/2.
 //  Copyright © 2018年 hanyutong. All rights reserved.
 //
 
-#import "MIYUBaseSearchViewController.h"
+#import "MIYURechargeViewController.h"
 
-@interface MIYUBaseSearchViewController ()
+@interface MIYURechargeViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *firstBtn;
+@property (weak, nonatomic) IBOutlet UIButton *sectionBtn;
 
 @end
 
-@implementation MIYUBaseSearchViewController
+@implementation MIYURechargeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
+- (IBAction)buttonAction:(id)sender {
+  [self.view removeFromSuperview];
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+  [self.view removeFromSuperview];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

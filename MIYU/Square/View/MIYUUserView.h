@@ -1,13 +1,15 @@
 //
-//  MIYUGiftView.h
+//  MIYUUserView.h
 //  MIYU
 //
-//  Created by hanyutong on 2018/3/19.
+//  Created by hanyutong on 2018/4/26.
 //  Copyright © 2018年 hanyutong. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MIYUGiftView : UIView
+
+
+@interface MIYUUserView : UIView
 
 @end

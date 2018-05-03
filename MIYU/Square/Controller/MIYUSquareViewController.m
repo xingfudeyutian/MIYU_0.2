@@ -49,7 +49,7 @@
 //
 //  self.navigationItem.titleView = titleView;
    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"filter"] style:UIBarButtonItemStylePlain target:self action:@selector(filterShow)];
-   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(CameraShow)];
+//   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(CameraShow)];
 
 
 //  @Weak(self)
@@ -81,7 +81,6 @@
 - (void)addFilter
 {
   [[UIApplication sharedApplication].keyWindow addSubview:self.filterVC.view];
-
 
 }
 - (void)removeFilter

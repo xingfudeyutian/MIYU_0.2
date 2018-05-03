@@ -8,7 +8,7 @@
 
 #import "MIYUVirtualmoneyViewController.h"
 #import "MIYUMoneyCell.h"
-
+#import "MIYURechargeViewController.h"
 
 #define margin 15.0f
 #define MoneyCell @"MIYUMoneyCell"
@@ -18,7 +18,7 @@
 @interface MIYUVirtualmoneyViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
-
+@property (nonatomic, strong) MIYURechargeViewController * rechargeVC;
 @end
 
 @implementation MIYUVirtualmoneyViewController
@@ -130,8 +130,14 @@ minimumLineSpacingForSectionAtIndex:(NSInteger)section
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+  MIYURechargeViewController * rechargeVC = [[MIYURechargeViewController alloc] init];
+  rechargeVC.view.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
+//  [self.view addSubview:rechargeVC.view];
+  [[UIApplication sharedApplication].keyWindow addSubview:rechargeVC.view];
+  [[UIApplication sharedApplication].keyWindow.rootViewController addChildViewController:rechargeVC];
+//  [self presentViewController:rechargeVC animated:NO completion:nil];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 

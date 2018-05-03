@@ -12,4 +12,7 @@
 
 @property (nonatomic, copy) void(^shareActionBlock)(id model);
 
+@property (nonatomic, assign) MIYUViewControllerType controllerType;
+
+
 @end

@@ -46,9 +46,9 @@
   MIYUVideoShowViewController * showVC = [[MIYUVideoShowViewController alloc] init];
   showVC.controllerType = self.controllerType;
 
-  [self.navigationController pushViewController:showVC animated:YES];
+//  [self.navigationController pushViewController:showVC animated:YES];
 
-//  [self presentViewController:showVC animated:YES completion:nil];
+  [self presentViewController:showVC animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

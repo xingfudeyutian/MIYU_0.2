@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   self.navigationBar.translucent = NO;
+  [self.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+  [self.navigationBar setShadowImage:[[UIImage alloc] init]];
 }
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
@@ -27,10 +29,7 @@
         [self creatBackButtonWithVC:viewController];
         self.currentShowVC = viewController;
     }
-
 }
-
-
 
 - (void)creatBackButtonWithVC:(UIViewController *)VC
 {

@@ -7,6 +7,9 @@
 //
 
 #import "MIYUChatBoxViewController.h"
+#import "MIYUShareActionSheet.h"
+
+
 
 @interface MIYUChatBoxViewController ()
 
@@ -14,7 +17,7 @@
 @property (nonatomic, strong) MIYUChatBoxView *chatBoxView;
 @property (nonatomic, strong) MIYUVoiceView   *chatBoxVoiceView;
 @property (nonatomic, strong) MIYUFaceView    *chatBoxFaceView;
-@property (nonatomic, strong) MIYUGiftView    *chatBoxGiftView;
+@property (nonatomic, strong) MIYUGiftViewController    *chatBoxGiftVC;
 
 @end
 
@@ -59,7 +62,7 @@
       } completion:^(BOOL finished) {
         [self.chatBoxFaceView removeFromSuperview];
         [self.chatBoxVoiceView removeFromSuperview];
-        [self.chatBoxGiftView removeFromSuperview];
+        [self.chatBoxGiftVC.view removeFromSuperview];
       }];
     }
   }
@@ -76,7 +79,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
       [self.chatBoxVoiceView removeFromSuperview];
       [self.chatBoxFaceView removeFromSuperview];
-      [self.chatBoxGiftView removeFromSuperview];
+      [self.chatBoxGiftVC.view removeFromSuperview];
     });
     return;
   }
@@ -106,7 +109,7 @@
         self.chatBoxVoiceView.y = self.chatBoxView.curHeight;
       } completion:^(BOOL finished) {
         [self.chatBoxFaceView removeFromSuperview];
-        [self.chatBoxGiftView removeFromSuperview];
+        [self.chatBoxGiftVC.view removeFromSuperview];
       }];
       // 整个界面高度变化
       if (fromStatus != TLChatBoxStatusShowFace || fromStatus != TLChatBoxStatusShowGift) {
@@ -120,7 +123,44 @@
     }
 
 
-  }else if (toStatus == TLChatBoxStatusShowFace)
+  }else if (toStatus == TLChatBoxStatusShowPhoto)
+  {
+
+  }
+  else if (toStatus == TLChatBoxStatusShowVideo)
+  {
+
+    [self.chatBoxGiftVC.view removeFromSuperview];
+    [self.chatBoxVoiceView removeFromSuperview];
+    [self.chatBoxFaceView removeFromSuperview];
+
+    if (self.photoOrVideoShowBlock)
+    {
+      self.photoOrVideoShowBlock(toStatus);
+    }
+    [UIView animateWithDuration:0.3 animations:^{
+      if (self.changeChatBoxHeightBlock)
+      {
+        self.changeChatBoxHeightBlock(self, self.chatBoxView.height );
+      }
+    }];
+
+    UIAlertController * alert = [[UIAlertController alloc] init];
+    UIAlertAction * action1 = [UIAlertAction actionWithTitle:@"添加视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+    }];
+    UIAlertAction * action2 = [UIAlertAction actionWithTitle:@"私密视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+    }];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+
+    }];
+    [alert addAction:action1];
+    [alert addAction:action2];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+  }
+  else if (toStatus == TLChatBoxStatusShowFace)
   {
     if (fromStatus == TLChatBoxStatusShowPhoto || fromStatus == TLChatBoxStatusShowVideo ||fromStatus == TLChatBoxStatusNothing)
     {
@@ -142,7 +182,7 @@
         self.chatBoxFaceView.y = self.chatBoxView.curHeight;
       } completion:^(BOOL finished) {
         [self.chatBoxVoiceView removeFromSuperview];
-        [self.chatBoxGiftView removeFromSuperview];
+        [self.chatBoxGiftVC.view removeFromSuperview];
       }];
       // 整个界面高度变化
       if (fromStatus != TLChatBoxStatusShowVoice || fromStatus != TLChatBoxStatusShowGift) {
@@ -158,9 +198,10 @@
   {
     if (fromStatus == TLChatBoxStatusShowPhoto || fromStatus == TLChatBoxStatusShowVideo ||fromStatus == TLChatBoxStatusNothing)
     {
-      self.chatBoxGiftView.y = self.chatBoxView.curHeight;
+      self.chatBoxGiftVC.view.y = self.chatBoxView.curHeight;
 
-      [self.view addSubview:self.chatBoxGiftView];
+      [self.view addSubview:self.chatBoxGiftVC.view];
+      [self addChildViewController:self.chatBoxGiftVC];
       [UIView animateWithDuration:0.3 animations:^{
 
         if (self.changeChatBoxHeightBlock)
@@ -170,10 +211,11 @@
       }];
     }else
     {
-      self.chatBoxGiftView.y = self.chatBoxView.curHeight + HEIGHT_CHATBOXVIEW;
-      [self.view addSubview:self.chatBoxGiftView];
+      self.chatBoxGiftVC.view.y = self.chatBoxView.curHeight + HEIGHT_CHATBOXVIEW;
+      [self.view addSubview:self.chatBoxGiftVC.view];
+      [self addChildViewController:self.chatBoxGiftVC];
       [UIView animateWithDuration:0.3 animations:^{
-        self.chatBoxGiftView.y = self.chatBoxView.curHeight;
+        self.chatBoxGiftVC.view.y = self.chatBoxView.curHeight;
       } completion:^(BOOL finished) {
         [self.chatBoxVoiceView removeFromSuperview];
         [self.chatBoxFaceView removeFromSuperview];
@@ -190,7 +232,7 @@
     }
   }else
   {
-        [self.chatBoxGiftView removeFromSuperview];
+        [self.chatBoxGiftVC.view removeFromSuperview];
         [self.chatBoxVoiceView removeFromSuperview];
         [self.chatBoxFaceView removeFromSuperview];
 
@@ -238,7 +280,7 @@
       @Strong(self)
       self.chatBoxFaceView.y = height;
       self.chatBoxVoiceView.y = height;
-      self.chatBoxGiftView.y = height;
+      self.chatBoxGiftVC.view.y = height;
 
       if (self.changeChatBoxHeightBlock)
       {
@@ -261,13 +303,14 @@
   }
   return _chatBoxVoiceView;
 }
--(MIYUGiftView *) chatBoxGiftView
+-(MIYUGiftViewController *) chatBoxGiftVC
 {
-  if (_chatBoxGiftView == nil) {
-    _chatBoxGiftView = [[MIYUGiftView alloc] initWithFrame:CGRectMake(0, HEIGHT_CHATBOXVIEW_TOOL, FUll_VIEW_WIDTH, HEIGHT_CHATBOXVIEW)];
-    _chatBoxGiftView.backgroundColor = [UIColor redColor];
+  if (_chatBoxGiftVC == nil) {
+    _chatBoxGiftVC = [[MIYUGiftViewController alloc] init];
+    _chatBoxGiftVC.view.frame = CGRectMake(0, HEIGHT_CHATBOXVIEW_TOOL, FUll_VIEW_WIDTH, HEIGHT_CHATBOXVIEW);
+//    _chatBoxGiftView.backgroundColor = [UIColor redColor];
   }
-  return _chatBoxGiftView;
+  return _chatBoxGiftVC;
 }
 
 -(MIYUFaceView *) chatBoxFaceView

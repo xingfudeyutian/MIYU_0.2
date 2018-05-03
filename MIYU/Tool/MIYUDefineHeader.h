@@ -22,7 +22,7 @@
 #define FUll_CONTENT_HEIGHT     FUll_VIEW_HEIGHT - NavigationBarHeight
 #define TabbarHeight    49
 #define NavigationBarHeight 64
-#define HEIGHT_CHATBOXVIEW 200
+#define HEIGHT_CHATBOXVIEW 260
 #define HEIGHT_CHATBOXVIEW_TOOL 103
 #define     CHATBOX_BUTTON_WIDTH        37
 #define     HEIGHT_TEXTVIEW             40

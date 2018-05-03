@@ -62,6 +62,7 @@
   UIAlertAction * action2 = [UIAlertAction actionWithTitle:@"色情或低俗内容" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
   }];
   UIAlertAction * action3 = [UIAlertAction actionWithTitle:@"其他理由" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    block(alert);
   }];
   UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
   }];

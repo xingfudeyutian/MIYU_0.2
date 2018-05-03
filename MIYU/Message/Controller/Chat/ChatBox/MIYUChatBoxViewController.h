@@ -10,7 +10,7 @@
 #import "MIYUChatBoxView.h"
 #import "MIYUVoiceView.h"
 #import "MIYUFaceView.h"
-#import "MIYUGiftView.h"
+#import "MIYUGiftViewController.h"
 
 @class MIYUChatBoxViewController;
 @class RCMessageModel;

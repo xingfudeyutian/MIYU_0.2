@@ -1,5 +1,5 @@
 //
-//  MIYUBaseSearchViewController.h
+//  MIYUHomeSearchViewController.h
 //  MIYU
 //
 //  Created by hanyutong on 2018/3/22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MIYUBaseSearchViewController : UIViewController
+@interface MIYUHomeSearchViewController : UIViewController
 
 @end

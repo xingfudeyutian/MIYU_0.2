@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUHomeSearchViewController">
+            <connections>
+                <outlet property="searchBar" destination="JUw-qz-wEd" id="ItJ-RV-thh"/>
+                <outlet property="searchDisplayController" destination="Mi9-fe-ARp" id="0bV-56-TqA"/>
+                <outlet property="tableView" destination="ZVL-hp-EOX" id="ufD-cw-Ne4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVL-hp-EOX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="搜索挑战标签关键词" showsCancelButton="YES" id="JUw-qz-wEd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </searchBar>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ZVL-hp-EOX" secondAttribute="bottom" id="8Uh-az-yWx"/>
+                <constraint firstItem="ZVL-hp-EOX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VXt-si-DCn"/>
+                <constraint firstItem="ZVL-hp-EOX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cNt-ej-I3H"/>
+                <constraint firstAttribute="trailing" secondItem="ZVL-hp-EOX" secondAttribute="trailing" id="iNf-Db-rUC"/>
+            </constraints>
+        </view>
+        <searchDisplayController id="Mi9-fe-ARp">
+            <connections>
+                <outlet property="delegate" destination="-1" id="U1S-ib-L7u"/>
+                <outlet property="searchContentsController" destination="-1" id="PAo-BY-bcH"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="ibd-wx-Ntd"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="3Rs-Pf-RAK"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+</document>

@@ -37,15 +37,15 @@
       [self changePageTo:tag];
     };
 
-   [self.view addSubview:self.switchView];
-  [self.view addSubview:self.imageVC.view];
-  [self.view addSubview:self.voiceVC.view];
-  [self.view addSubview:self.videoVC.view];
+    [self.view addSubview:self.switchView];
+    [self.view addSubview:self.imageVC.view];
+    [self.view addSubview:self.voiceVC.view];
+    [self.view addSubview:self.videoVC.view];
 
-  [self addChildViewController:self.imageVC];
-  [self addChildViewController:self.voiceVC];
-  [self addChildViewController:self.videoVC];
-  [self changePageTo:0];
+    [self addChildViewController:self.imageVC];
+    [self addChildViewController:self.voiceVC];
+    [self addChildViewController:self.videoVC];
+    [self changePageTo:0];
 
 
 
@@ -57,8 +57,8 @@
   self.currentVC = self.vcs[tag];
   self.currentVC.view.hidden = NO;
 
-  self.navigationItem.leftBarButtonItem = tag == 2?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(searchShow)];
-  self.navigationItem.rightBarButtonItem = tag == 1?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"Camera_RB"] style:UIBarButtonItemStylePlain target:self action:@selector(Camera_RBShow)];
+//  self.navigationItem.leftBarButtonItem = tag == 2?nil:[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(searchShow)];
+  self.navigationItem.rightBarButtonItem = tag == 2?[[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"Camera_RB"] style:UIBarButtonItemStylePlain target:self action:@selector(Camera_RBShow)]:nil;
 }
 
 - (void)searchShow
@@ -70,7 +70,20 @@
 - (void)Camera_RBShow
 {
 
+  UIAlertController * alert = [[UIAlertController alloc] init];
+  UIAlertAction * action1 = [UIAlertAction actionWithTitle:@"添加视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
+  }];
+  UIAlertAction * action2 = [UIAlertAction actionWithTitle:@"私密视频" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+  }];
+  UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+
+  }];
+  [alert addAction:action1];
+  [alert addAction:action2];
+  [alert addAction:cancel];
+  [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - Lazy loading

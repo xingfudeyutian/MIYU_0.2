@@ -20,7 +20,7 @@
 
 
 #import "MIYUAppDelegate.h"
-
+#import "MIYUUserSettingViewController.h"
 
 
 
@@ -85,9 +85,10 @@
     }
     else
     {
-
+      MIYUUserSettingViewController * userSetting = [[MIYUUserSettingViewController alloc] init];
+      userSetting.hidesBottomBarWhenPushed = YES;
+      [self.navigationController pushViewController:userSetting animated:YES];
     }
-
   }
 }
 

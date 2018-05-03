@@ -228,12 +228,8 @@
   if (lastStatus != TLChatBoxStatusShowPhoto) {
     self.status = TLChatBoxStatusShowPhoto;
 
-//    if (lastStatus == TLChatBoxStatusShowVoice || lastStatus == TLChatBoxStatusShowFace || lastStatus == TLChatBoxStatusShowGift) {
-//      [self textViewDidChange:self.textView];
-//    }
-//    else
-      if (lastStatus == TLChatBoxStatusShowKeyboard) {
-      [self.textView resignFirstResponder];
+    if (lastStatus == TLChatBoxStatusShowKeyboard) {
+     [self.textView resignFirstResponder];
     }
     if (self.chatBoxChangeStatusBlock)
     {
@@ -246,12 +242,7 @@
   MIYUChatBoxStatus lastStatus = self.status;// 记录下上次的状态
   if (lastStatus != TLChatBoxStatusShowVideo) {
     self.status = TLChatBoxStatusShowVideo;
-
-//    if (lastStatus == TLChatBoxStatusShowVoice || lastStatus == TLChatBoxStatusShowFace || lastStatus == TLChatBoxStatusShowGift) {
-//      [self textViewDidChange:self.textView];
-//    }
-//    else
-      if (lastStatus == TLChatBoxStatusShowKeyboard) {
+    if (lastStatus == TLChatBoxStatusShowKeyboard) {
       [self.textView resignFirstResponder];
     }
     if (self.chatBoxChangeStatusBlock)

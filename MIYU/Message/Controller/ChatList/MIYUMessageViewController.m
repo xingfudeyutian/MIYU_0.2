@@ -30,23 +30,20 @@
                                         @(ConversationType_GROUP)]];
 
   self.emptyConversationView = [UIView new];
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:IMAGE_Original(@"microphone") style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
+//  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:IMAGE_Original(@"microphone") style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAction)];
 
   UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, FUll_VIEW_WIDTH, 200)];
   view.backgroundColor = [UIColor redColor];
   MIYUChatListHeader * tableViewHeader = [MIYUChatListHeader viewFromXIB];// [[MIYUChatListHeader alloc] initWithFrame:CGRectMake(0, 0, FUll_VIEW_WIDTH, 200)];
   self.conversationListTableView.tableHeaderView = tableViewHeader;
   self.conversationListTableView.sectionHeaderHeight = 200;
-
-
   self.conversationListTableView.tableFooterView = [UIView new];
-
 }
 
-- (void)rightBarButtonAction
-{
-
-}
+//- (void)rightBarButtonAction
+//{
+//
+//}
 //重写RCConversationListViewController的onSelectedTableRow事件
 - (void)onSelectedTableRow:(RCConversationModelType)conversationModelType
          conversationModel:(RCConversationModel *)model
