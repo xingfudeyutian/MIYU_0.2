@@ -12,11 +12,12 @@
 #import "MIYUReportViewController.h"
 
 #import "MIYUShareActionSheet.h"
+#import "MIYUCommentBottomViewController.h"
 
 @interface MIYUContentcommentViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (nonatomic, assign) CGRect keyboardFrame;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
+
+@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) MIYUCommentBottomViewController * bottomVC;
 @property (nonatomic, strong) MIYUReportViewController * reportVC;
 @end
 
@@ -25,34 +26,61 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"more"] style:UIBarButtonItemStylePlain target:self action:@selector(moreAction:)];
-  /**
-   *  添加两个键盘回收通知
-   */
-  // 即将隐藏
-
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-  // 键盘的Frame值即将发生变化的时候创建的额监听
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardFrameWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
-
 
 }
 -(void)setupSubViews
 {
-  [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.left.equalTo(self.view.mas_left);
-    make.top.equalTo(self.view.mas_top);
-    make.right.equalTo(self.view.mas_right);
-    make.height.equalTo(self.bottomView.mas_top);
-  }];
-  [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.left.right.equalTo(self.tableView);
+  self.view.backgroundColor = [UIColor whiteColor];
+
+  [self.view addSubview:self.bottomVC.view];
+  [self addChildViewController:self.bottomVC];
+
+
+
+  [self.bottomVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
     make.bottom.equalTo(self.view.mas_bottom);
+    make.left.right.equalTo(self.view);
     make.height.equalTo(@64);
   }];
 
-  
+
+
+
+  [self.view addSubview:self.tableView];
+
+  @Weak(self)
+  self.bottomVC.changedHeightBlock = ^(CGFloat height) {
+    @Strong(self)
+
+    [UIView animateWithDuration:0.2 delay:0.05 options:UIViewAnimationOptionTransitionNone animations:^{
+      self.tableView.height = FUll_VIEW_HEIGHT - NavigationBarHeight - height;
+      [self.bottomVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.tableView.mas_bottom);
+        make.bottom.equalTo(self.view.mas_bottom).offset(height-64);
+      }];
+    } completion:nil];
+  };
+
 }
 
+-(MIYUCommentBottomViewController *)bottomVC
+{
+  if (_bottomVC == nil) {
+    _bottomVC = [[MIYUCommentBottomViewController alloc] init];
+//    _bottomVC.view.frame = CGRectMake(0, FUll_VIEW_HEIGHT - NavigationBarHeight, FUll_VIEW_WIDTH, 64);
+  }
+  return _bottomVC;
+}
+-(UITableView *)tableView
+{
+  if (_tableView == nil)
+  {
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT - 2* NavigationBarHeight)];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+  }
+  return _tableView;
+}
 -(void)moreAction:(id)sender
 {
   UIAlertController * alert = [MIYUShareActionSheet showShareActionSheetWithType:self.controllerType model:nil actionBlock:^(id paramer) {
@@ -112,7 +140,15 @@
   }
   return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+  [self.bottomVC resignFirstResponder];
+}
 
 -(MIYUReportViewController *)reportVC
 {
@@ -122,42 +158,6 @@
     _reportVC.view.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
   }
   return _reportVC;
-}
-
-#pragma mark - Private Methods
-
-- (void)keyboardWillHide:(NSNotification *)notification{
-
-  self.keyboardFrame = CGRectZero;
-
-}
-
-
-/**
- *  点击了 textView 的时候，这个方法的调用是比  - (void) textViewDidBeginEditing:(UITextView *)textView 要早的。
-
- */
-- (void)keyboardFrameWillChange:(NSNotification *)notification{
-
-  [UIView animateWithDuration:0.3 animations:^{
-    self.tableView.height =FUll_VIEW_HEIGHT - NavigationBarHeight -(self.keyboardFrame.size.height + self.bottomView.height);
-    self.bottomView.y = self.tableView.y + self.tableView.height;
-  }];
-
-}
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-  [self resignFirstResponder];
-}
-
-- (void)dealloc{
-
-  /**
-   *  移除键盘通知
-   */
-  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillChangeFrameNotification object:nil];
-  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
-
 }
 
 - (void)didReceiveMemoryWarning {
