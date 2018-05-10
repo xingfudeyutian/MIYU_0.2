@@ -35,8 +35,6 @@
   [self.view addSubview:self.bottomVC.view];
   [self addChildViewController:self.bottomVC];
 
-
-
   [self.bottomVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
     make.bottom.equalTo(self.view.mas_bottom);
     make.left.right.equalTo(self.view);

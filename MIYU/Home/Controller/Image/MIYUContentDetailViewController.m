@@ -12,8 +12,8 @@
 #import "MIYUContentDetailCell.h"
 #import "MIYUShareActionSheet.h"
 
+#import "MIYUReleaseContentViewController.h"
 
-#import "MIYUFilterViewController.h"
 
 @interface MIYUContentDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -29,7 +29,8 @@
 
 - (void)Camera_RBShow
 {
-
+  MIYUReleaseContentViewController * releaseVC = [[MIYUReleaseContentViewController alloc] init];
+  [self.navigationController pushViewController:releaseVC animated:YES];
 }
 #pragma mark - UITableViewDelegate,UITableViewDataSource
 
