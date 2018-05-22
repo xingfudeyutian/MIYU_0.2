@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MIYUBaseViewController.h"
 
-@interface MIYUPhoneLoginViewController : UIViewController
+@interface MIYUPhoneLoginViewController : MIYUBaseViewController
 
 @end

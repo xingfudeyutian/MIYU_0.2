@@ -7,7 +7,6 @@
 //
 
 #import "MIYUPhoneLoginViewController.h"
-
 #import "MIYUVaidationViewController.h"
 
 
@@ -31,9 +30,9 @@
 
     MIYUVaidationViewController * vaidationVC = [[MIYUVaidationViewController alloc] init];
     [self.navigationController pushViewController:vaidationVC animated:YES];
-//    [self presentViewController:nav animated:YES completion:nil];
-//    [self.navigationController pushViewController:vaidationVC animated:YES];
-
+}
+- (IBAction)backAction:(id)sender {
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

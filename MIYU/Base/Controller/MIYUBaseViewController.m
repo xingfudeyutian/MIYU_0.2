@@ -10,8 +10,6 @@
 
 @interface MIYUBaseViewController ()
 
-
-
 @end
 
 @implementation MIYUBaseViewController

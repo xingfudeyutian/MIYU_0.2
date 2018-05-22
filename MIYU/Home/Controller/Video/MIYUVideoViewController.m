@@ -8,6 +8,8 @@
 
 #import "MIYUVideoViewController.h"
 #import "MIYUVideoShowViewController.h"
+#import "MIYUAlertViewController.h"
+
 
 #import "CardView.h"
 #import "CardItem2.h"
@@ -20,7 +22,7 @@
 }
 @property (weak, nonatomic) IBOutlet CardView * cardView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint * cardViewHeightConstraint;
-
+@property (nonatomic, strong) MIYUVideoShowViewController * videoShowVC;
 @end
 
 //static NSString * ITEM_XIB    = @"CardItem";
@@ -91,15 +93,40 @@ static NSString * ITEM_RUID_2 = @"Item_RUID2";
 {
   NSLog(@"卡片%ld被选中", (long)index);
 
-  MIYUVideoShowViewController * videoShowVC = [[MIYUVideoShowViewController alloc] init];
-  videoShowVC.hidesBottomBarWhenPushed = YES;
-  videoShowVC.controllerType = MIYUOTHERINFO;
-  videoShowVC.modalTransitionStyle = UIModalPresentationFormSheet;
-  [self presentViewController:videoShowVC animated:YES completion:nil];
-//  [self.navigationController pushViewController:videoShowVC animated:YES];
+
+
+
+  MIYUAlertViewController * alert = [[MIYUAlertViewController alloc] init];
+  MIYUAlertModel * model = [[MIYUAlertModel alloc] init];
+  model.message = @"私密视频每次播放需要30鱼饵";
+  model.leftButton = @"取消播放";
+  model.rightButton = @"立即播放";
+  alert.model = model;
+  alert.view.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
+  @Weak(self)
+  alert.actionBlock = ^(NSInteger tag) {
+    @Strong(self)
+      [self presentViewController:self.videoShowVC animated:YES completion:nil];
+  };
+  [[UIApplication sharedApplication].keyWindow addSubview:alert.view];
+  [[UIApplication sharedApplication].keyWindow.rootViewController addChildViewController:alert];
+
+
+
+
+
 
 }
-
+-(MIYUVideoShowViewController *)videoShowVC
+{
+  if (_videoShowVC == nil) {
+    _videoShowVC = [[MIYUVideoShowViewController alloc] init];
+    _videoShowVC.hidesBottomBarWhenPushed = YES;
+    _videoShowVC.controllerType = MIYUOTHERINFO;
+    _videoShowVC.modalTransitionStyle = UIModalPresentationFormSheet;
+  }
+  return _videoShowVC;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

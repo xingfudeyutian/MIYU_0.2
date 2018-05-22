@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUAlertViewController">
+            <connections>
+                <outlet property="leftBtn" destination="BYq-GD-dJO" id="2DB-AP-N5Y"/>
+                <outlet property="messageL" destination="nLJ-40-F3X" id="0a0-ln-pLN"/>
+                <outlet property="rightBtn" destination="ojE-kZ-elS" id="dJF-Hj-eYq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp6-8E-bg9">
+                    <rect key="frame" x="50" y="261" width="275" height="144"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLJ-40-F3X">
+                            <rect key="frame" x="30" y="10" width="215" height="70"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYq-GD-dJO">
+                            <rect key="frame" x="30" y="90" width="92.5" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="hl0-o4-xXU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojE-kZ-elS">
+                            <rect key="frame" x="152.5" y="90" width="92.5" height="36"/>
+                            <color key="backgroundColor" red="1" green="0.86499750610000004" blue="0.0090984450650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="ZNT-FR-ASJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="18"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="1KW-CH-IWn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="BYq-GD-dJO" firstAttribute="top" secondItem="nLJ-40-F3X" secondAttribute="bottom" constant="10" id="68C-FX-nCZ"/>
+                        <constraint firstItem="ojE-kZ-elS" firstAttribute="leading" secondItem="BYq-GD-dJO" secondAttribute="trailing" constant="30" id="8w0-kO-zcq"/>
+                        <constraint firstItem="nLJ-40-F3X" firstAttribute="top" secondItem="Fp6-8E-bg9" secondAttribute="top" constant="10" id="A95-tC-YkL"/>
+                        <constraint firstItem="BYq-GD-dJO" firstAttribute="leading" secondItem="Fp6-8E-bg9" secondAttribute="leading" constant="30" id="JAh-gU-bMK"/>
+                        <constraint firstAttribute="width" secondItem="Fp6-8E-bg9" secondAttribute="height" multiplier="295:154" id="NfZ-G6-ywG"/>
+                        <constraint firstItem="nLJ-40-F3X" firstAttribute="leading" secondItem="BYq-GD-dJO" secondAttribute="leading" id="NmJ-AW-B58"/>
+                        <constraint firstAttribute="trailing" secondItem="ojE-kZ-elS" secondAttribute="trailing" constant="30" id="ayB-go-4E5"/>
+                        <constraint firstItem="ojE-kZ-elS" firstAttribute="trailing" secondItem="nLJ-40-F3X" secondAttribute="trailing" id="bUL-oN-Xrs"/>
+                        <constraint firstAttribute="bottom" secondItem="ojE-kZ-elS" secondAttribute="bottom" constant="18" id="cGG-BR-KfD"/>
+                        <constraint firstItem="ojE-kZ-elS" firstAttribute="top" secondItem="BYq-GD-dJO" secondAttribute="top" id="fRp-Kn-yzy"/>
+                        <constraint firstItem="ojE-kZ-elS" firstAttribute="width" secondItem="BYq-GD-dJO" secondAttribute="width" id="iWe-8f-XjS"/>
+                        <constraint firstItem="ojE-kZ-elS" firstAttribute="bottom" secondItem="BYq-GD-dJO" secondAttribute="bottom" id="l5a-Eo-Gfi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Fp6-8E-bg9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="H0T-gK-vGN"/>
+                <constraint firstItem="Fp6-8E-bg9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d4Z-an-Zbc"/>
+                <constraint firstItem="Fp6-8E-bg9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dI2-Yl-gSZ"/>
+                <constraint firstAttribute="trailing" secondItem="Fp6-8E-bg9" secondAttribute="trailing" constant="50" id="f1v-WI-DYc"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

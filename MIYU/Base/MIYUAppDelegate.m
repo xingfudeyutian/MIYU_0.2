@@ -11,7 +11,7 @@
 //tab页
 #import "MIYUTabBarController.h"
 
-#import "MIYUPhoneLoginViewController.h"
+#import "MIYUThirdLoginViewController.h"
 
 
 
@@ -24,8 +24,8 @@
 	
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-  //MIYUPhoneLoginViewController  *tabBarVC = [[MIYUPhoneLoginViewController alloc] init];
-  //UINavigationController  * nav = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+//  MIYUThirdLoginViewController  *tabBarVC = [[MIYUThirdLoginViewController alloc] init];
+//  UINavigationController  * nav = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
 
     MIYUTabBarController *tabBarVC = [[MIYUTabBarController alloc] init];
     self.window.rootViewController = tabBarVC;
@@ -54,13 +54,6 @@
     NSLog(@"token错误");
   }];
 }
-
-
-
-
-
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

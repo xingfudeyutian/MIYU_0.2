@@ -22,7 +22,7 @@
 #import "MIYUAppDelegate.h"
 #import "MIYUUserSettingViewController.h"
 
-
+#import "MIYUAlertViewController.h"
 
 @interface MIYUMineViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *leftBtn;
@@ -98,6 +98,21 @@
   if (btn.tag == 0)
   {
     //视频
+    MIYUAlertViewController * alert = [[MIYUAlertViewController alloc] init];
+    MIYUAlertModel * model = [[MIYUAlertModel alloc] init];
+    model.message = @"主人，亲密度不够，若要视频请赠送对方30点鱼饵/1分钟哦～";
+    model.leftButton = @"暂不视频";
+    model.rightButton = @"立即拨通";
+    alert.model = model;
+    alert.view.frame = CGRectMake(0, 0, FUll_VIEW_WIDTH, FUll_VIEW_HEIGHT);
+  @Weak(self)
+    alert.actionBlock = ^(NSInteger tag) {
+      @Strong(self)
+      //视频
+    };
+    [[UIApplication sharedApplication].keyWindow addSubview:alert.view];
+    [[UIApplication sharedApplication].keyWindow.rootViewController addChildViewController:alert];
+
   }else
   {
     //信息

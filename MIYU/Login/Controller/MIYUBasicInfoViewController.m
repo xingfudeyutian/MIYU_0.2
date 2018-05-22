@@ -7,6 +7,8 @@
 //
 
 #import "MIYUBasicInfoViewController.h"
+#import "MIYUTabBarController.h"
+
 
 @interface MIYUBasicInfoViewController ()
 
@@ -18,6 +20,11 @@
     [super viewDidLoad];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(backToLastVC:)];
     self.title = @"基础信息";
+}
+- (IBAction)enterApp:(id)sender {
+
+  MIYUTabBarController * tab = [[MIYUTabBarController alloc] init];
+  [[UIApplication sharedApplication] keyWindow].rootViewController = tab;
 }
 - (IBAction)backToLastVC:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
