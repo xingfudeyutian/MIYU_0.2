@@ -104,6 +104,7 @@
 {
   MIYUContentcommentViewController * commentVC = [[MIYUContentcommentViewController alloc] init];
   commentVC.controllerType = self.controllerType;
+  commentVC.cellType = self.cellType;
   [self.navigationController pushViewController:commentVC animated:YES];
 }
 

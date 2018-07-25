@@ -63,6 +63,9 @@
                     <constraint firstItem="38A-j0-CTx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="urr-4X-W4K"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="audioView" destination="gKp-ci-MI3" id="jc6-tw-KiE"/>
+            </connections>
             <point key="canvasLocation" x="34" y="217.5"/>
         </tableViewCell>
     </objects>

@@ -8,6 +8,9 @@
 
 #import "WaveView.h"
 
+
+
+
 @implementation WaveView
 
 -(void)frequenceLevel:(float *)levels

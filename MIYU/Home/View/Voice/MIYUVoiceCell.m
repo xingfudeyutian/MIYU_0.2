@@ -23,7 +23,7 @@
     // Initialization code
   float levels = 20;
   
-//  [self.wave frequenceLevel:&levels];
+  [self.audioView frequenceLevel:&levels];
 
 }
 - (IBAction)moreAction:(id)sender {

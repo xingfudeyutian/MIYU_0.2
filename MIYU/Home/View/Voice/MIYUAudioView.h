@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MIYUAudioView : UIView
-{
-  float levels;
-}
+
+-(void)frequenceLevel:(float *)levels;
 
 @end

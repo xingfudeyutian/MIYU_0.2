@@ -7,12 +7,20 @@
 //
 
 #import "MIYUAudioDetailCell.h"
+#import "MIYUAudioView.h"
+
+@interface MIYUAudioDetailCell ()
+@property (weak, nonatomic) IBOutlet MIYUAudioView *audioView;
+
+@end
 
 @implementation MIYUAudioDetailCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+  float levels = 30;
+
+  [self.audioView frequenceLevel:&levels];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

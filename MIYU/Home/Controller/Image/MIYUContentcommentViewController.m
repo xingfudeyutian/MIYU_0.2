@@ -8,6 +8,7 @@
 
 #import "MIYUContentcommentViewController.h"
 #import "MIYUContentDetailCell.h"
+#import "MIYUAudioDetailCell.h"
 #import "MIYUCommentCell.h"
 #import "MIYUReportViewController.h"
 
@@ -131,7 +132,13 @@
   BaseTableViewCell * cell ;
   if (indexPath.section == 0)
   {
-    cell = [MIYUContentDetailCell xibCellWithTableView:tableView];
+    if (self.cellType == MIYUCONTENTINFO)
+    {
+      cell = [MIYUContentDetailCell xibCellWithTableView:tableView];
+    }else
+    {
+      cell = [MIYUAudioDetailCell xibCellWithTableView:tableView];
+    }
   }else
   {
     cell = [MIYUCommentCell xibCellWithTableView:tableView];

@@ -38,6 +38,10 @@
 
 }
 
+-(void)frequenceLevel:(float *)levels
+{
+  [self.waveView frequenceLevel:levels];
+}
  
 /*
 // Only override drawRect: if you perform custom drawing.
