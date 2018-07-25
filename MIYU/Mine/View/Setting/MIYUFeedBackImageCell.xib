@@ -30,6 +30,9 @@
                     <constraint firstItem="eds-af-aIT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="xWF-xf-KHq"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="scrollView" destination="eds-af-aIT" id="7H0-y6-7o4"/>
+            </connections>
             <point key="canvasLocation" x="55" y="106"/>
         </tableViewCell>
     </objects>

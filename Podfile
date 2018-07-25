@@ -8,6 +8,7 @@ target ‘MIYU’ do
     pod 'ZFPlayer'
     pod 'ZFDownload'
     pod 'OCBarrage'
+    pod 'WechatOpenSDK'
     
 end
 

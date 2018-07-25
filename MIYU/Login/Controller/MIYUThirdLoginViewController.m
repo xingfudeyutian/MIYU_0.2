@@ -9,6 +9,7 @@
 #import "MIYUThirdLoginViewController.h"
 #import "MIYUPhoneLoginViewController.h"
 #import "MIYUNavigationViewController.h"
+#import "MIYUWeChat.h"
 
 @interface MIYUThirdLoginViewController ()
 
@@ -16,13 +17,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *qqLogin;
 @property (weak, nonatomic) IBOutlet UIButton *phoneLogin;
 
+
 @end
 
 @implementation MIYUThirdLoginViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    [self.navigationController.navigationBar setHidden:YES];
+  [super viewDidLoad];
+  [self.navigationController.navigationBar setHidden:YES];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {
@@ -35,27 +37,47 @@
   switch (btn.tag) {
     case 0:
     {
-      return;
+
+      if ([[MIYUWeChat sharedInstance] isWXAppInstalled])
+      {
+          [[MIYUWeChat sharedInstance] sendAuthRequest];
+      }
+      else
+      {
+        //如果未安装指导用户下载微信
+        NSURL * URL = [NSURL URLWithString:[WXApi getWXAppInstallUrl]];
+        if ([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
+          [[UIApplication sharedApplication] openURL:URL options:@{} completionHandler:^(BOOL success) {
+
+          }];
+        }else
+        {
+          BOOL success = [[UIApplication sharedApplication] openURL:URL];
+        }
+      }
     }
       break;
     case 1:
-    {
+    {//qq登录
       return;
     }
       break;
     case 2:
     {
       vc = [[MIYUPhoneLoginViewController alloc] init];
+      MIYUNavigationViewController * nav = [[MIYUNavigationViewController alloc] initWithRootViewController:vc];
+      [self presentViewController:nav animated:YES completion:nil];
     }
       break;
     default:
       break;
   }
-  MIYUNavigationViewController * nav = [[MIYUNavigationViewController alloc] initWithRootViewController:vc];
-  [self presentViewController:nav animated:YES completion:nil];
+
 }
 
+
+
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+  [super didReceiveMemoryWarning];
 }
 @end

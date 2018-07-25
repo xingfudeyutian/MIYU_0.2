@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MIYU/Mine/Controller/MineInfo/MIYUMineViewController.m"
-            timestampString = "548650395.352728"
+            filePath = "MIYU/Home/Controller/Video/MIYUVideoShowViewController.m"
+            timestampString = "554194905.060065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-bottomToolAction:"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-navigationClick:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,12 +25,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MIYU/Base/Controller/MIYUAlertViewController.m"
-            timestampString = "548650395.35366"
+            filePath = "MIYU/Home/Controller/Video/MIYUVideoShowViewController.m"
+            timestampString = "554194905.06068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MIYU/Base/Controller/MIYUAlertViewController.m"
-            timestampString = "548650395.353907"
+            filePath = "MIYU/Home/Controller/Video/MIYUVideoShowViewController.m"
+            timestampString = "554194905.060758"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

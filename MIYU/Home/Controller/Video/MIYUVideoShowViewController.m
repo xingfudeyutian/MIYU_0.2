@@ -44,7 +44,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  self.videoURL = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/videos/minion_03.mp4"];
+  NSString *urlStr = [[NSBundle mainBundle]pathForResource:@"magic.mp4" ofType:nil];
+  self.videoURL = [[NSURL alloc] initFileURLWithPath:urlStr];
+//  self.videoURL = [NSURL URLWithString:urlStr];
   // 自动播放，默认不自动播放
   [self.playerView autoPlayTheVideo];
   /**
@@ -168,6 +170,7 @@
     {
 //      [self.navigationController popViewControllerAnimated:YES];
       //返回
+
       [self dismissViewControllerAnimated:YES completion:nil];
     }
       break;

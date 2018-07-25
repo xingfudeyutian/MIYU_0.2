@@ -18,6 +18,7 @@
 #import "NSObject+extend.h"
 #import "UIView+CLTabbar.h"
 #import "UIImage+Extension.h"
+#import "MIYUAFNLinks.h"
 
 #import <RongIMKit/RongIMKit.h>
 #import <RongIMLib/RongIMLib.h>

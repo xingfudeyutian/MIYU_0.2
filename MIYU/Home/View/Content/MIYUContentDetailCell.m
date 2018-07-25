@@ -7,6 +7,13 @@
 //
 
 #import "MIYUContentDetailCell.h"
+#import "MIYUAudioView.h"
+
+
+@interface MIYUContentDetailCell ()
+
+
+@end
 
 @implementation MIYUContentDetailCell
 
@@ -32,5 +39,6 @@
 
     // Configure the view for the selected state
 }
+
 
 @end

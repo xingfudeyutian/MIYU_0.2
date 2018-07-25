@@ -71,7 +71,7 @@
   //名字
   [mAttributedString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"诶呀妈呀:"] attributes:@{NSForegroundColorAttributeName:COLOR_YELLOW}]];
   //内容
-  [mAttributedString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"发个粑粑弹幕发个"] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}]];
+  [mAttributedString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"发个弹幕发个"] attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}]];
 
   [mAttributedString addAttribute:NSStrokeWidthAttributeName value:[NSNumber numberWithInteger:-1] range:NSMakeRange(0, mAttributedString.length)];
   [mAttributedString addAttribute:NSStrokeColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, mAttributedString.length)];

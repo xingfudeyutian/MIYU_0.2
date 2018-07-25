@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MIYUCommentInfoView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RrQ-oW-tH4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLV-jd-H1h">
+                            <rect key="frame" x="15" y="28" width="70" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="XaP-cD-8UD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="3333" image="likeBtn">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-vF-eKU">
+                            <rect key="frame" x="105" y="28" width="70" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="Y3i-Z5-yVc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="33333" image="seeBtn">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyr-1I-3WU">
+                            <rect key="frame" x="288" y="25" width="22" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="IpI-7x-s8P"/>
+                                <constraint firstAttribute="width" constant="22" id="rh0-Le-K5E"/>
+                            </constraints>
+                            <state key="normal" image="like"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpP-Iz-EJX">
+                            <rect key="frame" x="340" y="25" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="TNs-0l-bZl"/>
+                                <constraint firstAttribute="height" constant="20" id="vwA-77-m2t"/>
+                            </constraints>
+                            <state key="normal" image="talk"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="iyr-1I-3WU" firstAttribute="centerY" secondItem="RrQ-oW-tH4" secondAttribute="centerY" id="0Vv-bQ-HPU"/>
+                        <constraint firstAttribute="trailing" secondItem="TpP-Iz-EJX" secondAttribute="trailing" constant="15" id="3kv-ux-6rt"/>
+                        <constraint firstItem="TpP-Iz-EJX" firstAttribute="centerY" secondItem="RrQ-oW-tH4" secondAttribute="centerY" id="C9l-K1-ler"/>
+                        <constraint firstItem="JLV-jd-H1h" firstAttribute="centerY" secondItem="RrQ-oW-tH4" secondAttribute="centerY" id="G8P-Tv-XeE"/>
+                        <constraint firstItem="Pue-vF-eKU" firstAttribute="leading" secondItem="JLV-jd-H1h" secondAttribute="trailing" constant="20" id="O9d-Ls-qHm"/>
+                        <constraint firstItem="iyr-1I-3WU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pue-vF-eKU" secondAttribute="trailing" id="boA-ze-7PG"/>
+                        <constraint firstItem="JLV-jd-H1h" firstAttribute="leading" secondItem="RrQ-oW-tH4" secondAttribute="leading" constant="15" id="g5T-EQ-Nb6"/>
+                        <constraint firstItem="Pue-vF-eKU" firstAttribute="centerY" secondItem="RrQ-oW-tH4" secondAttribute="centerY" id="kXr-4c-u8C"/>
+                        <constraint firstItem="TpP-Iz-EJX" firstAttribute="leading" secondItem="iyr-1I-3WU" secondAttribute="trailing" constant="30" id="xMo-MC-uPh"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0TB-Sz-Lg0">
+                    <rect key="frame" x="20" y="70" width="335" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6T-a4-oKQ">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="fMG-Lu-aX9"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="共2条评论">
+                                    <attributes>
+                                        <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="►">
+                                    <attributes>
+                                        <color key="NSColor" red="1" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="10" name="LucidaGrande"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="查看全部">
+                                    <attributes>
+                                        <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="g6T-a4-oKQ" secondAttribute="bottom" id="2qy-UT-KXd"/>
+                        <constraint firstItem="g6T-a4-oKQ" firstAttribute="leading" secondItem="0TB-Sz-Lg0" secondAttribute="leading" id="3ce-zP-Btc"/>
+                        <constraint firstAttribute="height" constant="20" id="Muw-1Y-7bl"/>
+                        <constraint firstAttribute="trailing" secondItem="g6T-a4-oKQ" secondAttribute="trailing" id="p7s-65-A3V"/>
+                        <constraint firstItem="g6T-a4-oKQ" firstAttribute="top" secondItem="0TB-Sz-Lg0" secondAttribute="top" id="wkz-Hv-g7b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0TB-Sz-Lg0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="4Dn-lt-IoG"/>
+                <constraint firstItem="RrQ-oW-tH4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5Ru-No-UGy"/>
+                <constraint firstItem="0TB-Sz-Lg0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Me-oq-S4h"/>
+                <constraint firstItem="RrQ-oW-tH4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8is-Pp-faq"/>
+                <constraint firstItem="RrQ-oW-tH4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BBG-H0-fZa"/>
+                <constraint firstAttribute="trailing" secondItem="RrQ-oW-tH4" secondAttribute="trailing" id="Foy-ZG-udb"/>
+                <constraint firstItem="0TB-Sz-Lg0" firstAttribute="top" secondItem="RrQ-oW-tH4" secondAttribute="bottom" id="foH-df-Skh"/>
+                <constraint firstAttribute="bottom" secondItem="0TB-Sz-Lg0" secondAttribute="bottom" id="qG5-Ro-ewr"/>
+                <constraint firstAttribute="trailing" secondItem="0TB-Sz-Lg0" secondAttribute="trailing" constant="20" id="zLq-gP-7ya"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="42"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="like" width="22" height="20"/>
+        <image name="likeBtn" width="11" height="10"/>
+        <image name="seeBtn" width="14" height="10"/>
+        <image name="talk" width="20" height="20"/>
+    </resources>
+</document>

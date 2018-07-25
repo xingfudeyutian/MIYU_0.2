@@ -48,6 +48,7 @@
 {
   MIYUContentDetailViewController * contentDetail = [[MIYUContentDetailViewController alloc] init];
   contentDetail.controllerType = self.controllerType;
+  contentDetail.cellType = MIYUAUDIOINFO;
   contentDetail.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:contentDetail animated:YES];
 }

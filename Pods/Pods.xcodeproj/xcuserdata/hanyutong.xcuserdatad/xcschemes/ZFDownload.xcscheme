@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CC2B1F2080222F46CACE088FC0527922'
-               BlueprintName = 'ZFDownload'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libZFDownload.a'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "48F30EB85FAE3DB6BF1E8663BC885B44"
+               BlueprintName = "ZFDownload"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "libZFDownload.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

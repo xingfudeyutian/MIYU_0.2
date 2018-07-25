@@ -7,7 +7,7 @@
 //
 
 #import "MIYUAppDelegate.h"
-
+#import "MIYUWeChat.h"
 //tab页
 #import "MIYUTabBarController.h"
 
@@ -15,7 +15,7 @@
 
 
 
-@interface MIYUAppDelegate ()
+@interface MIYUAppDelegate ()<WXApiDelegate>
 
 @end
 
@@ -26,15 +26,25 @@
 
 //  MIYUThirdLoginViewController  *tabBarVC = [[MIYUThirdLoginViewController alloc] init];
 //  UINavigationController  * nav = [[UINavigationController alloc] initWithRootViewController:tabBarVC];
+//  self.window.rootViewController = nav;
 
     MIYUTabBarController *tabBarVC = [[MIYUTabBarController alloc] init];
     self.window.rootViewController = tabBarVC;
     [self.window makeKeyWindow];
-
-  [self RongCloudConfig];
+    //配置三方框架
+//    [self thirdConfig];
     return YES;
 }
 
+
+-(void)thirdConfig
+{
+  //融云
+//  [self RongCloudConfig];
+
+  //微信
+  [[MIYUWeChat sharedInstance] registerApp];
+}
 
 -(void)RongCloudConfig
 {
@@ -53,6 +63,15 @@
     //如果没有设置token有效期却提示token错误，请检查您客户端和服务器的appkey是否匹配，还有检查您获取token的流程。
     NSLog(@"token错误");
   }];
+}
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+  return [WXApi handleOpenURL:url delegate:self];
+}
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  return [WXApi handleOpenURL:url delegate:self];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

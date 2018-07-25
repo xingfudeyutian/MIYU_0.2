@@ -9,7 +9,15 @@
 #ifndef MIYUDefineHeader_h
 #define MIYUDefineHeader_h
 
+#ifdef DEBUG
 
+#define DLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define DLog(...)
+
+#endif
 #define RONGCLOULDIM_KEY @"lmxuhwagxl20d"
 
 
@@ -32,9 +40,14 @@
 #define Strong(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
 
 
+
+
 typedef NS_ENUM(NSInteger, MIYUViewControllerType) {
   MIYUPERSONERALINFO = 0, // 个人信息
   MIYUOTHERINFO,      //其他人员信息
 };
-
+typedef NS_ENUM(NSInteger, MIYUCellType) {
+  MIYUCONTENTINFO= 0, // 语音
+  MIYUAUDIOINFO,      //图文
+};
 #endif /* MIYUDefineHeader_h */

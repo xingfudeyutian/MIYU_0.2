@@ -8,6 +8,14 @@
 
 #import "MIYUFeedBackImageCell.h"
 
+
+@interface MIYUFeedBackImageCell ()
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) UIButton * addButton;
+
+@end
+
 @implementation MIYUFeedBackImageCell
 
 - (void)awakeFromNib {

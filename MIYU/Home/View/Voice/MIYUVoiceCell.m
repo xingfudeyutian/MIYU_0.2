@@ -7,12 +7,24 @@
 //
 
 #import "MIYUVoiceCell.h"
+#import "MIYUAudioView.h"
+
+@interface MIYUVoiceCell ()
+
+@property (weak, nonatomic) IBOutlet MIYUAudioView *audioView;
+
+
+@end
 
 @implementation MIYUVoiceCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+  float levels = 20;
+  
+//  [self.wave frequenceLevel:&levels];
+
 }
 - (IBAction)moreAction:(id)sender {
 

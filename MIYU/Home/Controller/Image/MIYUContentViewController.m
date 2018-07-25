@@ -51,6 +51,7 @@
 {
   MIYUContentDetailViewController * contentDetail = [[MIYUContentDetailViewController alloc] init];
   contentDetail.controllerType = self.controllerType;
+  contentDetail.cellType = MIYUCONTENTINFO;
   contentDetail.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:contentDetail animated:YES];
 }

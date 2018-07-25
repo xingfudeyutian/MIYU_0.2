@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) NSMutableArray * dataArray;
 @property (nonatomic, assign) MIYUViewControllerType controllerType;
+@property (nonatomic, assign) MIYUCellType cellType;
+
 
 - (void)setupSubViews;
 

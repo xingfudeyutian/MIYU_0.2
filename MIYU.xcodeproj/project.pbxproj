@@ -86,6 +86,7 @@
 		B547ED7B208447C3007633C5 /* MIYUBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B547ED7A208447C3007633C5 /* MIYUBaseModel.m */; };
 		B549798F208D77B000519259 /* MIYUMyVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B549798D208D77B000519259 /* MIYUMyVideoCell.m */; };
 		B5497990208D77B000519259 /* MIYUMyVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B549798E208D77B000519259 /* MIYUMyVideoCell.xib */; };
+		B54EFD4121008B840071544C /* WaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54EFD4021008B840071544C /* WaveView.m */; };
 		B55B18872089DD7C00699F54 /* ZLCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B55B18862089DD7C00699F54 /* ZLCollectionViewFlowLayout.m */; };
 		B563B6882079E6D600B38AFF /* MIYUBarrageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B563B6802079E6D600B38AFF /* MIYUBarrageViewController.m */; };
 		B563B6892079E6D600B38AFF /* MIYUBarrageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B563B6812079E6D600B38AFF /* MIYUBarrageViewController.xib */; };
@@ -129,8 +130,20 @@
 		B5A4AB28205F80D9004202E1 /* MIYUChatBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4AB27205F80D9004202E1 /* MIYUChatBoxView.m */; };
 		B5A4AB2B205FA648004202E1 /* MIYUVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4AB2A205FA648004202E1 /* MIYUVoiceView.m */; };
 		B5A4AB2E205FA654004202E1 /* MIYUFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A4AB2D205FA654004202E1 /* MIYUFaceView.m */; };
+		B5A6045720F746970090347B /* MIYUAFNManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A6045620F746970090347B /* MIYUAFNManager.m */; };
+		B5A6045A20F74AEF0090347B /* MIYUAFNLinks.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A6045920F74AEF0090347B /* MIYUAFNLinks.m */; };
+		B5A6046820F750560090347B /* MIYUWeChat.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A6046720F750560090347B /* MIYUWeChat.m */; };
 		B5A83CD620B2A67A00406DE0 /* MIYUAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A83CD420B2A67A00406DE0 /* MIYUAlertViewController.m */; };
 		B5A83CD720B2A67A00406DE0 /* MIYUAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A83CD520B2A67A00406DE0 /* MIYUAlertViewController.xib */; };
+		B5ACC9702106C19400D10160 /* MIYUAudioView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ACC96F2106C19400D10160 /* MIYUAudioView.m */; };
+		B5ACC9722106C1A400D10160 /* MIYUAudioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACC9712106C1A400D10160 /* MIYUAudioView.xib */; };
+		B5ACC97D2107075000D10160 /* MIYUAudioDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ACC97B2107075000D10160 /* MIYUAudioDetailCell.m */; };
+		B5ACC97E2107075000D10160 /* MIYUAudioDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACC97C2107075000D10160 /* MIYUAudioDetailCell.xib */; };
+		B5ACC9812107077800D10160 /* MIYUBaseInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ACC9802107077800D10160 /* MIYUBaseInfoView.m */; };
+		B5ACC98421070BCB00D10160 /* MIYUCommentInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ACC98321070BCB00D10160 /* MIYUCommentInfoView.m */; };
+		B5ACC98621070BE500D10160 /* MIYUBaseInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACC98521070BE500D10160 /* MIYUBaseInfoView.xib */; };
+		B5ACC98821070EC000D10160 /* MIYUCommentInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5ACC98721070EC000D10160 /* MIYUCommentInfoView.xib */; };
+		B5ACC98D21084AE700D10160 /* magic.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B5ACC98C21084AE700D10160 /* magic.mp4 */; };
 		B5BDD79020A98E6F008E11B5 /* MIYUThirdLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BDD78E20A98E6F008E11B5 /* MIYUThirdLoginViewController.m */; };
 		B5BDD79120A98E6F008E11B5 /* MIYUThirdLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5BDD78F20A98E6F008E11B5 /* MIYUThirdLoginViewController.xib */; };
 		B5C479A22085EB1E0058C6A6 /* OCBarrageMixedImageAndTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C479A12085EB1E0058C6A6 /* OCBarrageMixedImageAndTextCell.m */; };
@@ -318,6 +331,8 @@
 		B549798C208D77B000519259 /* MIYUMyVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUMyVideoCell.h; sourceTree = "<group>"; };
 		B549798D208D77B000519259 /* MIYUMyVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUMyVideoCell.m; sourceTree = "<group>"; };
 		B549798E208D77B000519259 /* MIYUMyVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUMyVideoCell.xib; sourceTree = "<group>"; };
+		B54EFD3F21008B830071544C /* WaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveView.h; sourceTree = "<group>"; };
+		B54EFD4021008B840071544C /* WaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveView.m; sourceTree = "<group>"; };
 		B55B18852089DD7C00699F54 /* ZLCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		B55B18862089DD7C00699F54 /* ZLCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		B563B67F2079E6D600B38AFF /* MIYUBarrageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIYUBarrageViewController.h; sourceTree = "<group>"; };
@@ -392,9 +407,28 @@
 		B5A4AB2A205FA648004202E1 /* MIYUVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUVoiceView.m; sourceTree = "<group>"; };
 		B5A4AB2C205FA654004202E1 /* MIYUFaceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUFaceView.h; sourceTree = "<group>"; };
 		B5A4AB2D205FA654004202E1 /* MIYUFaceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUFaceView.m; sourceTree = "<group>"; };
+		B5A6045520F746970090347B /* MIYUAFNManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUAFNManager.h; sourceTree = "<group>"; };
+		B5A6045620F746970090347B /* MIYUAFNManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUAFNManager.m; sourceTree = "<group>"; };
+		B5A6045820F74AEF0090347B /* MIYUAFNLinks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUAFNLinks.h; sourceTree = "<group>"; };
+		B5A6045920F74AEF0090347B /* MIYUAFNLinks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUAFNLinks.m; sourceTree = "<group>"; };
+		B5A6046620F750560090347B /* MIYUWeChat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUWeChat.h; sourceTree = "<group>"; };
+		B5A6046720F750560090347B /* MIYUWeChat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUWeChat.m; sourceTree = "<group>"; };
 		B5A83CD320B2A67A00406DE0 /* MIYUAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUAlertViewController.h; sourceTree = "<group>"; };
 		B5A83CD420B2A67A00406DE0 /* MIYUAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUAlertViewController.m; sourceTree = "<group>"; };
 		B5A83CD520B2A67A00406DE0 /* MIYUAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUAlertViewController.xib; sourceTree = "<group>"; };
+		B5ACC96E2106C19400D10160 /* MIYUAudioView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUAudioView.h; sourceTree = "<group>"; };
+		B5ACC96F2106C19400D10160 /* MIYUAudioView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUAudioView.m; sourceTree = "<group>"; };
+		B5ACC9712106C1A400D10160 /* MIYUAudioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUAudioView.xib; sourceTree = "<group>"; };
+		B5ACC97A2107075000D10160 /* MIYUAudioDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUAudioDetailCell.h; sourceTree = "<group>"; };
+		B5ACC97B2107075000D10160 /* MIYUAudioDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUAudioDetailCell.m; sourceTree = "<group>"; };
+		B5ACC97C2107075000D10160 /* MIYUAudioDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUAudioDetailCell.xib; sourceTree = "<group>"; };
+		B5ACC97F2107077800D10160 /* MIYUBaseInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUBaseInfoView.h; sourceTree = "<group>"; };
+		B5ACC9802107077800D10160 /* MIYUBaseInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUBaseInfoView.m; sourceTree = "<group>"; };
+		B5ACC98221070BCB00D10160 /* MIYUCommentInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUCommentInfoView.h; sourceTree = "<group>"; };
+		B5ACC98321070BCB00D10160 /* MIYUCommentInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUCommentInfoView.m; sourceTree = "<group>"; };
+		B5ACC98521070BE500D10160 /* MIYUBaseInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUBaseInfoView.xib; sourceTree = "<group>"; };
+		B5ACC98721070EC000D10160 /* MIYUCommentInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUCommentInfoView.xib; sourceTree = "<group>"; };
+		B5ACC98C21084AE700D10160 /* magic.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = magic.mp4; sourceTree = "<group>"; };
 		B5BDD78D20A98E6F008E11B5 /* MIYUThirdLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIYUThirdLoginViewController.h; sourceTree = "<group>"; };
 		B5BDD78E20A98E6F008E11B5 /* MIYUThirdLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIYUThirdLoginViewController.m; sourceTree = "<group>"; };
 		B5BDD78F20A98E6F008E11B5 /* MIYUThirdLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MIYUThirdLoginViewController.xib; sourceTree = "<group>"; };
@@ -804,6 +838,7 @@
 				B57495B91FFCB54A00368343 /* Main.storyboard */,
 				B57495BC1FFCB54A00368343 /* Assets.xcassets */,
 				B57495BE1FFCB54A00368343 /* LaunchScreen.storyboard */,
+				B5ACC98C21084AE700D10160 /* magic.mp4 */,
 				B57495C11FFCB54A00368343 /* Info.plist */,
 				B57495C21FFCB54A00368343 /* main.m */,
 			);
@@ -882,6 +917,9 @@
 		B57495F51FFDF20600368343 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				B5A6046520F7503C0090347B /* weixin */,
+				B5A6045C20F750230090347B /* qq */,
+				B5A6045B20F750230090347B /* rongcloud */,
 				B55B18842089DD7C00699F54 /* ZLCollectionFlowLayout */,
 				B51B9782207AFF1900F5B29A /* Card */,
 				B50DDA26201EF8AF00D2EF32 /* YJFNavigationController */,
@@ -893,6 +931,10 @@
 				B532D26720172F1E00DC06A1 /* UIView+CLTabbar.m */,
 				B50DDA65202066BE00D2EF32 /* UIImage+Extension.h */,
 				B50DDA64202066BE00D2EF32 /* UIImage+Extension.m */,
+				B5A6045520F746970090347B /* MIYUAFNManager.h */,
+				B5A6045620F746970090347B /* MIYUAFNManager.m */,
+				B5A6045820F74AEF0090347B /* MIYUAFNLinks.h */,
+				B5A6045920F74AEF0090347B /* MIYUAFNLinks.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -900,6 +942,12 @@
 		B574960F1FFF1DC600368343 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B5ACC97F2107077800D10160 /* MIYUBaseInfoView.h */,
+				B5ACC9802107077800D10160 /* MIYUBaseInfoView.m */,
+				B5ACC98521070BE500D10160 /* MIYUBaseInfoView.xib */,
+				B5ACC98221070BCB00D10160 /* MIYUCommentInfoView.h */,
+				B5ACC98321070BCB00D10160 /* MIYUCommentInfoView.m */,
+				B5ACC98721070EC000D10160 /* MIYUCommentInfoView.xib */,
 				B532D2B2201AD0E100DC06A1 /* MIYUShowSquareCell.h */,
 				B532D2B3201AD0E100DC06A1 /* MIYUShowSquareCell.m */,
 				B532D2B4201AD0E100DC06A1 /* MIYUShowSquareCell.xib */,
@@ -1100,6 +1148,29 @@
 			path = ChatBox;
 			sourceTree = "<group>";
 		};
+		B5A6045B20F750230090347B /* rongcloud */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = rongcloud;
+			sourceTree = "<group>";
+		};
+		B5A6045C20F750230090347B /* qq */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = qq;
+			sourceTree = "<group>";
+		};
+		B5A6046520F7503C0090347B /* weixin */ = {
+			isa = PBXGroup;
+			children = (
+				B5A6046620F750560090347B /* MIYUWeChat.h */,
+				B5A6046720F750560090347B /* MIYUWeChat.m */,
+			);
+			path = weixin;
+			sourceTree = "<group>";
+		};
 		B5E3D90A2079ECB60007983E /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -1115,9 +1186,17 @@
 		B5E3D90E2079ECB60007983E /* Voice */ = {
 			isa = PBXGroup;
 			children = (
+				B54EFD3F21008B830071544C /* WaveView.h */,
+				B54EFD4021008B840071544C /* WaveView.m */,
 				B5E3D9112079ECE40007983E /* MIYUVoiceCell.h */,
 				B5E3D9122079ECE40007983E /* MIYUVoiceCell.m */,
 				B5E3D9132079ECE40007983E /* MIYUVoiceCell.xib */,
+				B5ACC96E2106C19400D10160 /* MIYUAudioView.h */,
+				B5ACC96F2106C19400D10160 /* MIYUAudioView.m */,
+				B5ACC9712106C1A400D10160 /* MIYUAudioView.xib */,
+				B5ACC97A2107075000D10160 /* MIYUAudioDetailCell.h */,
+				B5ACC97B2107075000D10160 /* MIYUAudioDetailCell.m */,
+				B5ACC97C2107075000D10160 /* MIYUAudioDetailCell.xib */,
 			);
 			path = Voice;
 			sourceTree = "<group>";
@@ -1176,7 +1255,6 @@
 				B57495AC1FFCB54A00368343 /* Sources */,
 				B57495AD1FFCB54A00368343 /* Frameworks */,
 				B57495AE1FFCB54A00368343 /* Resources */,
-				8DB3888D2BFB5FB6ECCBF758 /* [CP] Embed Pods Frameworks */,
 				1A4228C2D026AA4313B3D29A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1236,7 +1314,7 @@
 				TargetAttributes = {
 					B57495AF1FFCB54A00368343 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					B57495C71FFCB54A00368343 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1299,6 +1377,7 @@
 				B547E7202099ACDB001CF5A8 /* MIYUCommentCell.xib in Resources */,
 				B50DDA482020490D00D2EF32 /* MIYUSettingViewController.xib in Resources */,
 				B574961C1FFF1DC600368343 /* MIYUBaseViewController.xib in Resources */,
+				B5ACC98D21084AE700D10160 /* magic.mp4 in Resources */,
 				B52BBB6620A2CEC800D54B75 /* MIYUReleaseContentViewController.xib in Resources */,
 				B57495C01FFCB54A00368343 /* LaunchScreen.storyboard in Resources */,
 				B5950F70205A528400A25995 /* MIYUConversationViewController.xib in Resources */,
@@ -1319,6 +1398,7 @@
 				B5950F3D2058B49F00A25995 /* MIYUSquareViewController.xib in Resources */,
 				B5C479B02086ED2D0058C6A6 /* MIYUFilterViewController.xib in Resources */,
 				B545B4C2205659DF0039B422 /* MIYUMoneyCell.xib in Resources */,
+				B5ACC97E2107075000D10160 /* MIYUAudioDetailCell.xib in Resources */,
 				B50DDA4220201BE000D2EF32 /* MIYUVipViewController.xib in Resources */,
 				B538465A208B0EAB00AAD22C /* MIYUMineInfoSquareCell.xib in Resources */,
 				B53A217D20159061000D7D3D /* MIYUNormalCell.xib in Resources */,
@@ -1328,13 +1408,16 @@
 				B52BBB6C20A2DAC200D54B75 /* MIYUMarkCell.xib in Resources */,
 				B5C9293F2093143C00777B00 /* MIYUGiftViewController.xib in Resources */,
 				B5C9292E2091733300777B00 /* MIYUUserSettingViewController.xib in Resources */,
+				B5ACC98621070BE500D10160 /* MIYUBaseInfoView.xib in Resources */,
 				B5497990208D77B000519259 /* MIYUMyVideoCell.xib in Resources */,
 				B50DDA6120204A9900D2EF32 /* MIYUFeedbackViewController.xib in Resources */,
 				B57496201FFF1DC600368343 /* MIYUTabBarController.xib in Resources */,
+				B5ACC9722106C1A400D10160 /* MIYUAudioView.xib in Resources */,
 				B563B6AB2079E82B00B38AFF /* MIYUContentCell.xib in Resources */,
 				B57495BD1FFCB54A00368343 /* Assets.xcassets in Resources */,
 				B563B6962079E74400B38AFF /* MIYUContentViewController.xib in Resources */,
 				B51A471C20B3F5A500B52060 /* MIYUFeedBackImageCell.xib in Resources */,
+				B5ACC98821070EC000D10160 /* MIYUCommentInfoView.xib in Resources */,
 				B5384655208B0E7300AAD22C /* MIYUMineViewController.xib in Resources */,
 				B5245793209BFD7B0032F3FB /* MIYUCommentBottomViewController.xib in Resources */,
 				B50DDA3820201B4400D2EF32 /* MIYUIncomeViewController.xib in Resources */,
@@ -1388,26 +1471,21 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RongCloud.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Emoji.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCConfig.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/JResource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/jrmf.cer",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AlipaySDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WalletResource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BQMM.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZFPlayer.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MIYU/Pods-MIYU-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8DB3888D2BFB5FB6ECCBF758 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MIYU/Pods-MIYU-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D481F1E8CD49B25B0ABE1929 /* [CP] Check Pods Manifest.lock */ = {
@@ -1436,6 +1514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B574961F1FFF1DC600368343 /* MIYUTabBarController.m in Sources */,
+				B5ACC9812107077800D10160 /* MIYUBaseInfoView.m in Sources */,
 				B5384651208B0E7300AAD22C /* MIYUEditMineInfoViewController.m in Sources */,
 				B50DDA6020204A9900D2EF32 /* MIYUFeedbackViewController.m in Sources */,
 				B547ED7B208447C3007633C5 /* MIYUBaseModel.m in Sources */,
@@ -1452,12 +1531,15 @@
 				B5C9293E2093143C00777B00 /* MIYUGiftViewController.m in Sources */,
 				B50DDA4120201BE000D2EF32 /* MIYUVipViewController.m in Sources */,
 				B50DDA2B201EF8B000D2EF32 /* UIViewController+YJFNavigationExtension.m in Sources */,
+				B5A6045720F746970090347B /* MIYUAFNManager.m in Sources */,
 				B50DDA2C201EF8B000D2EF32 /* YJFRootNavigationController.m in Sources */,
 				B5950F3C2058B49F00A25995 /* MIYUSquareViewController.m in Sources */,
 				B50DDA66202066BE00D2EF32 /* UIImage+Extension.m in Sources */,
 				B51B978D207B007000F5B29A /* CardItem2.m in Sources */,
 				B50DDA4C2020493A00D2EF32 /* MIYUAccountSettingViewController.m in Sources */,
+				B54EFD4121008B840071544C /* WaveView.m in Sources */,
 				B549798F208D77B000519259 /* MIYUMyVideoCell.m in Sources */,
+				B5ACC97D2107075000D10160 /* MIYUAudioDetailCell.m in Sources */,
 				B5E4E3CC204D0E2000012E02 /* MIYUPhoneLoginViewController.m in Sources */,
 				B50F2341201B7988007EA94B /* MIYUBaseSquareCollectionController.m in Sources */,
 				B5C9292920905F7F00777B00 /* MIYUVideoShowViewController.m in Sources */,
@@ -1489,13 +1571,17 @@
 				B5A4AB24205F8094004202E1 /* MIYUChatBoxViewController.m in Sources */,
 				B532D2312015917800DC06A1 /* NSObject+extend.m in Sources */,
 				B5C9295220946D3100777B00 /* MIYUReportViewController.m in Sources */,
+				B5A6045A20F74AEF0090347B /* MIYUAFNLinks.m in Sources */,
 				B545B4C6205774250039B422 /* MIYUVideoSettingViewController.m in Sources */,
 				B5384646208B0E6D00AAD22C /* MIYUMineMomentCell.m in Sources */,
 				B5950F452058C84400A25995 /* MIYUBaseCollectionViewCell.m in Sources */,
 				B5E4E3D6204D1DA100012E02 /* MIYUBasicInfoViewController.m in Sources */,
 				B514DF46208D6C75004A88C0 /* MIYUMyMomentViewController.m in Sources */,
 				B5245792209BFD7B0032F3FB /* MIYUCommentBottomViewController.m in Sources */,
+				B5ACC98421070BCB00D10160 /* MIYUCommentInfoView.m in Sources */,
+				B5ACC9702106C19400D10160 /* MIYUAudioView.m in Sources */,
 				B57496311FFF475300368343 /* MIYUHomeViewController.m in Sources */,
+				B5A6046820F750560090347B /* MIYUWeChat.m in Sources */,
 				B547E6E0209950BC001CF5A8 /* MIYURechargeViewController.m in Sources */,
 				B563B6882079E6D600B38AFF /* MIYUBarrageViewController.m in Sources */,
 				B5E3D9082079EBA80007983E /* MIYUVoiceViewController.m in Sources */,
@@ -1688,13 +1774,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FX625MT89Z;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "MIYU/Tool/MIYU-Prefix.pch";
 				INFOPLIST_FILE = MIYU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xztz.-";
 				PRODUCT_NAME = "Mi鱼";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1707,13 +1795,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FX625MT89Z;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "MIYU/Tool/MIYU-Prefix.pch";
 				INFOPLIST_FILE = MIYU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xztz.-";
 				PRODUCT_NAME = "Mi鱼";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
