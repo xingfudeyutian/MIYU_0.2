@@ -201,7 +201,7 @@
   //矩形区域：认为是打码的级别，马赛克点的大小（失真的强度）
   //这里将级别写死了level
   //level 马赛克点的大小
-  NSUInteger currentIndex , preCurrentIndex, level = 25;
+  NSUInteger currentIndex , preCurrentIndex, level = 20;
   //像素点默认是4个通道,默认值是0
   unsigned char * pixels[4] = {0};
   for (NSUInteger i = 0; i < height - 1; i++) {

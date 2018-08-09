@@ -919,7 +919,6 @@
 			children = (
 				B5A6046520F7503C0090347B /* weixin */,
 				B5A6045C20F750230090347B /* qq */,
-				B5A6045B20F750230090347B /* rongcloud */,
 				B55B18842089DD7C00699F54 /* ZLCollectionFlowLayout */,
 				B51B9782207AFF1900F5B29A /* Card */,
 				B50DDA26201EF8AF00D2EF32 /* YJFNavigationController */,
@@ -1146,13 +1145,6 @@
 				B5C929422094042200777B00 /* MIYUGiftCell.xib */,
 			);
 			path = ChatBox;
-			sourceTree = "<group>";
-		};
-		B5A6045B20F750230090347B /* rongcloud */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = rongcloud;
 			sourceTree = "<group>";
 		};
 		B5A6045C20F750230090347B /* qq */ = {

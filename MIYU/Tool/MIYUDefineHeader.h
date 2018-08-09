@@ -47,7 +47,7 @@ typedef NS_ENUM(NSInteger, MIYUViewControllerType) {
   MIYUOTHERINFO,      //其他人员信息
 };
 typedef NS_ENUM(NSInteger, MIYUCellType) {
-  MIYUCONTENTINFO= 0, // 语音
-  MIYUAUDIOINFO,      //图文
+  MIYUCONTENTINFO= 0, // 图文
+  MIYUAUDIOINFO,      // 语音
 };
 #endif /* MIYUDefineHeader_h */

@@ -24,7 +24,7 @@
                             <constraint firstAttribute="height" constant="70" id="sZo-xn-RWM"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderIV" translatesAutoresizingMaskIntoConstraints="NO" id="ERZ-dG-fIh">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderIV" translatesAutoresizingMaskIntoConstraints="NO" id="ERZ-dG-fIh">
                         <rect key="frame" x="0.0" y="70" width="320" height="200"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="Fx6-bS-Lvn"/>
@@ -64,6 +64,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="placeholderIV" width="378" height="197"/>
+        <image name="placeholderIV" width="640" height="960"/>
     </resources>
 </document>

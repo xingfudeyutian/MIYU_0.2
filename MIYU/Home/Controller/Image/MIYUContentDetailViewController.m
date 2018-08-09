@@ -25,7 +25,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:@"Camera_RB"] style:UIBarButtonItemStylePlain target:self action:@selector(Camera_RBShow)];
+
+  NSString * image = self.cellType == MIYUAUDIOINFO?@"microphone":@"Camera_RB";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginalWithName:image] style:UIBarButtonItemStylePlain target:self action:@selector(Camera_RBShow)];
+
+
+
+  if (self.cellType == MIYUAUDIOINFO) {
+    UIView * headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 100)];
+    UILabel * titleL = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, headerView.width-20, 20)];
+    titleL.font = [UIFont systemFontOfSize:14];
+    titleL.text = @"标签介绍";
+    NSString * info = @"录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的录制属于你的萝莉音用你的声音去征服身边的";
+    CGSize infoSize = CGSizeMake(titleL.width, MAXFLOAT);
+    NSDictionary *dic = @{NSFontAttributeName : [UIFont systemFontOfSize:12.f ]};
+    //默认的
+    CGRect infoRect =   [info boundingRectWithSize:infoSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil];
+
+    UILabel * contentL = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, headerView.width-20, infoRect.size.height)];
+    contentL.text = info;
+    contentL.numberOfLines = 0;
+    contentL.font = [UIFont systemFontOfSize:12.0f];
+    [headerView addSubview:titleL];
+    [headerView addSubview:contentL];
+    headerView.height = titleL.height+contentL.height+30;
+    self.tableView.tableHeaderView = headerView;
+
+  }
+
 }
 
 - (void)Camera_RBShow

@@ -70,7 +70,7 @@
         </view>
     </objects>
     <resources>
-        <image name="info" width="520" height="312"/>
+        <image name="info" width="700" height="700"/>
         <image name="play" width="54" height="54"/>
     </resources>
 </document>
